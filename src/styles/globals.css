@@ -1,0 +1,25 @@
+.nav-link {
+  @apply text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200;
+}
+
+.submenu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.submenu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.submenu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.submenu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms, transform 200ms;
+}
