@@ -66,8 +66,10 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className={`flex lg:hidden items-center justify-center p-2 focus:outline-none ${
-            isScrolled ? 'text-gray-700' : 'text-white drop-shadow-lg'
+          className={`flex lg:hidden items-center justify-center p-2 focus:outline-none transition-all duration-300 ${
+            isScrolled 
+              ? 'text-gray-700 hover:text-primary-600' 
+              : 'text-white drop-shadow-lg hover:text-primary-200 bg-black/20 backdrop-blur-sm rounded-lg border border-white/20'
           }`}
           onClick={toggleMenu}
           aria-label="Toggle mobile menu"

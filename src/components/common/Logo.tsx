@@ -12,7 +12,7 @@ const Logo: React.FC<LogoProps> = ({ isScrolled = false }) => {
           src="https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//Global%20Technocrat%20Logo.png"
           alt="Global Technocrats Logo"
           className={`h-20 w-auto transition-all duration-300 ${
-            !isScrolled ? 'filter brightness-0 invert contrast-200' : ''
+            !isScrolled ? 'filter brightness-0 invert' : ''
           }`}
         />
       </div>
