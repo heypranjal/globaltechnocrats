@@ -66,10 +66,11 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className={`lg:hidden hover:text-primary-900 focus:outline-none ${
+          className={`flex lg:hidden items-center justify-center p-2 focus:outline-none ${
             isScrolled ? 'text-gray-700' : 'text-white drop-shadow-lg'
           }`}
           onClick={toggleMenu}
+          aria-label="Toggle mobile menu"
         >
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
