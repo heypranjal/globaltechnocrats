@@ -7,6 +7,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import { mediaAssets } from '../../data/mediaAssets';
 
 const HeroSection: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const HeroSection: React.FC = () => {
             transformOrigin: 'center center'
           }}
         >
-          <source src="https://sivirxabbuldqkckjwmu.supabase.co/storage/v1/object/public/rover//hero-2.mp4" type="video/mp4" />
+          <source src={mediaAssets.heroes.video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         {/* Dark overlay for better text visibility */}

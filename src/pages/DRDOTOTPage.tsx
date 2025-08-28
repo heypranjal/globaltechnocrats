@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Award, ArrowRight } from 'lucide-react';
+import { getImageUrl } from '../data/mediaAssets';
 
 const DRDOTOTPage: React.FC = () => {
   const products = [
@@ -9,13 +10,13 @@ const DRDOTOTPage: React.FC = () => {
       name: 'Bukhari', 
       path: '/products/drdo/bukhari', 
       description: 'Advanced heating solution for extreme cold environments, developed with DRDO technology.',
-      image: '/images/Bukhari-768x384.png'
+      image: getImageUrl('products', 'bukhari')
     },
     { 
       name: 'Vajra', 
       path: '/products/drdo/vajra', 
       description: 'High-durability protective equipment for specialized defense operations.',
-      image: '/images/Vajra-1-1536x768.png'
+      image: getImageUrl('products', 'vajra')
     },
   ];
 

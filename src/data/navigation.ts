@@ -3,7 +3,7 @@
 
 export const productCategories = [
   { name: 'Fencing Solutions', path: '/products/fencing', hasSubmenu: false },
-  { name: 'Gates & Barriers', path: '/products/gates' },
+  { name: 'Gates & Barriers', path: '/products/gates', hasSubmenu: false },
   { name: 'Advanced AI Products', path: '/products/ai' },
   { name: 'DRDO TOT', path: '/products/drdo' },
   { name: 'Defence Tech', path: '/products/defence' },

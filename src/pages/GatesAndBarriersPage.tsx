@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Zap, ArrowRight } from 'lucide-react';
+import { getImageUrl } from '../data/mediaAssets';
 
 const GatesAndBarriersPage: React.FC = () => {
   const products = [
@@ -9,31 +10,31 @@ const GatesAndBarriersPage: React.FC = () => {
       name: 'Swing Gates', 
       path: '/products/gates/swing-gates', 
       description: 'High-security swing gates with advanced access control integration.',
-      image: '/images/Swing-Gates-768x274.jpg'
+      image: getImageUrl('products', 'swing-gates')
     },
     { 
       name: 'Sliding Gates', 
       path: '/products/gates/sliding-gates', 
       description: 'Space-efficient sliding security gates for locations with limited clearance.',
-      image: '/images/Sliding-Gates-768x274.jpg'
+      image: getImageUrl('products', 'sliding-gates')
     },
     { 
       name: 'Collapsible Barrier', 
       path: '/products/gates/collapsible-barrier', 
       description: 'Rapidly deployable security barriers for temporary or emergency scenarios.',
-      image: '/images/Gabion-768x274.jpg' // Using a similar barrier image
+      image: getImageUrl('products', 'gabion') // Using a similar barrier image
     },
     { 
       name: 'Architectural Gabions', 
       path: '/products/gates/architectural-gabions', 
       description: 'Decorative yet functional security barriers for perimeter protection.',
-      image: '/images/Gabion-768x274.jpg'
+      image: getImageUrl('products', 'gabion')
     },
     { 
       name: 'Hesco Box', 
       path: '/products/gates/hesco-box', 
       description: 'Military-grade defensive barriers for rapid deployment in high-risk areas.',
-      image: '/images/Gabion-768x274.jpg' // Using a similar barrier image
+      image: getImageUrl('products', 'gabion') // Using a similar barrier image
     },
   ];
 

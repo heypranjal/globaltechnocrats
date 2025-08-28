@@ -70,15 +70,23 @@ export function MobileMenubar({ onNavigate }: MobileMenubarProps) {
 
       {/* Products Menu */}
       <div>
-        <button 
-          className={`flex items-center justify-between w-full text-base font-medium text-gray-700 hover:text-primary-900 transition-colors ${
-            location.pathname.startsWith('/products') ? 'text-primary-900' : ''
-          }`}
-          onClick={() => toggleMenu('products')}
-        >
-          Products
-          <ChevronDown className={`w-4 h-4 transition-transform ${expandedMenu === 'products' ? 'rotate-180' : ''}`} />
-        </button>
+        <div className="flex items-center">
+          <Link 
+            to="/products"
+            className={`flex-1 text-base font-medium hover:text-primary-900 transition-colors ${
+              location.pathname.startsWith('/products') ? 'text-primary-900' : 'text-gray-700'
+            }`}
+            onClick={handleNavigation}
+          >
+            Products
+          </Link>
+          <button 
+            className="ml-2 p-1 text-gray-700 hover:text-primary-900"
+            onClick={() => toggleMenu('products')}
+          >
+            <ChevronDown className={`w-4 h-4 transition-transform ${expandedMenu === 'products' ? 'rotate-180' : ''}`} />
+          </button>
+        </div>
         
         {expandedMenu === 'products' && (
           <div className="mt-3 pl-4 space-y-3">

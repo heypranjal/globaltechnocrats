@@ -10,6 +10,20 @@ import type { RefObject } from 'react';
 
 const categories = [
   {
+    id: 'defence',
+    title: 'Defence Tech',
+    description: 'Advanced defense technology solutions for military and defense applications.',
+    icon: <Globe className="w-10 h-10 text-primary-500" />,
+    products: [
+      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
+      { name: 'DRDO TOT Products', path: '/products/drdo' },
+      { name: 'Bhukhari', path: '/products/defence/bhukhari' },
+      { name: 'Vajra', path: '/products/defence/vajra' }
+    ],
+    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-defenceproducts.png',
+    link: '/products/defence'
+  },
+  {
     id: 'fencing',
     title: 'Fencing Solutions',
     description: 'High-security fencing systems designed to protect sensitive installations and critical infrastructure.',
@@ -22,7 +36,7 @@ const categories = [
       { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' }
     ],
-    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-fencingsolutions.png',
+    image: 'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/crash%20rated.png',
     link: '/products/fencing'
   },
   {
@@ -51,20 +65,6 @@ const categories = [
     ],
     image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-advanceaisolutions.png',
     link: '/products/ai'
-  },
-  {
-    id: 'defence',
-    title: 'Defence Tech',
-    description: 'Advanced defense technology solutions for military and defense applications.',
-    icon: <Globe className="w-10 h-10 text-primary-500" />,
-    products: [
-      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
-      { name: 'DRDO TOT Products', path: '/products/drdo' },
-      { name: 'Bhukhari', path: '/products/defence/bhukhari' },
-      { name: 'Vajra', path: '/products/defence/vajra' }
-    ],
-    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-defenceproducts.png',
-    link: '/products/defence'
   }
 ];
 
@@ -101,11 +101,11 @@ const ProductCategoriesSection: React.FC = () => {
             >
               <div className="flex flex-col h-full">
                 <Link to={category.link} className="block">
-                  <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden">
+                  <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden p-4 sm:p-6">
                     <img 
                       src={category.image} 
                       alt={category.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl sm:rounded-2xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 flex items-center">

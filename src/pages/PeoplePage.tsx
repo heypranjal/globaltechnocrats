@@ -6,45 +6,55 @@ import ProductShowcaseMD from '../components/people/ProductShowcaseMD';
 import TechLeadershipGrid from '../components/people/TechLeadershipGrid';
 import DataDepartmentCards from '../components/people/DataDepartmentCards';
 import TechCultureSection from '../components/people/TechCultureSection';
-import MinimalTestimonials from '../components/people/MinimalTestimonials';
-import TechCTA from '../components/people/TechCTA';
+import { getImageUrl, getImageAlt } from '../data/mediaAssets';
 
 const PeoplePage: React.FC = () => {
   const executives = [
     {
       id: 1,
-      name: 'Mr. Atul Aggarwal (MD)',
+      name: 'Mr. Atul Aggarwal',
       position: 'Managing Director',
-      bio: 'Mr. Atul Aggarwal, the Managing Director of Global Technocrats, is a visionary entrepreneur with a passion for indigenous defence innovation. His career bridges global manufacturing and high-tech engineering, but it\'s in advanced defence systems that his leadership shines brightest.\n\nUnder his direction, the company has spearheaded projects like a Mobile Mortar Platform, developed under a Technology Transfer Agreement as part of the Make in India initiative. Mr. Aggarwal is also driving the development of Unmanned Ground-Based Vehicles (UGVs) designed for tactical reconnaissance and logistics support in rugged terrains. These cutting-edge systems reflect his commitment to self-reliant defence manufacturing and agile R&D.\n\nToday, with a sharp eye on future warfare needs, he continues to push the boundaries—positioning Global Technocrats as a trusted force in India\'s defence tech ecosystem.',
-      image: '/images/Atul-Agarwal-650x650.png'
+      education: 'BA Honours in Mathematical Statistics, SP Jain Business School, Delhi University',
+      bio: 'An experienced businessman with expertise in product development across diverse industries including organic farming, specialty dyes, leather, and defense technology. Mr. Aggarwal brings a unique blend of business acumen and technical expertise to lead Global Technocrats into new frontiers of defense innovation.\n\nUnder his visionary leadership, the company has evolved from a traditional manufacturing firm to a cutting-edge defense technology company, pioneering solutions like Mobile Mortar Systems and AI-powered security solutions. His strategic vision focuses on indigenous defense innovation and self-reliant manufacturing.\n\nWith deep roots in mathematical statistics and business strategy, he continues to drive the company\'s expansion into advanced defense systems, positioning Global Technocrats as a key player in India\'s defense tech ecosystem.',
+      image: getImageUrl('people', 'atul-agarwal'),
+      specialties: ['Product Development', 'Business Strategy', 'Defense Innovation', 'Manufacturing Excellence']
     },
     {
       id: 2,
       name: 'Mr. Krishna Khanna',
       position: 'GM-Sales & Marketing',
-      bio: 'Mr. Krishan Khanna, has navigated a remarkable six-decade career. Starting at Mitsui & Co. Ltd., a leading Japanese multinational, he rapidly rose to significant roles, including Liaison Officer for a pivotal fertilizer project funded by a Japanese Grant. Later, as the General Manager of Global Technocrats Pvt. Ltd., he was instrumental in strengthening India\'s borders, working closely with the defense forces. His journey epitomizes dedication and diverse expertise.',
-      image: '/images/Krishna-Khanna.png'
+      experience: '6 decades of industry leadership',
+      bio: 'Mr. Krishna Khanna brings an unprecedented six decades of industry experience, having navigated a remarkable career across multinational corporations and defense sectors. His journey began at Mitsui & Co. Ltd., a leading Japanese multinational, where he rapidly ascended to significant leadership roles.\n\nHis expertise encompasses international business development, strategic partnerships, and complex project management. As Liaison Officer for a pivotal fertilizer project funded by Japanese Grant, he demonstrated exceptional diplomatic and technical skills.\n\nAt Global Technocrats, he has been instrumental in strengthening India\'s border security infrastructure, working closely with defense forces to deliver critical security solutions. His vast experience and deep industry relationships continue to drive the company\'s market expansion.',
+      image: getImageUrl('people', 'krishna-khanna'),
+      specialties: ['International Business', 'Strategic Partnerships', 'Defense Relations', 'Project Management']
     },
     {
       id: 3,
       name: 'Mr. Surendra Batra',
       position: 'GM-Civil',
-      bio: 'Mr. Surendra Batra is a retired AXN from CPWD and held the esteemed position of GM-Civil in Global Technocrats. With over 20 years of dedicated service at the border postings of CPWD in the Northeast region, he boasts profound expertise in the local and working conditions of NE-Indian borders. His academic credentials include an Undergraduate Diploma in Civil and a B.TECH in Civil Engineering, further solidifying his stature in the field.',
-      image: '/images/Surinder-Kumar.png'
+      experience: '20+ years border posting experience',
+      education: 'Diploma in Civil Engineering, B.TECH in Civil Engineering',
+      bio: 'A retired AXN from CPWD (Central Public Works Department), Mr. Surendra Batra brings over two decades of specialized experience in border infrastructure development. His extensive service at border postings across Northeast India has provided him with unparalleled insights into the unique challenges and requirements of frontier security infrastructure.\n\nHis deep understanding of local conditions, terrain challenges, and operational requirements in Northeast Indian borders makes him invaluable for developing practical, field-tested security solutions. His technical expertise spans civil engineering, infrastructure planning, and project execution in challenging environments.\n\nAt Global Technocrats, he leads civil engineering initiatives, ensuring that our security installations are built to withstand the harshest conditions while maintaining operational excellence.',
+      image: getImageUrl('people', 'surinder-kumar'),
+      specialties: ['Border Infrastructure', 'Civil Engineering', 'Project Execution', 'Northeast Operations']
     },
     {
       id: 4,
       name: 'Mr. Vijay Verma',
-      position: 'Business Development-Lead',
-      bio: 'With 18 years of experience driving enterprise success, Mr. Vijay blends IT leadership with a passion for sales development to deliver transformative business growth. A strategist in digital transformation and cyber security, He has worked with iconic brands like Oberoi\'s, Audi, Porsche, Apple, and Reliance to align technology with revenue-focused goals. Their innovative approach empowers businesses to unlock new opportunities and achieve sustained success in today\'s competitive market. He is currently with Global Technocrats, focusing on Defence Tech Products.',
-      image: '/images/Vijay-Verma.png'
+      position: 'Business Development Lead',
+      experience: '18 years driving enterprise success',
+      bio: 'Mr. Vijay Verma combines 18 years of enterprise leadership with cutting-edge expertise in digital transformation and cybersecurity. His unique blend of IT leadership and sales acumen has consistently delivered transformative business growth across diverse industries.\n\nHis impressive portfolio includes strategic engagements with iconic brands including Oberoi Hotels, Audi, Porsche, Apple, and Reliance, where he successfully aligned advanced technology solutions with revenue-focused business objectives. His innovative approach to business development has consistently unlocked new market opportunities.\n\nAt Global Technocrats, he spearheads business development for Defense Tech Products, leveraging his deep understanding of enterprise needs and technology trends to expand our market presence and forge strategic partnerships.',
+      image: getImageUrl('people', 'vijay-verma'),
+      specialties: ['Digital Transformation', 'Cybersecurity', 'Enterprise Sales', 'Strategic Partnerships']
     },
     {
       id: 5,
       name: 'Mr. Vijendra Sharma',
       position: 'GM-Productions',
-      bio: 'Mr. Vijender Sharma boasts 35 years in the manufacturing sector, notably as GM Production at M/s Global Technocrats Pvt. Ltd. He\'s adept in managing production, with stints at Sharda Motor Industries, Carrier Air-Con Refrigeration, SUZUKI, and TATA NANO. Key achievements include driving quality, implementing cost-saving measures, hitting production goals, and commissioning powder coating and spray paint plants. His commitment to excellence sets him apart in the industry.',
-      image: '/images/vijendra-sharma.png'
+      experience: '35 years in manufacturing excellence',
+      bio: 'Mr. Vijendra Sharma brings 35 years of manufacturing expertise, with a distinguished career spanning leading automotive and industrial companies including Sharda Motor Industries, Carrier Air-Conditioning & Refrigeration, SUZUKI, and TATA NANO projects.\n\nHis exceptional track record includes driving quality improvements, implementing cost-saving initiatives, consistently achieving production targets, and successfully commissioning advanced manufacturing facilities including powder coating and spray paint plants. His operational excellence has set new industry benchmarks.\n\nAs GM-Productions at Global Technocrats, he oversees our advanced manufacturing operations, ensuring that every product meets the highest quality standards while optimizing production efficiency. His commitment to manufacturing excellence positions our products as industry leaders.',
+      image: getImageUrl('people', 'vijendra-sharma'),
+      specialties: ['Manufacturing Excellence', 'Quality Control', 'Production Optimization', 'Industrial Engineering']
     }
   ];
 
@@ -52,47 +62,43 @@ const PeoplePage: React.FC = () => {
     {
       id: 'research',
       name: 'Research & Development',
-      description: 'Our R&D team drives innovation across all product lines, from physical security systems to advanced AI applications.',
+      description: 'Pioneering next-generation defense technologies including AI-powered threat assessment, Heavy Lift Drones, and advanced security systems through strategic partnerships with DRDO.',
       icon: <Cpu className="w-8 h-8" />,
-      members: 45,
-      projects: 12,
-      locations: ['New Delhi', 'Dubai']
+      locations: ['New Delhi', 'Kapashera'],
+      highlights: ['AI Threat Assessment', 'DRDO Collaborations', 'Advanced Materials']
     },
     {
-      id: 'engineering',
-      name: 'Engineering & Manufacturing',
-      description: 'Responsible for transforming innovative concepts into reliable, field-ready products that meet rigorous quality standards.',
+      id: 'manufacturing',
+      name: 'Manufacturing & Production',
+      description: 'Operating ISO-certified facilities with 60,000+ MT annual capacity, featuring in-house coating plants and advanced manufacturing systems for defense products.',
       icon: <Shield className="w-8 h-8" />,
-      members: 68,
-      projects: 15,
-      locations: ['Mumbai', 'Delhi NCR']
+      locations: ['Kapashera', 'Delhi NCR'],
+      highlights: ['60,000+ MT Capacity', 'ISO Certified', 'In-house Coating']
     },
     {
       id: 'business',
       name: 'Business Development',
-      description: 'Our global business team builds strategic relationships with clients and partners across defense, government, and private sectors.',
+      description: 'Building strategic relationships with defense forces, government agencies, and international partners to expand our global footprint in security solutions.',
       icon: <Briefcase className="w-8 h-8" />,
-      members: 32,
-      projects: 8,
-      locations: ['Dubai', 'Riyadh', 'Doha', 'New Delhi']
+      locations: ['New Delhi', 'Regional Offices'],
+      highlights: ['Defense Contracts', 'Border Security', 'International Expansion']
     },
     {
-      id: 'operations',
-      name: 'Operations & Support',
-      description: 'Ensuring smooth deployment, maintenance, and ongoing support for all our systems deployed in the field.',
+      id: 'engineering',
+      name: 'Civil & Infrastructure',
+      description: 'Specialized team with extensive border posting experience, designing and implementing security infrastructure for challenging frontier environments.',
       icon: <Globe className="w-8 h-8" />,
-      members: 54,
-      projects: 20,
-      locations: ['All Offices']
+      locations: ['Northeast Borders', 'Field Operations'],
+      highlights: ['Border Expertise', 'Infrastructure Design', 'Field Operations']
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Our People | Global Technocrats</title>
-        <meta name="description" content="Meet the exceptional minds driving innovation in defense technology at Global Technocrats. Discover our leadership team, departments, and company culture." />
-        <meta name="keywords" content="Global Technocrats team, leadership, defense technology experts, company culture, careers" />
+        <title>Our People | Global Technocrats - Defense Technology Leaders</title>
+        <meta name="description" content="Meet the visionary leaders and expert teams behind India's premier defense technology company. 20+ years of expertise in AI-powered security solutions, border infrastructure, and defense innovation." />
+        <meta name="keywords" content="Global Technocrats team, defense technology leaders, Atul Aggarwal, Krishna Khanna, border security experts, DRDO partnerships, manufacturing excellence" />
       </Helmet>
 
       {/* Ultra-Modern Hero Section */}
@@ -109,12 +115,6 @@ const PeoplePage: React.FC = () => {
 
       {/* Data-Driven Culture */}
       <TechCultureSection />
-
-      {/* Minimal Testimonials */}
-      <MinimalTestimonials />
-
-      {/* Modern CTA */}
-      <TechCTA />
     </>
   );
 };

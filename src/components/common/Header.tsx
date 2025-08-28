@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       <div className="container flex items-center justify-between gap-8">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0" onClick={closeMenu}>
-          <Logo />
+          <Logo isScrolled={isScrolled} />
         </Link>
 
         {/* Desktop Navigation - Centered */}

@@ -8,6 +8,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import ProductDetailPageDebug from './pages/ProductDetailPageDebug';
 import BlogPage from './pages/BlogPage';
 import OurStoryPage from './pages/OurStoryPage';
 import PeoplePage from './pages/PeoplePage';
@@ -16,37 +17,12 @@ import InvestorRelationsPage from './pages/InvestorRelationsPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
 
-// Fencing Solution Pages
-import AntiClimbFencingPage from './pages/fencing/AntiClimbFencingPage';
-import RazorMeshFencingPage from './pages/fencing/RazorMeshFencingPage';
-import DecorativeFencingPage from './pages/fencing/DecorativeFencingPage';
-import CrashRatedFencePage from './pages/fencing/CrashRatedFencePage';
-import ConcertinaCoilFencePage from './pages/fencing/ConcertinaCoilFencePage';
-import SSConcertinaCoilPage from './pages/fencing/SSConcertinaCoilPage';
-import GIConcertinaCoilPage from './pages/fencing/GIConcertinaCoilPage';
-import ChainLinkFencePage from './pages/fencing/ChainLinkFencePage';
-import BarbedWireFencePage from './pages/fencing/BarbedWireFencePage';
-
+// Category Pages
 import FencingSolutionsPage from './pages/FencingSolutionsPage';
 import GatesAndBarriersPage from './pages/GatesAndBarriersPage';
 import AdvancedAIProductsPage from './pages/AdvancedAIProductsPage';
 import DRDOTOTPage from './pages/DRDOTOTPage';
 import DefenceTechPage from './pages/DefenceTechPage';
-
-// Gates & Barriers Pages
-import SwingGatesPage from './pages/gates/SwingGatesPage';
-import SlidingGatesPage from './pages/gates/SlidingGatesPage';
-import CollapsibleBarrierPage from './pages/gates/CollapsibleBarrierPage';
-import ArchitecturalGabionsPage from './pages/gates/ArchitecturalGabionsPage';
-import HescoBoxPage from './pages/gates/HescoBoxPage';
-
-// AI Product Pages
-import ImageEnhancerPage from './pages/ai/ImageEnhancerPage';
-import DeepSocmintPage from './pages/ai/DeepSocmintPage';
-
-// DRDO TOT Product Pages
-import BukhariPage from './pages/drdo/BukhariPage';
-import VajraPage from './pages/drdo/VajraPage';
 
 function App() {
   return (
@@ -62,40 +38,14 @@ function App() {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
           <Route path="products" element={<ProductsPage />} />
-          <Route path="products/:productId" element={<ProductDetailPage />} />
+          <Route path="products/:category/:productId" element={<ProductDetailPage />} />
           
           {/* Category Pages */}
+          <Route path="products/fencing" element={<FencingSolutionsPage />} />
           <Route path="products/gates" element={<GatesAndBarriersPage />} />
           <Route path="products/ai" element={<AdvancedAIProductsPage />} />
           <Route path="products/drdo" element={<DRDOTOTPage />} />
           <Route path="products/defence" element={<DefenceTechPage />} />
-          
-          {/* Fencing Solutions as Parent Page */}
-          <Route path="products/fencing" element={<FencingSolutionsPage />} />
-          <Route path="products/fencing/anti-climb" element={<AntiClimbFencingPage />} />
-          <Route path="products/fencing/razor-mesh" element={<RazorMeshFencingPage />} />
-          <Route path="products/fencing/decorative" element={<DecorativeFencingPage />} />
-          <Route path="products/fencing/crash-rated-fence" element={<CrashRatedFencePage />} />
-          <Route path="products/fencing/concertina-coil-fence" element={<ConcertinaCoilFencePage />} />
-          <Route path="products/fencing/ss-concertina-coil" element={<SSConcertinaCoilPage />} />
-          <Route path="products/fencing/gi-concertina-coil" element={<GIConcertinaCoilPage />} />
-          <Route path="products/fencing/chain-link-fence" element={<ChainLinkFencePage />} />
-          <Route path="products/fencing/barbed-wire-fence" element={<BarbedWireFencePage />} />
-          
-          {/* Gates & Barriers as Parent Page */}
-          <Route path="products/gates/swing-gates" element={<SwingGatesPage />} />
-          <Route path="products/gates/sliding-gates" element={<SlidingGatesPage />} />
-          <Route path="products/gates/collapsible-barrier" element={<CollapsibleBarrierPage />} />
-          <Route path="products/gates/architectural-gabions" element={<ArchitecturalGabionsPage />} />
-          <Route path="products/gates/hesco-box" element={<HescoBoxPage />} />
-          
-          {/* AI Products as Parent Page */}
-          <Route path="products/ai/image-enhancer" element={<ImageEnhancerPage />} />
-          <Route path="products/ai/deepsocmint" element={<DeepSocmintPage />} />
-          
-          {/* DRDO TOT Products as Parent Page */}
-          <Route path="products/drdo/bukhari" element={<BukhariPage />} />
-          <Route path="products/drdo/vajra" element={<VajraPage />} />
           
           <Route path="blog" element={<BlogPage />} />
           <Route path="our-story" element={<OurStoryPage />} />

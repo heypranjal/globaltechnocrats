@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ShieldAlert, ArrowRight } from 'lucide-react';
+import { getImageUrl } from '../data/mediaAssets';
 
 const FencingSolutionsPage: React.FC = () => {
   const products = [
@@ -9,55 +10,55 @@ const FencingSolutionsPage: React.FC = () => {
       name: 'Anti Climb Fencing', 
       path: '/products/fencing/anti-climb', 
       description: 'High-security anti-climb fencing designed to prevent unauthorized access.',
-      image: '/images/Anti-Climb-Fencing-2.jpg'
+      image: getImageUrl('products', 'anti-climb-fencing')
     },
     { 
       name: 'Razor Mesh Fencing', 
       path: '/products/fencing/razor-mesh', 
       description: 'Advanced razor mesh fencing providing maximum security for sensitive installations.',
-      image: '/images/Razor-Mesh-Fencing-2.jpg'
+      image: getImageUrl('products', 'razor-mesh-fencing')
     },
     { 
       name: 'Crash Rated Fence', 
       path: '/products/fencing/crash-rated-fence', 
       description: 'High-impact resistance fencing designed to withstand vehicular attacks.',
-      image: '/images/Crash-Rated-Security-Fencing-768x274.jpg'
+      image: getImageUrl('products', 'crash-rated-security')
     },
     { 
       name: 'Concertina Coil Fence', 
       path: '/products/fencing/concertina-coil-fence', 
       description: 'Rapid-deployment security barrier providing effective perimeter protection.',
-      image: '/images/Concertina-coil-Fence-768x274.jpg'
+      image: getImageUrl('products', 'concertina-coil')
     },
     { 
       name: 'Chain Link Fence', 
       path: '/products/fencing/chain-link-fence', 
       description: 'Durable and versatile chain link fencing solutions for various applications.',
-      image: '/images/Chain-Link-Fence-1-1024x366.jpg'
+      image: getImageUrl('products', 'chain-link')
     },
     { 
       name: 'Barbed Wire Fence', 
       path: '/products/fencing/barbed-wire-fence', 
       description: 'Traditional security fencing with sharp wire barbs for deterrence.',
-      image: '/images/Barbed-Wire-2-1024x366.jpg'
+      image: getImageUrl('products', 'barbed-wire')
     },
     { 
       name: 'SS Concertina Coil', 
       path: '/products/fencing/ss-concertina-coil', 
       description: 'High-quality stainless steel concertina coil for maximum durability.',
-      image: '/images/SS-Concertina-coil-768x274.jpg'
+      image: getImageUrl('products', 'ss-concertina')
     },
     { 
       name: 'GI Concertina Coil', 
       path: '/products/fencing/gi-concertina-coil', 
       description: 'Cost-effective galvanized iron concertina coil for perimeter security.',
-      image: '/images/GI-Concertina-Coil-768x274.png'
+      image: getImageUrl('products', 'gi-concertina')
     },
     { 
       name: 'Swing Gates', 
       path: '/products/fencing/swing-gates', 
       description: 'High-quality swing gates for secure and convenient access control.',
-      image: '/images/Swing-Gates-768x274.jpg'
+      image: getImageUrl('products', 'swing-gates')
     },
   ];
 

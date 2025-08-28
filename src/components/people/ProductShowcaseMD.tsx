@@ -5,8 +5,11 @@ interface Executive {
   id: number;
   name: string;
   position: string;
+  education?: string;
+  experience?: string;
   bio: string;
   image: string;
+  specialties?: string[];
 }
 
 interface ProductShowcaseMDProps {
@@ -17,12 +20,12 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
   const [activeTab, setActiveTab] = useState<'overview' | 'experience' | 'achievements'>('overview');
 
   const professionalProfile = [
-    { label: 'Position', value: 'Managing Director' },
-    { label: 'Experience', value: '25+ Years' },
-    { label: 'Education', value: 'BA Honours, SP Jain' },
-    { label: 'Specialization', value: 'Defence Innovation' },
-    { label: 'Key Projects', value: 'Mobile Mortar Platform, UGVs' },
-    { label: 'Focus Area', value: 'Indigenous Defence Tech' }
+    { label: 'Position', value: executive.position },
+    { label: 'Experience', value: executive.experience || '20+ Years' },
+    { label: 'Education', value: executive.education || 'BA Honours in Mathematical Statistics' },
+    { label: 'Specialization', value: 'Product Development & Business Strategy' },
+    { label: 'Industries', value: 'Defense Tech, Manufacturing, Innovation' },
+    { label: 'Focus Area', value: 'Indigenous Defense Innovation' }
   ];
 
   const achievements = [
@@ -33,18 +36,24 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50/30">
+    <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-primary-50/30">
       <div className="max-w-7xl mx-auto px-8">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-8 text-sm font-medium text-gray-600">
-            Leadership Excellence
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-md border border-primary-200/50 rounded-full px-6 py-3 mb-10 text-sm font-semibold text-primary-700 shadow-lg">
+            <div className="bg-gradient-to-r from-primary-500 to-orange-500 p-1.5 rounded-full">
+              <Award className="w-4 h-4 text-white" />
+            </div>
+            <span>Leadership Excellence</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Visionary Leadership
+          <h2 className="text-5xl md:text-6xl font-light text-gray-900 mb-6 tracking-tight">
+            <span className="bg-gradient-to-r from-primary-600 to-orange-600 bg-clip-text text-transparent font-semibold">
+              Visionary
+            </span>
+            <span className="block">Leadership</span>
           </h2>
-          <p className="text-xl text-gray-500 font-light max-w-2xl mx-auto">
-            Meet the architect behind Global Technocrats' success story
+          <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed">
+            Meet the architect behind Global Technocrats' transformation into India's premier defense technology company
           </p>
         </div>
 
@@ -53,23 +62,29 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
           {/* Product Image - 3 columns */}
           <div className="lg:col-span-3 flex flex-col">
             <div className="relative flex-1">
-              {/* Background Element */}
-              <div className="absolute -inset-8 bg-gradient-to-br from-blue-50/50 to-gray-50/50 rounded-3xl" />
+              {/* Premium Background Element */}
+              <div className="absolute -inset-8 bg-gradient-to-br from-primary-50/60 to-orange-50/40 rounded-3xl blur-sm" />
+              <div className="absolute -inset-4 bg-gradient-to-br from-white/80 to-gray-50/60 rounded-3xl" />
               
-              {/* Main Image Container */}
-              <div className="relative bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full flex flex-col justify-center">
+              {/* Luxury Image Container */}
+              <div className="relative bg-white rounded-3xl p-10 shadow-2xl border border-gray-200/50 h-full flex flex-col justify-center backdrop-blur-sm">
                 <div className="relative">
                   <img
                     src={executive.image}
                     alt={executive.name}
                     className="w-full max-w-md mx-auto rounded-xl"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(executive.name)}&size=500&background=072ac8&color=ffffff&bold=true`;
+                    }}
                   />
                   
-                  {/* Floating Info Card */}
-                  <div className="absolute -bottom-4 -right-4 bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                  {/* Premium Floating Card */}
+                  <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-2xl p-6 shadow-2xl border border-primary-500/20">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-gray-900">25+</div>
-                      <div className="text-sm text-gray-500">Years Experience</div>
+                      <div className="text-2xl font-bold">20+</div>
+                      <div className="text-sm text-primary-100">Years Excellence</div>
+                      <div className="text-xs text-primary-200 mt-1">Defense Innovation</div>
                     </div>
                   </div>
                 </div>
@@ -79,16 +94,30 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
 
           {/* Product Details - 2 columns */}
           <div className="lg:col-span-2 flex flex-col space-y-8">
-            {/* Title & Position */}
-            <div>
-              <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-2 tracking-tight">
-                {executive.name.replace(' (MD)', '')}
+            {/* Enhanced Title & Position */}
+            <div className="space-y-4">
+              <h3 className="text-4xl md:text-5xl font-light text-gray-900 mb-2 tracking-tight">
+                {executive.name}
               </h3>
-              <p className="text-lg text-blue-600 font-medium">{executive.position}</p>
+              <div className="flex items-center gap-3">
+                <p className="text-xl font-semibold bg-gradient-to-r from-primary-600 to-orange-600 bg-clip-text text-transparent">
+                  {executive.position}
+                </p>
+                <div className="h-px flex-1 bg-gradient-to-r from-primary-200 to-transparent"></div>
+              </div>
+              {executive.specialties && (
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {executive.specialties.map((specialty, index) => (
+                    <span key={index} className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium border border-primary-200">
+                      {specialty}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
 
-            {/* Tab Navigation */}
-            <div className="flex space-x-1 bg-gray-100 rounded-lg p-1">
+            {/* Premium Tab Navigation */}
+            <div className="flex space-x-1 bg-gray-100/80 backdrop-blur-sm rounded-xl p-1.5 border border-gray-200/50">
               {[
                 { key: 'overview', label: 'Overview' },
                 { key: 'experience', label: 'Experience' },
@@ -97,10 +126,10 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key as any)}
-                  className={`flex-1 px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                  className={`flex-1 px-4 py-3 text-sm font-semibold rounded-lg transition-all duration-300 ${
                     activeTab === tab.key
-                      ? 'bg-white text-gray-900 shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'bg-white text-gray-900 shadow-lg border border-gray-200/50'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-white/50'
                   }`}
                 >
                   {tab.label}
@@ -120,11 +149,11 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
                   {/* Professional Profile */}
                   <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Professional Profile</h4>
-                    <div className="grid grid-cols-1 gap-3">
+                    <div className="grid grid-cols-1 gap-4">
                       {professionalProfile.map((spec, index) => (
-                        <div key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-                          <span className="text-sm text-gray-500">{spec.label}</span>
-                          <span className="text-sm font-medium text-gray-900">{spec.value}</span>
+                        <div key={index} className="flex flex-col sm:flex-row sm:justify-between sm:items-start py-3 border-b border-gray-100 last:border-0 gap-1 sm:gap-3">
+                          <span className="text-sm text-gray-500 font-medium min-w-[120px] flex-shrink-0">{spec.label}</span>
+                          <span className="text-sm font-medium text-gray-900 text-left sm:text-right leading-relaxed">{spec.value}</span>
                         </div>
                       ))}
                     </div>
@@ -168,12 +197,12 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
               )}
             </div>
 
-            {/* CTA */}
-            <div className="pt-6 border-t border-gray-100 mt-auto">
-              <button className="group w-full bg-gray-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-all duration-300 flex items-center justify-center gap-2">
-                <LinkedinIcon className="w-5 h-5" />
-                Connect on LinkedIn
-                <div className="absolute inset-0 rounded-xl bg-blue-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            {/* Premium CTA */}
+            <div className="pt-8 border-t border-gray-200 mt-auto">
+              <button className="group w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-2xl font-semibold hover:from-primary-700 hover:to-primary-800 transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+                <LinkedinIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span>Connect with Leadership</span>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/20 to-primary-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </div>
           </div>

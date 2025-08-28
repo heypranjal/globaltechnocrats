@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, MapPin, ArrowUpRight } from 'lucide-react';
+import { MapPin, ArrowUpRight, TrendingUp } from 'lucide-react';
 
 interface Department {
   id: string;
   name: string;
   description: string;
   icon: React.ReactElement;
-  members: number;
-  projects: number;
   locations: string[];
+  highlights?: string[];
 }
 
 interface DataDepartmentCardsProps {
@@ -32,8 +31,6 @@ const DataDepartmentCards: React.FC<DataDepartmentCardsProps> = ({ departments }
               // Animate numbers for this card
               const dept = departments.find(d => d.id === cardId);
               if (dept) {
-                animateNumber(`${cardId}-members`, dept.members);
-                animateNumber(`${cardId}-projects`, dept.projects);
                 animateNumber(`${cardId}-locations`, dept.locations.length);
               }
             }
@@ -62,12 +59,9 @@ const DataDepartmentCards: React.FC<DataDepartmentCardsProps> = ({ departments }
     }, 50);
   };
 
-  const getGrowthPercentage = (members: number): number => {
-    // Simulate growth percentages based on team size
-    if (members > 60) return 15;
-    if (members > 50) return 12;
-    if (members > 40) return 18;
-    return 10;
+  const getGrowthPercentage = (): number => {
+    // Simulate growth percentages for capabilities expansion
+    return 15;
   };
 
   return (
@@ -111,7 +105,7 @@ const DataDepartmentCards: React.FC<DataDepartmentCardsProps> = ({ departments }
                       </h3>
                       <div className="flex items-center gap-2 text-sm text-green-600">
                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        +{getGrowthPercentage(department.members)}% this year
+                        +{getGrowthPercentage()}% capabilities growth
                       </div>
                     </div>
                   </div>
@@ -124,47 +118,36 @@ const DataDepartmentCards: React.FC<DataDepartmentCardsProps> = ({ departments }
                   {department.description}
                 </p>
 
+                {/* Key Highlights */}
+                {department.highlights && (
+                  <div className="space-y-3 mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Key Capabilities</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {department.highlights.map((highlight, index) => (
+                        <span
+                          key={index}
+                          className="inline-flex items-center bg-gradient-to-r from-primary-50 to-orange-50 text-primary-700 px-3 py-1.5 rounded-full text-xs font-medium border border-primary-200"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Data Visualization */}
                 <div className="space-y-4">
-                  {/* Team Members */}
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl group-hover:bg-blue-50/50 transition-colors duration-300">
-                    <div className="flex items-center gap-3">
-                      <Users className="w-5 h-5 text-gray-500" />
-                      <span className="text-sm font-medium text-gray-700">Team Members</span>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-gray-900">
-                        {animatedNumbers[`${department.id}-members`] || 0}
-                      </div>
-                      <div className="text-xs text-gray-500">Active</div>
-                    </div>
-                  </div>
-
-                  {/* Projects */}
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl group-hover:bg-blue-50/50 transition-colors duration-300">
-                    <div className="flex items-center gap-3">
-                      <TrendingUp className="w-5 h-5 text-gray-500" />
-                      <span className="text-sm font-medium text-gray-700">Active Projects</span>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-gray-900">
-                        {animatedNumbers[`${department.id}-projects`] || 0}
-                      </div>
-                      <div className="text-xs text-gray-500">Running</div>
-                    </div>
-                  </div>
-
                   {/* Locations */}
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl group-hover:bg-blue-50/50 transition-colors duration-300">
+                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-xl group-hover:bg-primary-50/50 transition-colors duration-300">
                     <div className="flex items-center gap-3">
                       <MapPin className="w-5 h-5 text-gray-500" />
-                      <span className="text-sm font-medium text-gray-700">Global Locations</span>
+                      <span className="text-sm font-medium text-gray-700">Operating Locations</span>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-gray-900">
                         {animatedNumbers[`${department.id}-locations`] || 0}
                       </div>
-                      <div className="text-xs text-gray-500">Cities</div>
+                      <div className="text-xs text-gray-500">Sites</div>
                     </div>
                   </div>
                 </div>
@@ -188,45 +171,26 @@ const DataDepartmentCards: React.FC<DataDepartmentCardsProps> = ({ departments }
                 </div>
               </div>
 
-              {/* Progress Bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-100 rounded-b-2xl overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-1000 delay-500"
-                  style={{ 
-                    width: visibleCards.has(department.id) ? `${(department.projects / 20) * 100}%` : '0%'
-                  }}
-                />
-              </div>
             </div>
           ))}
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-8 p-8 bg-white rounded-2xl border border-gray-100">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-12 p-8 bg-gradient-to-r from-white to-gray-50 rounded-3xl border border-gray-100 shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center">
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
-                {departments.reduce((sum, dept) => sum + dept.members, 0)}
-              </div>
-              <div className="text-sm text-gray-500">Total Team Members</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
-                {departments.reduce((sum, dept) => sum + dept.projects, 0)}
-              </div>
-              <div className="text-sm text-gray-500">Active Projects</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
+              <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-orange-600 bg-clip-text text-transparent mb-2">
                 {[...new Set(departments.flatMap(dept => dept.locations))].length}
               </div>
-              <div className="text-sm text-gray-500">Global Locations</div>
+              <div className="text-sm font-medium text-gray-600">Operating Locations</div>
+              <div className="text-xs text-gray-500 mt-1">Strategic presence</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-gray-900 mb-1">
+              <div className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-orange-600 bg-clip-text text-transparent mb-2">
                 {departments.length}
               </div>
-              <div className="text-sm text-gray-500">Specialized Divisions</div>
+              <div className="text-sm font-medium text-gray-600">Specialized Divisions</div>
+              <div className="text-xs text-gray-500 mt-1">Expert teams</div>
             </div>
           </div>
         </div>

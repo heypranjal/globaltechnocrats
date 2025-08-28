@@ -80,8 +80,11 @@ export function MainMenubar({ isScrolled = false, onNavigate }: MainMenubarProps
             className={`px-3 py-2 text-sm font-medium bg-transparent hover:bg-gray-100 focus:bg-gray-100 data-[state=open]:bg-gray-100 rounded-md transition-colors text-gray-700 hover:text-gray-900 ${
               location.pathname.startsWith('/products') ? 'bg-gray-100 text-gray-900' : ''
             }`}
+            asChild
           >
-            Products
+            <Link to="/products" onClick={handleNavigation}>
+              Products
+            </Link>
           </MenubarTrigger>
           <MenubarContent className="min-w-[280px]">
             <MenubarSub>
