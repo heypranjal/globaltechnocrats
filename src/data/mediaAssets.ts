@@ -23,7 +23,7 @@ export interface MediaAssets {
 
 export const mediaAssets: MediaAssets = {
   heroes: {
-    video: "https://sivirxabbuldqkckjwmu.supabase.co/storage/v1/object/public/rover//hero-2.mp4",
+    video: "https://www.youtube.com/embed/niq8UN4bT8M?autoplay=1&mute=1&loop=1&playlist=niq8UN4bT8M&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1",
     images: {
       main: {
         url: "/GT Hero Image.png",

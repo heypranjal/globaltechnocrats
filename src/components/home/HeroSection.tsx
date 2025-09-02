@@ -12,24 +12,44 @@ import { mediaAssets } from '../../data/mediaAssets';
 const HeroSection: React.FC = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden">
-      {/* Full Screen Video Background */}
+      {/* Full Screen YouTube Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+        {/* Desktop Video */}
+        <iframe
+          src={mediaAssets.heroes.video}
+          className="absolute inset-0 w-full h-full hidden md:block"
           style={{
+            width: '100vw',
+            height: '100vh',
             transform: 'scale(1.3)',
-            transformOrigin: 'center center'
+            transformOrigin: 'center center',
+            pointerEvents: 'none'
           }}
-        >
-          <source src={mediaAssets.heroes.video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          frameBorder="0"
+          title="Hero Background Video Desktop"
+        />
+        
+        {/* Mobile Video - Vertical scaling */}
+        <iframe
+          src={mediaAssets.heroes.video}
+          className="absolute inset-0 w-full h-full md:hidden"
+          style={{
+            width: '200vw',
+            height: '100vh',
+            transform: 'translateX(-25%) scale(1.8)',
+            transformOrigin: 'center center',
+            pointerEvents: 'none'
+          }}
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          frameBorder="0"
+          title="Hero Background Video Mobile"
+        />
+        
         {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/40 md:bg-black/30"></div>
       </div>
 
       {/* Hero Content */}
