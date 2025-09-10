@@ -180,6 +180,19 @@ export const getImageUrl = (category: keyof MediaAssets, key: string, subKey?: s
 };
 
 /**
+ * Helper function to handle product image URLs (direct strings or media asset keys)
+ */
+export const getProductImageUrl = (imageUrl: string): string => {
+  // If it's already a full URL (starts with http/https or /), return as-is
+  if (imageUrl.startsWith('http') || imageUrl.startsWith('/')) {
+    return imageUrl;
+  }
+  
+  // Otherwise, try to get it from media assets
+  return getImageUrl('products', imageUrl);
+};
+
+/**
  * Helper function to get image alt text
  */
 export const getImageAlt = (category: keyof MediaAssets, key: string, subKey?: string): string => {

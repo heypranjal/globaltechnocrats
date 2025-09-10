@@ -4,7 +4,7 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldAlert, Zap, Cpu, Award, Globe } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Zap, Cpu, Award, Globe, DoorOpen } from 'lucide-react';
 import ProductCard from './ProductCard';
 import type { ProductCategory } from '../../data/products';
 
@@ -18,7 +18,8 @@ const iconMap = {
   Zap,
   Cpu,
   Award,
-  Globe
+  Globe,
+  DoorOpen
 };
 
 const CategorySection: React.FC<CategorySectionProps> = ({ category, showAll = false }) => {

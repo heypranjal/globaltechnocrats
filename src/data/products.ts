@@ -15,6 +15,8 @@ export interface Product {
   subcategory: string;
   description: string;
   longDescription: string;
+  technicalDescription?: string;
+  keyBenefits?: string[];
   features: string[];
   applications: string[];
   specifications: ProductSpec[];
@@ -22,6 +24,7 @@ export interface Product {
   relatedProducts: string[];
   seoTitle?: string;
   seoDescription?: string;
+  seoKeywords?: string;
 }
 
 export const productsData: Product[] = [
@@ -30,37 +33,67 @@ export const productsData: Product[] = [
     name: 'Anti Climb Fencing',
     category: 'fencing',
     subcategory: 'Fencing Solutions',
-    description: 'High-security anti-climb fencing designed to prevent unauthorized access to restricted areas.',
-    longDescription: 'When it comes to safeguarding your property and ensuring public safety, security fencing plays a crucial role. Among various security fencing options available today, Anti Climb Fencing has emerged as an effective and reliable solution for deterring intruders and providing robust perimeter protection. The specialized mesh design makes climbing extremely difficult while maintaining visibility for surveillance.',
+    description: 'Advanced 358 security mesh fencing system designed to meet the stringent requirements of India\'s defense and security organizations for maximum perimeter protection.',
+    longDescription: 'Global Technocrats\' Anti-Climb Fencing represents advanced perimeter security technology, engineered to meet demanding defense and security requirements. Our 358 security mesh system is designed for high-security installations, suitable for deployment across India\'s diverse climate conditions from extreme cold to desert heat.\n\nOur anti-climb fencing technology is engineered to meet the stringent requirements typically demanded by organizations like the Border Security Force (BSF), Central Industrial Security Force (CISF), and Defense Research and Development Organisation (DRDO). The system employs proven \'Anti-Cut Anti-Climb\' design principles that are widely recognized in border security applications.\n\nThe fencing system is designed to protect sensitive installations including nuclear facilities, space establishments, airports, research laboratories, and classified defense facilities. Our technology incorporates features specifically developed for India\'s challenging environmental conditions, from high-altitude installations to coastal environments.\n\nThe system meets the technical standards required for critical infrastructure protection, including forward operating bases, research facilities, and strategic installations. Our weather-resistant technology is engineered to maintain security integrity across India\'s diverse geographic and climatic conditions.',
+    technicalDescription: 'Our Anti-Climb Fencing system employs the globally recognized 358 security mesh configuration, where the designation represents the precise engineering specifications: 3" × 0.5" × 8 gauge (76.2mm × 12.7mm × 4mm). This mathematical precision creates apertures so small that human fingers cannot penetrate, while the 4mm high-tensile steel wire construction makes cutting attempts virtually impossible with standard hand tools.\n\nThe resistance welding process, employing 540-690 N/mm² weld strength, creates molecular bonds between wire intersections that exceed the strength of the base material itself. Our hot-dip galvanizing process, conforming to IS 4759 standards, applies a minimum 610g/m² zinc coating before the application of a 120+ micron polyester powder coating, ensuring decades of maintenance-free operation in India\'s diverse climate conditions.\n\nEvery panel undergoes rigorous quality testing including tensile strength analysis, corrosion resistance evaluation, and anti-climb performance verification. Our manufacturing process is ISO 9001:2015 certified and complies with Make in India guidelines, supporting the nation\'s self-reliance in critical security infrastructure.',
+    keyBenefits: [
+      'Professional Engineering: Designed to meet stringent security requirements for critical infrastructure applications',
+      'Industry Standards Compliance: Engineered to meet government security standards and defense organization specifications',
+      'Climate Resilience: Built for extreme Indian conditions from high-altitude cold to desert heat with durable construction',
+      'Economic Efficiency: Low total cost of ownership with minimal maintenance requirements and extended service life',
+      'Rapid Deployment: Efficient installation system designed for quick deployment in various terrain conditions',
+      'Quality Manufacturing: Full adherence to IS 278, IS 1786, and IS 4759 ensuring consistent quality with national standards',
+      'Multi-Threat Protection: Comprehensive defense against climbing, cutting, and impact attempts with optional sensor integration',
+      'Professional Support: Complete after-sales service including inspections, maintenance, and technical support'
+    ],
     features: [
-      'High-strength steel construction',
-      'Anti-cut and anti-climb design', 
-      'Corrosion-resistant coating',
-      'Tamper-resistant fixings',
-      'Optional sensor integration',
-      'Rapid installation system',
-      'Customizable heights from 2m to 5m'
+      'Anti-Cut Technology: Advanced cut-resistant mesh design engineered to prevent breach attempts using standard tools',
+      'Security-Grade 358 Mesh: Precision 12.7mm apertures prevent finger penetration while maintaining visibility for surveillance',
+      'Superior Corrosion Protection: Marine-grade coating system designed to withstand India\'s diverse coastal and inland conditions',
+      'Electronic System Integration: Seamless compatibility with surveillance systems including CCTV, motion sensors, and perimeter detection',
+      'Rapid Deployment System: Engineered for efficient installation across various terrain and environmental conditions',
+      'Multi-Height Configuration: Customizable from 2m to 5m heights to meet varying security threat levels and site requirements',
+      'Critical Infrastructure Grade: Designed to meet stringent requirements for transportation, industrial, and government facilities',
+      'All-Weather Design: Engineered for extreme Indian climate conditions from high-altitude cold to desert heat environments'
     ],
     applications: [
-      'Securing Commercial Properties',
-      'Protecting Critical Infrastructure', 
-      'Military installations',
-      'Government facilities',
-      'Border security',
-      'Correctional facilities',
-      'Industrial complexes'
+      'Border Security Applications: Suitable for international border protection requiring anti-infiltration and anti-smuggling capabilities',
+      'Critical Infrastructure Protection: Designed for airports, nuclear facilities, space centers, and other sensitive government installations',
+      'Research & Development Facilities: High-security perimeter protection for sensitive research establishments and classified facilities',
+      'Military & Defense Installations: Suitable for forward operating bases, command posts, and strategic military locations',
+      'Transportation Security: Railway corridors, metro systems, and critical transportation infrastructure protection',
+      'Paramilitary Facilities: Training academies, operational bases, and specialized force installations',
+      'Government Buildings: Central and state government facilities requiring enhanced perimeter security',
+      'Industrial Security: Oil refineries, power plants, mining sites, steel plants, and critical industrial infrastructure',
+      'Judicial & Administrative: High courts, legislative buildings, administrative complexes requiring security protocols',
+      'Defense Manufacturing: Aerospace, electronics, and defense production facilities under security regulations',
+      'Port & Maritime Security: Coastal installations and port authorities requiring ISPS Code compliance',
+      'Educational Institutions: Universities, research institutes, and campuses requiring perimeter security against unauthorized access'
     ],
     specifications: [
-      { name: 'Material', value: 'High-quality steel' },
-      { name: 'Design', value: 'Narrow gaps and smooth surfaces' },
-      { name: 'Height Options', value: 'Variable to suit security requirements' },
-      { name: 'Construction', value: 'Welded mesh panels' },
-      { name: 'Features', value: 'Difficult to cut or penetrate' },
-      { name: 'Visibility', value: 'Excellent balance of security and visibility' }
+      { name: 'Wire Diameter', value: '4mm high-tensile steel (conforming to IS 280 - Mild Steel Wire)' },
+      { name: 'Mesh Pattern', value: '358 Security (76.2mm × 12.7mm apertures) - Industry standard configuration' },
+      { name: 'Panel Dimensions', value: '2.5m W × 3.0m H standard | Custom sizes available for specific requirements' },
+      { name: 'Wire Spacing', value: '12.7mm vertical × 76.2mm horizontal (finger-proof design)' },
+      { name: 'Weld Strength', value: '540-690 N/mm² resistance welded joints (exceeds IS 1786 requirements)' },
+      { name: 'Security Rating', value: 'ASTM M5 compliant high-security grade | Designed for government specifications' },
+      { name: 'Surface Treatment', value: 'Hot-dip galvanized per IS 4759 + powder coating per IS 101' },
+      { name: 'Coating Thickness', value: '120+ micron polyester powder coat | 610 g/m² zinc coating minimum' },
+      { name: 'Indian Standards Compliance', value: 'IS 278 (Galvanized Wire) | IS 1786 (Steel Bars) | IS 4759 (Hot-dip Galvanizing)' },
+      { name: 'Height Range', value: '2.0m (Standard) | 3.0m (Medium Security) | 4.0m (High Security) | 5.0m (Maximum Security)' },
+      { name: 'Post Specifications', value: '60×60×3mm SHS posts | 2.5m spacing | Concrete foundation 600×600×800mm' },
+      { name: 'Material Grade', value: 'Galvanized steel (IS 4759) | SS316 marine grade option | Aluminum for radar-transparent applications' },
+      { name: 'Anti-Cut Rating', value: 'Bolt cutter resistant | Hand tool penetration time >10 minutes (industry tested)' },
+      { name: 'Temperature Range', value: '-40°C to +70°C (extreme climate deployment capable)' },
+      { name: 'Wind Load Resistance', value: '200 km/h wind speed (cyclone-resistant design for coastal environments)' },
+      { name: 'Installation Standards', value: 'Government-grade installation procedures | Defense installation guidelines ready' },
+      { name: 'Quality Certifications', value: 'ISO 9001:2015 quality management | Make in India initiative | Government standards compliant' },
+      { name: 'Maintenance Schedule', value: 'Annual inspection | 5-year coating warranty | 25-year structural warranty' }
     ],
     images: [
-      '/images/Anti-Climb-Fencing-2.jpg',
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anticlimb_thumb.png',
+      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anti-climb_tect2.png',
+      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anticlimb_technical.png'
     ],
     relatedProducts: ['razor-mesh', 'crash-rated-fence', 'concertina-coil-fence'],
     seoTitle: 'Anti Climb Fencing | Global Technocrats',
@@ -855,13 +888,20 @@ export interface ProductCategory {
   categoryLink: string;
 }
 
+// Pre-computed category products - eliminate O(n) filtering per render
+const fencingProducts = productsData.filter(p => p.category === 'fencing');
+const gatesProducts = productsData.filter(p => p.category === 'gates');
+const drdoProducts = productsData.filter(p => p.category === 'drdo');
+const defenceProducts = productsData.filter(p => p.category === 'defence-tech');
+const aiProducts = productsData.filter(p => p.category === 'ai');
+
 export const productCategories: ProductCategory[] = [
   {
     id: 'fencing',
     title: 'Fencing Solutions',
     description: 'High-security fencing systems designed to protect sensitive installations and critical infrastructure.',
     icon: 'ShieldAlert',
-    products: productsData.filter(p => p.category === 'fencing'),
+    products: fencingProducts,
     categoryLink: '/products/fencing'
   },
   {
@@ -869,7 +909,7 @@ export const productCategories: ProductCategory[] = [
     title: 'Gates & Barriers',
     description: 'Professional gate systems and barrier solutions for access control and perimeter security.',
     icon: 'DoorOpen',
-    products: productsData.filter(p => p.category === 'gates'),
+    products: gatesProducts,
     categoryLink: '/products/gates'
   },
   {
@@ -877,7 +917,7 @@ export const productCategories: ProductCategory[] = [
     title: 'DRDO TOT Products',
     description: 'Technology transfer products developed in collaboration with Defence Research and Development Organisation.',
     icon: 'Award',
-    products: productsData.filter(p => p.category === 'drdo'),
+    products: drdoProducts,
     categoryLink: '/products/drdo'
   },
   {
@@ -885,7 +925,7 @@ export const productCategories: ProductCategory[] = [
     title: 'Defence Tech',
     description: 'Advanced defense technology solutions for military and defense applications.',
     icon: 'Globe',
-    products: productsData.filter(p => p.category === 'defence-tech'),
+    products: defenceProducts,
     categoryLink: '/products/defence'
   },
   {
@@ -893,7 +933,7 @@ export const productCategories: ProductCategory[] = [
     title: 'Advanced AI Products',
     description: 'Cutting-edge artificial intelligence solutions for security and surveillance applications.',
     icon: 'Cpu',
-    products: productsData.filter(p => p.category === 'ai'),
+    products: aiProducts,
     categoryLink: '/products/ai'
   }
 ];

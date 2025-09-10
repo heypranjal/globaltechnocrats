@@ -38,7 +38,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ title }) => {
     <div className="flex flex-col min-h-screen">
       {/* Show Header on all pages */}
       <Header />
-      <main className="flex-grow">
+      <main className={`flex-grow ${isHomePage ? '' : 'pt-20'}`}>
         <Outlet />
       </main>
       <Footer />
