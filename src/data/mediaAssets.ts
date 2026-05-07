@@ -43,11 +43,11 @@ export const mediaAssets: MediaAssets = {
 
   people: {
     'atul-agarwal': {
-      url: '/images/Atul-Agarwal-650x650.png',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778130121/Atul-Agarwal-650x650_rvpgul.png',
       alt: 'Atul Agarwal - Global Technocrats'
     },
     'krishna-khanna': {
-      url: '/images/Krishna-Khanna.png', 
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778130122/Krishna-Khanna_e4fc4x.png', 
       alt: 'Krishna Khanna - Global Technocrats'
     },
     'surinder-kumar': {
@@ -55,11 +55,11 @@ export const mediaAssets: MediaAssets = {
       alt: 'Surinder Kumar - Global Technocrats'
     },
     'vijay-verma': {
-      url: '/images/Vijay-Verma.png',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778130121/Vijay-Verma_g5nrjo.png',
       alt: 'Vijay Verma - Global Technocrats'
     },
     'vijendra-sharma': {
-      url: '/images/vijendra-sharma.png',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778130121/vijendra-sharma_la9amd.png',
       alt: 'Vijendra Sharma - Global Technocrats'
     }
   },
