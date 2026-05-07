@@ -30,16 +30,6 @@ const PeoplePage: React.FC = () => {
     },
     {
       id: 3,
-      name: 'Mr. Surendra Batra',
-      position: 'GM-Civil',
-      experience: '20+ years border posting experience',
-      education: 'Diploma in Civil Engineering, B.TECH in Civil Engineering',
-      bio: 'A retired AXN from CPWD (Central Public Works Department), Mr. Surendra Batra brings over two decades of specialized experience in border infrastructure development. His extensive service at border postings across Northeast India has provided him with unparalleled insights into the unique challenges and requirements of frontier security infrastructure.\n\nHis deep understanding of local conditions, terrain challenges, and operational requirements in Northeast Indian borders makes him invaluable for developing practical, field-tested security solutions. His technical expertise spans civil engineering, infrastructure planning, and project execution in challenging environments.\n\nAt Global Technocrats, he leads civil engineering initiatives, ensuring that our security installations are built to withstand the harshest conditions while maintaining operational excellence.',
-      image: getImageUrl('people', 'surinder-kumar'),
-      specialties: ['Border Infrastructure', 'Civil Engineering', 'Project Execution', 'Northeast Operations']
-    },
-    {
-      id: 4,
       name: 'Mr. Vijay Verma',
       position: 'Business Development Lead',
       experience: '18 years driving enterprise success',
@@ -48,7 +38,7 @@ const PeoplePage: React.FC = () => {
       specialties: ['Digital Transformation', 'Cybersecurity', 'Enterprise Sales', 'Strategic Partnerships']
     },
     {
-      id: 5,
+      id: 4,
       name: 'Mr. Vijendra Sharma',
       position: 'GM-Productions',
       experience: '35 years in manufacturing excellence',

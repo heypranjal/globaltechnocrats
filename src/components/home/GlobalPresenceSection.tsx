@@ -13,30 +13,16 @@ const locations = [
   {
     id: 2,
     country: 'India',
-    city: 'Mumbai',
+    city: 'Biwandi, Rajasthan',
     type: 'Regional Office',
-    pinPosition: { top: '60%', left: '67%' }
+    pinPosition: { top: '55%', left: '68%' }
   },
   {
     id: 3,
-    country: 'UAE',
-    city: 'Dubai',
+    country: 'India',
+    city: 'Jhansi, Uttar Pradesh',
     type: 'Regional Office',
-    pinPosition: { top: '47%', left: '58%' }
-  },
-  {
-    id: 4,
-    country: 'Saudi Arabia',
-    city: 'Riyadh',
-    type: 'Regional Office',
-    pinPosition: { top: '50%', left: '55%' }
-  },
-  {
-    id: 5,
-    country: 'Qatar',
-    city: 'Doha',
-    type: 'Sales Office',
-    pinPosition: { top: '48%', left: '57%' }
+    pinPosition: { top: '52%', left: '69%' }
   }
 ];
 

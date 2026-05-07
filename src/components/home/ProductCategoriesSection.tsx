@@ -20,7 +20,7 @@ const categories = [
       { name: 'Bhukhari', path: '/products/defence/bhukhari' },
       { name: 'Vajra', path: '/products/defence/vajra' }
     ],
-    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-defenceproducts.png',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778128126/defencetech_vc7qkp.jpg',
     link: '/products/defence'
   },
   {
@@ -36,7 +36,7 @@ const categories = [
       { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' }
     ],
-    image: 'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/crash%20rated.png',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649743/WhatsApp_Image_2026-04-09_at_11.45.05_anwj1p.jpg',
     link: '/products/fencing'
   },
   {
@@ -53,18 +53,6 @@ const categories = [
     ],
     image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-slidinggate.png',
     link: '/products/gates'
-  },
-  {
-    id: 'ai',
-    title: 'Advanced AI Products',
-    description: 'Cutting-edge artificial intelligence solutions for security and surveillance applications.',
-    icon: <Cpu className="w-10 h-10 text-primary-500" />,
-    products: [
-      { name: 'Image Enhancer', path: '/products/ai/image-enhancer' },
-      { name: 'DeepSocmint', path: '/products/ai/deep-socmint' }
-    ],
-    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-advanceaisolutions.png',
-    link: '/products/ai'
   }
 ];
 
