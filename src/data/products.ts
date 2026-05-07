@@ -668,7 +668,7 @@ export const productsData: Product[] = [
       { name: 'Weight Capacity', value: 'Up to 1500 lbs per leaf' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649745/WhatsApp_Image_2026-04-09_at_11.47.23_oitxe4.jpg',
       'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ],
     relatedProducts: ['sliding-gates', 'architectural-gabions'],
@@ -709,7 +709,7 @@ export const productsData: Product[] = [
       { name: 'Opening Speed', value: '12-24 inches per second' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649744/WhatsApp_Image_2026-04-09_at_11.47.30_aiyitw.jpg',
       'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ],
     relatedProducts: ['swing-gates', 'collapsible-barrier'],
