@@ -20,7 +20,7 @@ const categories = [
       { name: 'Bhukhari', path: '/products/defence/bhukhari' },
       { name: 'Vajra', path: '/products/defence/vajra' }
     ],
-    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1778128126/defencetech_vc7qkp.jpg',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777679/defenceteck1_irr6dw.png',
     link: '/products/defence'
   },
   {

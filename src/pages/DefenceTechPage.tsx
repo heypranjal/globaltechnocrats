@@ -39,6 +39,15 @@ const DefenceTechPage: React.FC = () => {
           </p>
         </div>
 
+        {/* Cover Image */}
+        <div className="mb-12 rounded-xl overflow-hidden shadow-md">
+          <img
+            src="https://res.cloudinary.com/dy93kgo03/image/upload/v1779777679/defenceteck1_irr6dw.png"
+            alt="Defence Tech"
+            className="w-full object-cover max-h-[480px]"
+          />
+        </div>
+
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {products.map((product) => (

@@ -91,9 +91,8 @@ export const productsData: Product[] = [
       { name: 'Maintenance Schedule', value: 'Annual inspection | 5-year coating warranty | 25-year structural warranty' }
     ],
     images: [
-      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anticlimb_thumb.png',
-      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anti-climb_tect2.png',
-      'https://gpcgyrnfpjdtgulqhank.supabase.co/storage/v1/object/public/crash_rated_fence/anticlimb_technical.png'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing1_urt06c.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing2_kmuxz3.png'
     ],
     relatedProducts: ['razor-mesh', 'crash-rated-fence', 'concertina-coil-fence'],
     seoTitle: 'Anti Climb Fencing | Global Technocrats',
@@ -300,8 +299,8 @@ export const productsData: Product[] = [
       { name: 'Post Spacing', value: '2.5 meters' }
     ],
     images: [
-      '/images/Razor-Mesh-Fencing-2.jpg',
-      'https://images.unsplash.com/photo-1567513177553-5e1049591218?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/razormeshfencing1_wmbutx.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/razormeshfencing2_svetj7.png'
     ],
     relatedProducts: ['anti-climb', 'concertina-coil-fence']
   },
@@ -380,8 +379,8 @@ export const productsData: Product[] = [
       { name: 'Maintenance', value: 'Low to minimal' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776290/WhatsApp_Image_2026-05-25_at_14.19.20_vnymai.jpg',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776289/WhatsApp_Image_2026-05-25_at_14.16.43_xycfsh.jpg'
     ],
     relatedProducts: ['anti-climb', 'razor-mesh'],
     seoTitle: 'Decorative Fencing | Elegant Security Solutions | Global Technocrats',
@@ -421,8 +420,8 @@ export const productsData: Product[] = [
       { name: 'Certification', value: 'Government lab verified' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence1_lqdc8g.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence2_a7w2bn.png'
     ],
     relatedProducts: ['anti-climb', 'concertina-coil-fence'],
     seoTitle: 'K4 Crash Rated Fence | Vehicle Impact Protection | Global Technocrats',
@@ -462,8 +461,8 @@ export const productsData: Product[] = [
       { name: 'Finish', value: 'Hot-dip galvanized' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567513177553-5e1049591218?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777398/ConcertinaCoilFence1_truxp8.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777433/ConcertinaCoilFence2_rqdlc7.png'
     ],
     relatedProducts: ['ss-concertina-coil', 'gi-concertina-coil', 'razor-mesh'],
     seoTitle: 'Concertina Coil Fence | High-Security Perimeter Protection | Global Technocrats',
@@ -503,8 +502,8 @@ export const productsData: Product[] = [
       { name: 'Tensile Strength', value: '1270-1570 N/mm²' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1567513177553-5e1049591218?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775911/SSConcertinaCoil1_uwgha6.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776018/SsImage2_lgojr8.png'
     ],
     relatedProducts: ['concertina-coil-fence', 'gi-concertina-coil'],
     seoTitle: 'SS Concertina Coil | Stainless Steel Security Barrier | Global Technocrats',
@@ -585,8 +584,8 @@ export const productsData: Product[] = [
       { name: 'Post Spacing', value: '6-10 feet intervals' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775129/chainlinkfence1_vhosi4.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775129/chainlinkfence2_fsswl8.png'
     ],
     relatedProducts: ['barbed-wire-fence', 'decorative-fencing'],
     seoTitle: 'Chain Link Fence | Affordable Perimeter Security | Global Technocrats',
@@ -626,8 +625,8 @@ export const productsData: Product[] = [
       { name: 'Tensile Strength', value: '1400-2000 lbs' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567513177553-5e1049591218?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775128/barbedwirefence1_bhxu8k.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/barbedwirefence2_xajctr.png'
     ],
     relatedProducts: ['chain-link-fence', 'gi-concertina-coil'],
     seoTitle: 'Barbed Wire Fence | Agricultural & Livestock Security | Global Technocrats',
@@ -668,8 +667,8 @@ export const productsData: Product[] = [
       { name: 'Weight Capacity', value: 'Up to 1500 lbs per leaf' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649745/WhatsApp_Image_2026-04-09_at_11.47.23_oitxe4.jpg',
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776218/swingGates1_enitpo.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776510/swinggates2_rznfaj.png'
     ],
     relatedProducts: ['sliding-gates', 'architectural-gabions'],
     seoTitle: 'Swing Gates | Automated Access Control Systems | Global Technocrats',
@@ -709,8 +708,8 @@ export const productsData: Product[] = [
       { name: 'Opening Speed', value: '12-24 inches per second' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649744/WhatsApp_Image_2026-04-09_at_11.47.30_aiyitw.jpg',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776789/sliddinggate2_uazh3b.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776757/slidingGate1_kj77om.png'
     ],
     relatedProducts: ['swing-gates', 'collapsible-barrier'],
     seoTitle: 'Sliding Gates | Automated Space-Efficient Access Control | Global Technocrats',
@@ -750,8 +749,8 @@ export const productsData: Product[] = [
       { name: 'Lifespan', value: '50-100 years with proper maintenance' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776974/ArchitecturalGabions1_p567th.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776998/ArchitecturalGabions2_vhdv6f.png'
     ],
     relatedProducts: ['hesco-box', 'collapsible-barrier'],
     seoTitle: 'Architectural Gabions | Decorative Stone Barriers | Global Technocrats',
@@ -791,8 +790,8 @@ export const productsData: Product[] = [
       { name: 'Storage', value: 'Compact folded design' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777149/CollapsibleBarrier2_kvw9kv.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777142/CollapsibleBarrier1_gk9cfv.png'
     ],
     relatedProducts: ['swing-gates', 'sliding-gates'],
     seoTitle: 'Collapsible Barriers | Portable Crowd Control Solutions | Global Technocrats',
@@ -832,8 +831,8 @@ export const productsData: Product[] = [
       { name: 'Reusability', value: 'Multiple deployment cycles' }
     ],
     images: [
-      'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777263/HescoBox11_avwixf.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777286/HescoBox2_echlf3.png'
     ],
     relatedProducts: ['architectural-gabions', 'collapsible-barrier'],
     seoTitle: 'Hesco Box | Military-Grade Blast Barriers | Global Technocrats',
