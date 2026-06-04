@@ -1,99 +1,129 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Globe, Search } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import Logo from './Logo';
-import { MainMenubar } from '@/components/navigation/MainMenubar';
-import { MobileMenubar } from '@/components/navigation/MobileMenubar';
-
-const closeTimer: ReturnType<typeof setTimeout> | null = null;
+import { DesktopNav } from '@/components/navigation/DesktopNav';
+import { MobileNav } from '@/components/navigation/MobileNav';
+import { MegaMenuPanel } from '@/components/navigation/MegaMenuPanel';
 
 const Header: React.FC = () => {
-  useEffect(() => {
-    return () => {
-      if (closeTimer) clearTimeout(closeTimer);
-    };
-  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    return () => {
+      if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    };
+  }, []);
+
+  const openMegaMenu = () => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    setIsMegaMenuOpen(true);
   };
 
-  const closeMenu = () => {
+  const scheduleMegaMenuClose = () => {
+    closeTimerRef.current = setTimeout(() => setIsMegaMenuOpen(false), 200);
+  };
+
+  const closeAll = () => {
     setIsMenuOpen(false);
+    setIsMegaMenuOpen(false);
   };
 
+  const headerBg = isScrolled
+    ? 'bg-[#f7f2eb]/97 backdrop-blur-md shadow-md border-b border-stone-200'
+    : 'bg-transparent';
 
   return (
-    <header 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 backdrop-blur-md border-b border-gray-100/50 py-3' : 'bg-transparent py-4'
-      }`}
-    >
-      <div className="container flex items-center justify-between gap-8">
-        {/* Logo */}
-        <Link to="/" className="flex-shrink-0" onClick={closeMenu}>
-          <Logo isScrolled={isScrolled} />
-        </Link>
+    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerBg}`}>
 
-        {/* Desktop Navigation - Centered */}
-        <nav className="hidden lg:flex items-center justify-center flex-grow">
-          <MainMenubar isScrolled={isScrolled} onNavigate={closeMenu} />
-        </nav>
+      {/* Main nav bar */}
+      <div className={`transition-all duration-300 ${isScrolled ? 'py-3' : 'py-4'}`}>
+        <div className="container flex items-center justify-between gap-6">
 
-        {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center space-x-6 flex-shrink-0">
-          <button className={`hover:text-primary-900 ${isScrolled ? 'text-gray-600' : 'text-white drop-shadow-lg'}`}>
-            <Search className="w-5 h-5" />
-          </button>
-          <button className={`hover:text-primary-900 ${isScrolled ? 'text-gray-600' : 'text-white drop-shadow-lg'}`}>
-            <Globe className="w-5 h-5" />
-          </button>
-          <Link to="/contact" className="btn btn-primary py-2.5 px-6 typography-button">
-            Get a Quote
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0" onClick={closeAll}>
+            <Logo isScrolled={isScrolled} />
           </Link>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className={`flex lg:hidden items-center justify-center p-2 focus:outline-none transition-all duration-300 ${
-            isScrolled 
-              ? 'text-gray-700 hover:text-primary-600' 
-              : 'text-white drop-shadow-lg hover:text-primary-200 bg-black/20 backdrop-blur-sm rounded-lg border border-white/20'
-          }`}
-          onClick={toggleMenu}
-          aria-label="Toggle mobile menu"
-        >
-          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
+          {/* Desktop navigation */}
+          <div className="hidden lg:flex flex-1 items-center justify-center">
+            <DesktopNav
+              isScrolled={isScrolled}
+              isMegaMenuOpen={isMegaMenuOpen}
+              onMegaMenuOpen={openMegaMenu}
+              onMegaMenuClose={scheduleMegaMenuClose}
+              onNavigate={closeAll}
+            />
+          </div>
 
-      {/* Mobile Menu */}
-      <div 
-        className={`lg:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300 transform ${
-          isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0 pointer-events-none'
-        }`}
-      >
-        <div className="container py-6">
-          <MobileMenubar onNavigate={closeMenu} />
-          
-          <div className="pt-6 border-t border-gray-100 mt-6">
-            <Link to="/contact" className="btn btn-primary w-full text-center typography-button" onClick={closeMenu}>
+          {/* Desktop actions */}
+          <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
+            <a
+              href="tel:+911146067000"
+              className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
+                isScrolled
+                  ? 'text-gray-800 hover:text-[#072ac8]'
+                  : 'text-white/90 hover:text-white drop-shadow'
+              }`}
+              aria-label="Call us"
+            >
+              <Phone className="w-4 h-4" />
+              +91 11 4606 7000
+            </a>
+            <Link
+              to="/contact"
+              className="btn btn-primary py-2 px-5 text-sm font-semibold"
+              onClick={closeAll}
+            >
               Get a Quote
             </Link>
           </div>
+
+          {/* Mobile menu toggle */}
+          <button
+            className={`flex lg:hidden items-center justify-center p-2 rounded-lg transition-all duration-200 ${
+              isScrolled
+                ? 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200'
+                : 'text-white bg-black/20 backdrop-blur-sm border border-white/20 hover:bg-black/30'
+            }`}
+            onClick={() => setIsMenuOpen((v) => !v)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+
         </div>
       </div>
+
+      {/* Mega menu – desktop, full-width */}
+      <MegaMenuPanel
+        isOpen={isMegaMenuOpen}
+        onMouseEnter={openMegaMenu}
+        onMouseLeave={scheduleMegaMenuClose}
+        onNavigate={closeAll}
+      />
+
+      {/* Mobile menu dropdown */}
+      <div
+        className={`lg:hidden absolute top-full left-0 w-full bg-[#f7f2eb] shadow-xl border-t border-stone-200 transition-all duration-300 ${
+          isMenuOpen
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <MobileNav onNavigate={closeAll} />
+      </div>
+
     </header>
   );
 };

@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CookieConsent from '../components/common/CookieConsent';
+import ScrollToTop from '../components/common/ScrollToTop';
 
 interface MainLayoutProps {
   title?: string;
@@ -43,6 +44,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ title }) => {
       </main>
       <Footer />
       {showCookieConsent && <CookieConsent onAccept={handleCookieConsent} />}
+      <ScrollToTop />
     </div>
   );
 };
