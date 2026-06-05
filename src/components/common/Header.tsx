@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 
   const headerBg = isScrolled
     ? 'bg-[#f7f2eb]/97 backdrop-blur-md shadow-md border-b border-stone-200'
-    : 'bg-transparent';
+    : 'bg-primary-900 shadow-lg';
 
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${headerBg}`}>
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
               className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
                 isScrolled
                   ? 'text-gray-800 hover:text-[#072ac8]'
-                  : 'text-white/90 hover:text-white drop-shadow'
+                  : 'text-white/90 hover:text-white'
               }`}
               aria-label="Call us"
             >
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             className={`flex lg:hidden items-center justify-center p-2 rounded-lg transition-all duration-200 ${
               isScrolled
                 ? 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200'
-                : 'text-white bg-black/20 backdrop-blur-sm border border-white/20 hover:bg-black/30'
+                : 'text-white hover:bg-white/20'
             }`}
             onClick={() => setIsMenuOpen((v) => !v)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}

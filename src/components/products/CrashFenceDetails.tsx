@@ -179,38 +179,26 @@ export const CrashFenceDetails: React.FC = () => (
             Independent crash test results demonstrating certified penetration distances at defined vehicle weights and speeds.
           </p>
         </div>
-        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-          <table className="w-full text-sm min-w-[800px]">
+        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm max-w-2xl mx-auto">
+          <table className="w-full text-sm">
             <thead>
               <tr className="bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 text-white">
-                <th className="text-left px-6 py-4 font-bold tracking-wide">Product</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Vehicle Weight (kg)</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Vehicle Type</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Test Speed (kph)</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Impact Angle (°)</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Penetration (m)</th>
-                <th className="text-center px-5 py-4 font-bold tracking-wide">Debris Dispersion (m)</th>
+                <th className="text-left px-6 py-4 font-bold tracking-wide">Parameter</th>
+                <th className="text-left px-6 py-4 font-bold tracking-wide">Value</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {[
-                {
-                  product: 'StronGuard™ RCS 25\nV/2500 [N1G]/48/90: 0.0/0.0',
-                  weight: '2,500', type: 'N1G', speed: '48', angle: '90', penetration: '0', debris: '0',
-                },
-                {
-                  product: 'StronGuard™ RCS 75\nV/7500 [N2]/48/90: 3.5/0.0',
-                  weight: '7,500', type: 'N2', speed: '48', angle: '90', penetration: '3.5', debris: '0',
-                },
-              ].map((row, i) => (
-                <tr key={row.product} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-6 py-4 font-semibold text-gray-800 whitespace-pre-line leading-relaxed">{row.product}</td>
-                  <td className="px-5 py-4 text-center text-gray-700">{row.weight}</td>
-                  <td className="px-5 py-4 text-center text-gray-700 font-medium">{row.type}</td>
-                  <td className="px-5 py-4 text-center text-gray-700">{row.speed}</td>
-                  <td className="px-5 py-4 text-center text-gray-700">{row.angle}</td>
-                  <td className="px-5 py-4 text-center font-bold text-primary-900">{row.penetration}</td>
-                  <td className="px-5 py-4 text-center text-gray-700">{row.debris}</td>
+                { param: 'Vehicle Weight (Kg)', value: '6800' },
+                { param: 'Vehicle Type', value: 'N2' },
+                { param: 'Test Speed (kph)', value: '48' },
+                { param: 'Impact Angle (°)', value: '90' },
+                { param: 'Penetration (m)', value: '1.01-7' },
+                { param: 'Dispersion of Major Debris (m)', value: '0' },
+              ].map(({ param, value }, i) => (
+                <tr key={param} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                  <td className="px-6 py-4 font-semibold text-gray-700">{param}</td>
+                  <td className="px-6 py-4 font-bold text-gray-900">{value}</td>
                 </tr>
               ))}
             </tbody>

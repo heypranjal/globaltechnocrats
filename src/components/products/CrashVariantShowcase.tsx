@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, ImageIcon, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +14,6 @@ const VARIANT_IMAGES: Record<string, string[]> = {
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541128/gauntelt-_4_cyoi4f.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541128/gauntelt-anti-climb3_lqnajg.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541128/gauntelt-_2_i9hkuu.jpg',
-    'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541127/Fence_Style-Black_fhujci.jpg',
   ],
   stronghold: [
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541225/strong_hold_k4_rated.jpeg_4_nbmowk.jpg',
@@ -24,13 +23,11 @@ const VARIANT_IMAGES: Record<string, string[]> = {
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_3_ndpkxq.png',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541222/strong_hold_k4_fence_2_jpv04h.png',
-    'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541222/Fence_Style-Black_tcajbv.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541220/1.5mtr_crash_rated_fence_-strong_hold_avfxbi.png',
   ],
   trident: [
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE.png_tlhtje.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE_sw0tg6.png',
-    'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541240/Fence_Style-Black_cmdfsb.jpg',
   ],
 };
 
@@ -108,24 +105,9 @@ const VariantCard: React.FC<VariantCardProps> = ({ variant }) => {
   const images = VARIANT_IMAGES[variant.key];
   const hasImages = images.length > 0;
   const [current, setCurrent] = useState(0);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const startAutoPlay = useCallback(() => {
-    if (!hasImages) return;
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setCurrent(i => (i + 1) % images.length);
-    }, 2000);
-  }, [hasImages, images.length]);
-
-  useEffect(() => {
-    startAutoPlay();
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
-  }, [startAutoPlay]);
 
   const go = (dir: 1 | -1) => {
     setCurrent(i => (i + dir + images.length) % images.length);
-    startAutoPlay();
   };
 
   return (
@@ -168,7 +150,7 @@ const VariantCard: React.FC<VariantCardProps> = ({ variant }) => {
               {images.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => { setCurrent(i); startAutoPlay(); }}
+                  onClick={() => setCurrent(i)}
                   aria-label={`Image ${i + 1}`}
                   className={`rounded-full transition-all duration-300 ${i === current ? 'bg-white w-3 h-1.5' : 'bg-white/50 w-1.5 h-1.5'}`}
                 />

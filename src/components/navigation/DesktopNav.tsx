@@ -33,8 +33,8 @@ export function DesktopNav({
         : 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200/70';
     }
     return active
-      ? 'text-white font-semibold'
-      : 'text-white/90 hover:text-white';
+      ? 'text-white font-semibold bg-white/20'
+      : 'text-white/90 hover:text-white hover:bg-white/15';
   };
 
   return (
@@ -69,9 +69,7 @@ export function DesktopNav({
               {/* Active/open indicator */}
               {(isMegaMenuOpen || isActive(item.path)) && (
                 <span
-                  className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full ${
-                    isScrolled ? 'bg-[#072ac8]' : 'bg-white'
-                  }`}
+                  className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#072ac8]"
                 />
               )}
             </div>
@@ -87,11 +85,7 @@ export function DesktopNav({
           >
             {item.name}
             {isActive(item.path) && (
-              <span
-                className={`absolute bottom-0 left-3 right-3 h-0.5 rounded-full ${
-                  isScrolled ? 'bg-[#072ac8]' : 'bg-white'
-                }`}
-              />
+              <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#072ac8]" />
             )}
           </Link>
         );

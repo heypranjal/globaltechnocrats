@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Shield, FileText, Phone, Award, CheckCircle, ChevronLeft } from 'lucide-react';
@@ -27,9 +27,9 @@ const certBadges = [
 ];
 
 const ctaCards = [
-  { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our security consultants', cta: 'Call Now', href: 'tel:+911146067000' },
-  { Icon: FileText, label: 'Download Brochure', sub: 'Full specs and variant selection guide', cta: 'Download PDF', href: '/contact' },
-  { Icon: Shield, label: 'Request a Quote', sub: 'Custom pricing for your project scope', cta: 'Get Quote', href: '/contact' },
+  { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our security consultants', cta: 'Call Now', href: 'tel:+911146067000', target: undefined, download: undefined },
+  { Icon: FileText, label: 'Download Brochure', sub: 'Full specs and variant selection guide', cta: 'Download PDF', href: 'https://drive.google.com/uc?export=download&id=1nf__qSSurzFLdHpNIDAgUwxbVxnP2hny', target: '_blank', download: 'CrashRatedFence_Brochure.pdf' },
+  { Icon: Shield, label: 'Request a Quote', sub: 'Custom pricing for your project scope', cta: 'Get Quote', href: '/contact', target: undefined, download: undefined },
 ];
 
 const overviewPoints = [
@@ -43,23 +43,9 @@ const overviewPoints = [
 
 const CrashRatedFencePage: React.FC = () => {
   const [current, setCurrent] = useState(0);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const startAutoPlay = useCallback(() => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    intervalRef.current = setInterval(() => {
-      setCurrent(i => (i + 1) % CAROUSEL_IMAGES.length);
-    }, 2000);
-  }, []);
-
-  useEffect(() => {
-    startAutoPlay();
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
-  }, [startAutoPlay]);
 
   const go = (dir: 1 | -1) => {
     setCurrent(i => (i + dir + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
-    startAutoPlay();
   };
 
   return (
@@ -126,61 +112,70 @@ const CrashRatedFencePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Right — carousel */}
-            <div className="relative hidden lg:block">
-              <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3] bg-slate-800 relative">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={current}
-                    src={CAROUSEL_IMAGES[current]}
-                    alt={`Crash rated fence variant ${current + 1}`}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  />
-                </AnimatePresence>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
-
-                {/* Arrow buttons */}
-                <button
-                  onClick={() => go(-1)}
-                  aria-label="Previous image"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => go(1)}
-                  aria-label="Next image"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-
-                {/* Dot indicators */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                  {CAROUSEL_IMAGES.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => { setCurrent(i); startAutoPlay(); }}
-                      aria-label={`Go to image ${i + 1}`}
-                      className={`w-1.5 h-1.5 rounded-full transition-all ${i === current ? 'bg-white w-4' : 'bg-white/40'}`}
+            {/* Right — image gallery */}
+            <div className="hidden lg:block">
+              {/* Main image — chip anchored here */}
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3] bg-slate-800 relative">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={current}
+                      src={CAROUSEL_IMAGES[current]}
+                      alt={`Crash rated fence variant ${current + 1}`}
+                      className="absolute inset-0 w-full h-full object-contain"
+                      initial={{ opacity: 0, x: 40 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -40 }}
+                      transition={{ duration: 0.5, ease: 'easeInOut' }}
                     />
-                  ))}
+                  </AnimatePresence>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+
+                  {/* Arrow buttons */}
+                  <button
+                    onClick={() => go(-1)}
+                    aria-label="Previous image"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => go(1)}
+                    aria-label="Next image"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {/* Floating cert chip */}
+                <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-primary-900" />
+                  </div>
+                  <div>
+                    <p className="text-[11px] text-gray-400 font-medium">Independently Tested</p>
+                    <p className="text-sm font-bold text-gray-900">K4 Vehicle Impact</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Floating cert chip */}
-              <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-5 h-5 text-primary-900" />
-                </div>
-                <div>
-                  <p className="text-[11px] text-gray-400 font-medium">Independently Tested</p>
-                  <p className="text-sm font-bold text-gray-900">K4 Vehicle Impact</p>
-                </div>
+              {/* Thumbnail strip */}
+              <div className="mt-10 flex gap-2 overflow-x-auto pb-2">
+                {CAROUSEL_IMAGES.map((src, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrent(i)}
+                    aria-label={`View image ${i + 1}`}
+                    className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all duration-200 ${
+                      i === current
+                        ? 'ring-2 ring-white scale-105 opacity-100'
+                        : 'opacity-50 hover:opacity-80'
+                    }`}
+                  >
+                    <img src={src} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
               </div>
             </div>
 
@@ -236,10 +231,13 @@ const CrashRatedFencePage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            {ctaCards.map(({ Icon, label, sub, cta, href }) => (
+            {ctaCards.map(({ Icon, label, sub, cta, href, target, download }) => (
               <a
                 key={label}
                 href={href}
+                target={target}
+                download={download}
+                rel={target === '_blank' ? 'noopener noreferrer' : undefined}
                 className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl p-6 text-center hover:bg-white/15 transition-all hover:-translate-y-1 group"
               >
                 <div className="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mx-auto mb-4 group-hover:bg-white/25 transition-colors">
