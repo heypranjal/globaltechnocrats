@@ -24,6 +24,7 @@ import AdvancedAIProductsPage from './pages/AdvancedAIProductsPage';
 import DRDOTOTPage from './pages/DRDOTOTPage';
 import DefenceTechPage from './pages/DefenceTechPage';
 import CrashRatedFencePage from './pages/CrashRatedFencePage';
+import ChainLinkFencePage from './pages/ChainLinkFencePage';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
           <Route path="products" element={<ProductsPage />} />
           {/* Parent page — before the dynamic catch-all */}
           <Route path="products/fencing/crash-rated-fence" element={<CrashRatedFencePage />} />
+          <Route path="products/fencing/chain-link-fence" element={<ChainLinkFencePage />} />
           <Route path="products/:category/:productId" element={<ProductDetailPage />} />
           
           {/* Category Pages */}

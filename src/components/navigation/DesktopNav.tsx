@@ -27,14 +27,9 @@ export function DesktopNav({
 
   const colorClass = (path: string) => {
     const active = isActive(path);
-    if (isScrolled) {
-      return active
-        ? 'text-[#072ac8] bg-blue-100/60 font-semibold'
-        : 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200/70';
-    }
     return active
-      ? 'text-white font-semibold bg-white/20'
-      : 'text-white/90 hover:text-white hover:bg-white/15';
+      ? 'text-[#072ac8] bg-blue-100/60 font-semibold'
+      : 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200/70';
   };
 
   return (

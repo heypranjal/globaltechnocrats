@@ -3,48 +3,45 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Shield, FileText, Phone, Award, CheckCircle, ChevronLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CrashVariantShowcase } from '../components/products/CrashVariantShowcase';
-import { CrashFenceDetails } from '../components/products/CrashFenceDetails';
+import { ChainLinkFenceDetails } from '../components/products/ChainLinkFenceDetails';
 import BrochureModal from '../components/products/BrochureModal';
 
-const OVERVIEW_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png';
-
 const CAROUSEL_IMAGES = [
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541129/gauntelt-_10_dhcwub.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541148/gauntelt-_8_nfrtlu.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541220/1.5mtr_crash_rated_fence_-strong_hold_avfxbi.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE.png_tlhtje.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE_sw0tg6.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780551269/crash_rated_fence_t8ikes.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986150/chian-link_R-spam_z0nl9f.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986146/chian_link_2.4x1.3m_eolink.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986127/chain_link_yjozjc.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986126/Copilot_20260530_135233_zcnpzu.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986122/chain_link_2_kkeaw8.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986121/chain_-link3_unhxjh.png',
 ];
 
+const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986127/chain_link_yjozjc.png';
+
 const certBadges = [
-  { label: 'ASTM F2656', sub: 'Certified' },
-  { label: 'PAS 68', sub: 'Compliant' },
-  { label: 'K4 Rated', sub: 'Impact Class' },
-  { label: 'Gov. Lab', sub: 'Verified' },
+  { label: 'IS 278',       sub: 'Compliant' },
+  { label: 'BS EN 10223', sub: 'Certified' },
+  { label: 'Hot-Dip Galv.', sub: 'Finish' },
+  { label: 'PVC Coated',  sub: 'Option' },
 ];
 
 const ctaCards = [
-  { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our security consultants', cta: 'Call Now', href: 'tel:+911146067000', openModal: false },
-  { Icon: FileText, label: 'Download Brochure', sub: 'Full specs and variant selection guide', cta: 'Download PDF', href: undefined, openModal: true },
-  { Icon: Shield, label: 'Request a Quote', sub: 'Custom pricing for your project scope', cta: 'Get Quote', href: '/contact', openModal: false },
+  { Icon: Phone,    label: 'Talk to an Expert',  sub: 'Speak with our security consultants',   cta: 'Call Now',      href: 'tel:+911146067000', openModal: false },
+  { Icon: FileText, label: 'Download Brochure',  sub: 'Full specs and configuration guide',    cta: 'Download PDF',  href: undefined,           openModal: true  },
+  { Icon: Shield,   label: 'Request a Quote',    sub: 'Custom pricing for your project scope', cta: 'Get Quote',     href: '/contact',          openModal: false },
 ];
 
 const overviewPoints = [
-  'Independently tested and certified to K4 impact class under ASTM F2656 and PAS 68',
-  'Arrests and stops a 7,500 kg vehicle travelling at 48 km/h within the certified penetration distance',
-  'Engineered palisade construction transfers crash energy directly into reinforced concrete foundations',
-  'Three performance-matched variants — Gauntlet, Strong Hold, and Trident — for distinct threat environments',
-  'Integrates with access control, CCTV, and perimeter intrusion detection systems',
-  'Hot-dip galvanized finish with powder coat options for long-term corrosion resistance',
+  'Galvanized steel wire construction for all-weather corrosion resistance',
+  'Available in 2.5 mm – 4 mm wire gauge across standard and heavy-duty grades',
+  '50 mm × 50 mm mesh aperture — compliant with IS 278 and BS EN 10223',
+  'Height options from 1.2 m to 3.6 m with customisable panel widths',
+  'PVC coating available in RAL colour range for aesthetic installations',
+  'Suitable for perimeter, industrial, agricultural, and residential applications',
 ];
 
-const CrashRatedFencePage: React.FC = () => {
-  const [current, setCurrent] = useState(0);
+const ChainLinkFencePage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [current, setCurrent] = useState(0);
 
   const go = (dir: 1 | -1) => {
     setCurrent(i => (i + dir + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
@@ -53,12 +50,12 @@ const CrashRatedFencePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>K4 Crash Rated Fence | Kronos Palisade System | Global Technocrats</title>
+        <title>Chain Link Fence | Galvanized & PVC Coated | Global Technocrats</title>
         <meta
           name="description"
-          content="K4 rated crash-rated palisade fence — ASTM F2656 &amp; PAS 68 certified. Available in Gauntlet, Strong Hold, and Trident variants for critical infrastructure and defence protection."
+          content="Heavy-duty chain link fencing — IS 278 &amp; BS EN 10223 compliant. Available in hot-dip galvanized and PVC coated finishes for industrial, residential, and government applications."
         />
-        <meta name="keywords" content="crash rated fence, K4 fence, vehicle crash fence, palisade fence, ASTM F2656, PAS 68, perimeter security" />
+        <meta name="keywords" content="chain link fence, galvanized chain link, PVC coated fence, perimeter fencing, security fencing India" />
       </Helmet>
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
@@ -78,37 +75,21 @@ const CrashRatedFencePage: React.FC = () => {
                 <ChevronRight className="w-3 h-3" />
                 <Link to="/products/fencing" className="hover:text-slate-300 transition-colors">Fencing Solutions</Link>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-slate-400">Crash Rated Fence</span>
+                <span className="text-slate-400">Chain Link Fence</span>
               </nav>
 
-              <div className="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
-                <Shield className="w-3.5 h-3.5" /> K4 Impact Class
+              <div className="inline-flex items-center gap-2 bg-green-700 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
+                <Shield className="w-3.5 h-3.5" /> Security Fencing
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.1] mb-3">
-                Crash Rated<br />
+                Chain Link<br />
                 <span className="text-primary-300">Fence System</span>
               </h1>
-              <p className="text-lg font-medium text-blue-200 mb-5">Kronos Palisade Series</p>
-              <p className="text-slate-300 text-base leading-relaxed mb-6 max-w-lg">
-                Government lab-verified vehicle crash protection for data centres, defence installations, and critical national infrastructure. Available in three performance-matched variants.
+              <p className="text-lg font-medium text-blue-200 mb-5">Galvanized &amp; PVC Coated Range</p>
+              <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-lg">
+                Durable, cost-effective perimeter fencing for industrial, residential, and government sites. Available in standard and heavy-duty grades with hot-dip galvanized or PVC coated finish.
               </p>
-
-              {/* Variant icon strip */}
-              <div className="flex gap-5 mb-8">
-                {[
-                  { name: 'Gauntlet Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985111/gauntelt_lddnsl.jpg' },
-                  { name: 'Strong Hold Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985095/stronghold_mpkpzs.jpg' },
-                  { name: 'Trident Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985349/Fence_Style-Black_vll8ge.jpg' },
-                ].map(({ name, img }) => (
-                  <div key={name} className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/25 shadow-lg">
-                      <img src={img} alt={name} className="w-full h-full object-cover" />
-                    </div>
-                    <p className="text-white/80 text-[11px] font-medium text-center leading-tight max-w-[72px]">{name}</p>
-                  </div>
-                ))}
-              </div>
 
               <div className="grid grid-cols-4 gap-3 max-w-sm">
                 {certBadges.map(({ label, sub }) => (
@@ -123,14 +104,13 @@ const CrashRatedFencePage: React.FC = () => {
 
             {/* Right — image gallery */}
             <div className="hidden lg:block">
-              {/* Main image — chip anchored here */}
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3] bg-slate-800 relative">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={current}
                       src={CAROUSEL_IMAGES[current]}
-                      alt={`Crash rated fence variant ${current + 1}`}
+                      alt={`Chain link fence view ${current + 1}`}
                       className="absolute inset-0 w-full h-full object-contain"
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -140,19 +120,12 @@ const CrashRatedFencePage: React.FC = () => {
                   </AnimatePresence>
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
 
-                  {/* Arrow buttons */}
-                  <button
-                    onClick={() => go(-1)}
-                    aria-label="Previous image"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
-                  >
+                  <button onClick={() => go(-1)} aria-label="Previous image"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors">
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  <button
-                    onClick={() => go(1)}
-                    aria-label="Next image"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
-                  >
+                  <button onClick={() => go(1)} aria-label="Next image"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors">
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -163,8 +136,8 @@ const CrashRatedFencePage: React.FC = () => {
                     <Shield className="w-5 h-5 text-primary-900" />
                   </div>
                   <div>
-                    <p className="text-[11px] text-gray-400 font-medium">Independently Tested</p>
-                    <p className="text-sm font-bold text-gray-900">K4 Vehicle Impact</p>
+                    <p className="text-[11px] text-gray-400 font-medium">IS 278 Compliant</p>
+                    <p className="text-sm font-bold text-gray-900">Chain Link Fencing</p>
                   </div>
                 </div>
               </div>
@@ -172,16 +145,10 @@ const CrashRatedFencePage: React.FC = () => {
               {/* Thumbnail strip */}
               <div className="mt-10 flex gap-2 overflow-x-auto pb-2">
                 {CAROUSEL_IMAGES.map((src, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setCurrent(i)}
-                    aria-label={`View image ${i + 1}`}
+                  <button key={i} onClick={() => setCurrent(i)} aria-label={`View image ${i + 1}`}
                     className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all duration-200 ${
-                      i === current
-                        ? 'ring-2 ring-white scale-105 opacity-100'
-                        : 'opacity-50 hover:opacity-80'
-                    }`}
-                  >
+                      i === current ? 'ring-2 ring-white scale-105 opacity-100' : 'opacity-50 hover:opacity-80'
+                    }`}>
                     <img src={src} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
                   </button>
                 ))}
@@ -197,15 +164,15 @@ const CrashRatedFencePage: React.FC = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-primary-900">What Is a Crash Rated Fence?</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary-900">What Is a Chain Link Fence?</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">
-                Crash Rated Fence —<br /> Certified Vehicle Intrusion Barrier
+                Chain Link Fence —<br /> Versatile Perimeter Solution
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                A crash rated fence is a purpose-engineered perimeter barrier independently certified to stop a vehicle of defined mass travelling at a defined speed within a maximum allowed penetration distance. Unlike standard security fencing, every structural element — paling, rail, post, and foundation — is designed and tested as a complete system to absorb and arrest vehicle kinetic energy.
+                A chain link fence is a woven wire fencing type made from galvanized or PVC coated steel wire, forming a characteristic diamond pattern. Widely recognised for its strength, visibility, and low maintenance, it is one of the most deployed perimeter fencing systems globally.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Global Technocrats' Crash Rated Fence achieves K4 impact class certification under ASTM F2656 and PAS 68, verified by government-accredited laboratories.
+                Global Technocrats' Chain Link Fence range is manufactured to IS 278 and BS EN 10223 standards, ensuring consistent wire gauge, mesh aperture, and coating quality across all grades.
               </p>
               <ul className="space-y-3">
                 {overviewPoints.map((pt) => (
@@ -216,18 +183,16 @@ const CrashRatedFencePage: React.FC = () => {
                 ))}
               </ul>
             </div>
+
             <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-100 aspect-video bg-gray-100">
-              <img src={OVERVIEW_IMAGE} alt="Crash Rated Fence installation view" className="w-full h-full object-cover" />
+              <img src={OVERVIEW_IMAGE} alt="Chain Link Fence installation" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Variant Showcase ─────────────────────────────────────────────────── */}
-      <CrashVariantShowcase />
-
-      {/* ── Specs + Features + Applications + Comparison ─────────────────────── */}
-      <CrashFenceDetails />
+      {/* ── Specs + Features + Applications + Specification Table ─────────────── */}
+      <ChainLinkFenceDetails />
 
       {/* ── Bottom CTA ───────────────────────────────────────────────────────── */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-primary-950">
@@ -235,7 +200,7 @@ const CrashRatedFencePage: React.FC = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Secure Your Perimeter?</h2>
             <p className="text-blue-200 max-w-xl mx-auto text-sm leading-relaxed">
-              Our team of defence security specialists will help you select the right Kronos variant and design a complete perimeter protection solution.
+              Our team will help you select the right chain link grade and design a complete perimeter fencing solution for your site.
             </p>
           </div>
 
@@ -273,4 +238,4 @@ const CrashRatedFencePage: React.FC = () => {
   );
 };
 
-export default CrashRatedFencePage;
+export default ChainLinkFencePage;

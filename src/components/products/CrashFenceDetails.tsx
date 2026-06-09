@@ -141,26 +141,28 @@ export const CrashFenceDetails: React.FC = () => (
           </p>
         </div>
         <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-          <table className="w-full text-sm min-w-[560px]">
+          <table className="w-full text-sm min-w-[640px]">
             <thead>
               <tr className="bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 text-white">
                 <th className="text-left px-6 py-4 font-bold tracking-wide">Product Name</th>
                 <th className="text-center px-6 py-4 font-bold tracking-wide">Height Range (m)</th>
                 <th className="text-center px-6 py-4 font-bold tracking-wide">Pale Type</th>
-                <th className="text-center px-6 py-4 font-bold tracking-wide">Security Rating</th>
+                <th className="text-center px-6 py-4 font-bold tracking-wide">Impact Rating</th>
+                <th className="text-left px-6 py-4 font-bold tracking-wide">Available Styles</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
               {[
-                { name: 'StronGuard RCS',     height: '1.8 – 3.0', pale: 'D', rating: 'CPNI BEH' },
-                { name: 'StronGuard SL1 RCS', height: '1.8 – 3.0', pale: 'W', rating: 'LPS 1175 A1 (SR1)' },
-                { name: 'StronGuard SL2 RCS', height: '2.4 – 3.0', pale: 'W', rating: 'LPS 1175 B3 (SR2)' },
+                { name: 'K04P1/KRONOS',    height: '1.5 – 3.0', pale: 'W', rating: 'P1', styles: 'Gauntlet, Strong Hold, Trident' },
+                { name: 'K04P2/KRONOS',    height: '1.5 – 3.0', pale: 'W', rating: 'P2', styles: 'Gauntlet, Strong Hold, Trident' },
+                { name: 'K04P1IB/KRONOS',  height: '1.5 – 3.0', pale: 'W', rating: 'P1', styles: 'Gauntlet, Strong Hold, Trident' },
               ].map((row, i) => (
                 <tr key={row.name} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                   <td className="px-6 py-4 font-semibold text-gray-800">{row.name}</td>
                   <td className="px-6 py-4 text-center text-gray-700">{row.height}</td>
                   <td className="px-6 py-4 text-center text-gray-700 font-medium">{row.pale}</td>
                   <td className="px-6 py-4 text-center text-primary-900 font-semibold">{row.rating}</td>
+                  <td className="px-6 py-4 text-gray-700">{row.styles}</td>
                 </tr>
               ))}
             </tbody>
