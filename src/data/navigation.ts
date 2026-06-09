@@ -29,9 +29,9 @@ export const megaMenuCategories: MegaMenuCategory[] = [
     description: 'High-security fencing for critical infrastructure',
     items: [
       { name: 'Crash Rated Fencing', path: '/products/fencing/crash-rated-fence' },
+      { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Anti-Climb Fencing', path: '/products/fencing/anti-climb' },
       { name: 'Razor Mesh Fencing', path: '/products/fencing/razor-mesh' },
-      { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' },
       { name: 'Concertina Coil Fence', path: '/products/fencing/concertina-coil-fence' },
       { name: 'GI Concertina Coil', path: '/products/fencing/gi-concertina-coil' },
