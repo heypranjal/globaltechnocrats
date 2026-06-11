@@ -8,7 +8,7 @@ const Logo: React.FC<LogoProps> = ({ isScrolled = false }) => {
   return (
     <div className="flex items-center">
       <img
-        src="https://res.cloudinary.com/dy93kgo03/image/upload/v1780980064/123_b1bpcz.png"
+        src="https://res.cloudinary.com/dy93kgo03/image/upload/v1781154704/finallogologo_lenofl.png"
         alt="Global Technocrats Logo"
         className="h-44 w-auto -my-12 transition-all duration-300"
       />

@@ -15,7 +15,7 @@ const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541148/gauntelt-_8_nfrtlu.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541220/1.5mtr_crash_rated_fence_-strong_hold_avfxbi.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE.png_tlhtje.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781154613/WhatsApp_Image_2026-06-05_at_14.05.10_2_w4aj50.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541241/TRIDENT_FENCE_sw0tg6.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780551269/crash_rated_fence_t8ikes.jpg',
 ];
@@ -62,10 +62,10 @@ const CrashRatedFencePage: React.FC = () => {
       </Helmet>
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="relative -mt-20 min-h-[92vh] bg-gradient-to-br from-slate-900 via-slate-800 to-primary-950 flex items-center overflow-hidden">
+      <section className="relative -mt-20 min-h-[92vh] bg-white flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '28px 28px' }}
+          className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: 'radial-gradient(circle, #423c81 1px, transparent 1px)', backgroundSize: '28px 28px' }}
         />
 
         <div className="container relative z-10 py-28">
@@ -73,49 +73,49 @@ const CrashRatedFencePage: React.FC = () => {
 
             {/* Left — copy */}
             <div>
-              <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs text-slate-500 mb-8">
-                <Link to="/" className="hover:text-slate-300 transition-colors">Home</Link>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs text-gray-400 mb-8">
+                <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
                 <ChevronRight className="w-3 h-3" />
-                <Link to="/products/fencing" className="hover:text-slate-300 transition-colors">Fencing Solutions</Link>
+                <Link to="/products/fencing" className="hover:text-gray-600 transition-colors">Fencing Solutions</Link>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-slate-400">Crash Rated Fence</span>
+                <span className="text-gray-500">Crash Rated Fence</span>
               </nav>
 
               <div className="inline-flex items-center gap-2 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
                 <Shield className="w-3.5 h-3.5" /> K4 Impact Class
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.1] mb-3">
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.1] mb-3">
                 Crash Rated<br />
-                <span className="text-primary-300">Fence System</span>
+                <span className="text-primary-900">Fence System</span>
               </h1>
-              <p className="text-lg font-medium text-blue-200 mb-5">Kronos Palisade Series</p>
-              <p className="text-slate-300 text-base leading-relaxed mb-6 max-w-lg">
+              <p className="text-lg font-medium text-primary-900 mb-5">Kronos Palisade Series</p>
+              <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-lg">
                 Government lab-verified vehicle crash protection for data centres, defence installations, and critical national infrastructure. Available in three performance-matched variants.
               </p>
 
               {/* Variant icon strip */}
               <div className="flex gap-5 mb-8">
                 {[
-                  { name: 'Gauntlet Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985111/gauntelt_lddnsl.jpg' },
-                  { name: 'Strong Hold Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985095/stronghold_mpkpzs.jpg' },
-                  { name: 'Trident Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780985349/Fence_Style-Black_vll8ge.jpg' },
+                  { name: 'Gauntlet Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1781084600/Gauntlet_dh4snd.png' },
+                  { name: 'Strong Hold Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1781084602/Strong_Hold_rztl6u.png' },
+                  { name: 'Trident Style Fence', img: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1781084604/Trident_ls4zhv.png' },
                 ].map(({ name, img }) => (
                   <div key={name} className="flex flex-col items-center gap-2">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-white/25 shadow-lg">
+                    <div className="w-16 h-16 rounded-xl overflow-hidden ring-1 ring-gray-200 shadow-md">
                       <img src={img} alt={name} className="w-full h-full object-cover" />
                     </div>
-                    <p className="text-white/80 text-[11px] font-medium text-center leading-tight max-w-[72px]">{name}</p>
+                    <p className="text-gray-600 text-[11px] font-medium text-center leading-tight max-w-[72px]">{name}</p>
                   </div>
                 ))}
               </div>
 
               <div className="grid grid-cols-4 gap-3 max-w-sm">
                 {certBadges.map(({ label, sub }) => (
-                  <div key={label} className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl p-3 text-center">
-                    <Award className="w-4 h-4 text-primary-300 mx-auto mb-1.5" />
-                    <p className="text-white text-[11px] font-bold leading-tight">{label}</p>
-                    <p className="text-blue-300 text-[10px] mt-0.5">{sub}</p>
+                  <div key={label} className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-center">
+                    <Award className="w-4 h-4 text-primary-900 mx-auto mb-1.5" />
+                    <p className="text-gray-900 text-[11px] font-bold leading-tight">{label}</p>
+                    <p className="text-primary-900 text-[10px] mt-0.5">{sub}</p>
                   </div>
                 ))}
               </div>
@@ -125,7 +125,7 @@ const CrashRatedFencePage: React.FC = () => {
             <div className="hidden lg:block">
               {/* Main image — chip anchored here */}
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3] bg-slate-800 relative">
+                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200 aspect-[4/3] bg-gray-50 relative">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={current}
@@ -138,20 +138,19 @@ const CrashRatedFencePage: React.FC = () => {
                       transition={{ duration: 0.5, ease: 'easeInOut' }}
                     />
                   </AnimatePresence>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
 
                   {/* Arrow buttons */}
                   <button
                     onClick={() => go(-1)}
                     aria-label="Previous image"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-gray-900/40 hover:bg-gray-900/60 text-white flex items-center justify-center transition-colors"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => go(1)}
                     aria-label="Next image"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-gray-900/40 hover:bg-gray-900/60 text-white flex items-center justify-center transition-colors"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -178,7 +177,7 @@ const CrashRatedFencePage: React.FC = () => {
                     aria-label={`View image ${i + 1}`}
                     className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all duration-200 ${
                       i === current
-                        ? 'ring-2 ring-white scale-105 opacity-100'
+                        ? 'ring-2 ring-primary-900 scale-105 opacity-100'
                         : 'opacity-50 hover:opacity-80'
                     }`}
                   >

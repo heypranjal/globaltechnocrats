@@ -86,7 +86,7 @@ const TechLeadershipGrid: React.FC<TechLeadershipGridProps> = ({ executives }) =
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(executive.name)}&size=200&background=072ac8&color=ffffff&bold=true`;
+                            target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(executive.name)}&size=200&background=423c81&color=ffffff&bold=true`;
                           }}
                         />
                       </div>

@@ -59,10 +59,10 @@ const ChainLinkFencePage: React.FC = () => {
       </Helmet>
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="relative -mt-20 min-h-[92vh] bg-gradient-to-br from-slate-900 via-slate-800 to-primary-950 flex items-center overflow-hidden">
+      <section className="relative -mt-20 min-h-[92vh] bg-white flex items-center overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{ backgroundImage: 'radial-gradient(circle, #fff 1px, transparent 1px)', backgroundSize: '28px 28px' }}
+          className="absolute inset-0 opacity-[0.03]"
+          style={{ backgroundImage: 'radial-gradient(circle, #423c81 1px, transparent 1px)', backgroundSize: '28px 28px' }}
         />
 
         <div className="container relative z-10 py-28">
@@ -70,33 +70,33 @@ const ChainLinkFencePage: React.FC = () => {
 
             {/* Left — copy */}
             <div>
-              <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs text-slate-500 mb-8">
-                <Link to="/" className="hover:text-slate-300 transition-colors">Home</Link>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-1 text-xs text-gray-400 mb-8">
+                <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
                 <ChevronRight className="w-3 h-3" />
-                <Link to="/products/fencing" className="hover:text-slate-300 transition-colors">Fencing Solutions</Link>
+                <Link to="/products/fencing" className="hover:text-gray-600 transition-colors">Fencing Solutions</Link>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-slate-400">Chain Link Fence</span>
+                <span className="text-gray-500">Chain Link Fence</span>
               </nav>
 
               <div className="inline-flex items-center gap-2 bg-green-700 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
                 <Shield className="w-3.5 h-3.5" /> Security Fencing
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-white leading-[1.1] mb-3">
+              <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.1] mb-3">
                 Chain Link<br />
-                <span className="text-primary-300">Fence System</span>
+                <span className="text-primary-900">Fence System</span>
               </h1>
-              <p className="text-lg font-medium text-blue-200 mb-5">Galvanized &amp; PVC Coated Range</p>
-              <p className="text-slate-300 text-base leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg font-medium text-primary-900 mb-5">Galvanized &amp; PVC Coated Range</p>
+              <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg">
                 Durable, cost-effective perimeter fencing for industrial, residential, and government sites. Available in standard and heavy-duty grades with hot-dip galvanized or PVC coated finish.
               </p>
 
               <div className="grid grid-cols-4 gap-3 max-w-sm">
                 {certBadges.map(({ label, sub }) => (
-                  <div key={label} className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl p-3 text-center">
-                    <Award className="w-4 h-4 text-primary-300 mx-auto mb-1.5" />
-                    <p className="text-white text-[11px] font-bold leading-tight">{label}</p>
-                    <p className="text-blue-300 text-[10px] mt-0.5">{sub}</p>
+                  <div key={label} className="bg-gray-50 border border-gray-200 rounded-xl p-3 text-center">
+                    <Award className="w-4 h-4 text-primary-900 mx-auto mb-1.5" />
+                    <p className="text-gray-900 text-[11px] font-bold leading-tight">{label}</p>
+                    <p className="text-primary-900 text-[10px] mt-0.5">{sub}</p>
                   </div>
                 ))}
               </div>
@@ -105,7 +105,7 @@ const ChainLinkFencePage: React.FC = () => {
             {/* Right — image gallery */}
             <div className="hidden lg:block">
               <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 aspect-[4/3] bg-slate-800 relative">
+                <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200 aspect-[4/3] bg-gray-50 relative">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={current}
@@ -118,14 +118,13 @@ const ChainLinkFencePage: React.FC = () => {
                       transition={{ duration: 0.5, ease: 'easeInOut' }}
                     />
                   </AnimatePresence>
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
 
                   <button onClick={() => go(-1)} aria-label="Previous image"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors">
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-gray-900/40 hover:bg-gray-900/60 text-white flex items-center justify-center transition-colors">
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button onClick={() => go(1)} aria-label="Next image"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center transition-colors">
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-gray-900/40 hover:bg-gray-900/60 text-white flex items-center justify-center transition-colors">
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </div>
@@ -147,7 +146,7 @@ const ChainLinkFencePage: React.FC = () => {
                 {CAROUSEL_IMAGES.map((src, i) => (
                   <button key={i} onClick={() => setCurrent(i)} aria-label={`View image ${i + 1}`}
                     className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all duration-200 ${
-                      i === current ? 'ring-2 ring-white scale-105 opacity-100' : 'opacity-50 hover:opacity-80'
+                      i === current ? 'ring-2 ring-primary-900 scale-105 opacity-100' : 'opacity-50 hover:opacity-80'
                     }`}>
                     <img src={src} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
                   </button>

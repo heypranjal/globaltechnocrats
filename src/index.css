@@ -178,7 +178,7 @@
 
   .section-primary {
     @apply bg-primary-900 text-white border-y border-primary-800;
-    background: linear-gradient(145deg, #072ac8, #051f94);
+    background: linear-gradient(145deg, #423c81, #2d2960);
   }
 
   .section-alternate {

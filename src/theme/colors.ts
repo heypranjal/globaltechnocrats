@@ -3,12 +3,12 @@
  * Global Technocrats Website
  * 
  * This file manages all color tokens for the website theme.
- * Primary color: #072ac8 (requested blue)
+ * Primary color: #423c81 (requested blue)
  */
 
 // Helper function to generate color variations
 const generateColorScale = (baseColor: string, name: string) => {
-  // For #072ac8, we'll create a proper color scale
+  // For #423c81, we'll create a proper color scale
   const scales = {
     primary: {
       50: '#f0f4ff',
@@ -19,9 +19,9 @@ const generateColorScale = (baseColor: string, name: string) => {
       500: '#5570ff',
       600: '#3d4ff5',
       700: '#2937d8',
-      800: '#1f2bb0',
-      900: '#072ac8', // Base color
-      950: '#051f94'
+      800: '#35306b',
+      900: '#423c81', // Base color
+      950: '#2d2960'
     },
     secondary: {
       50: '#f8fafc',
@@ -106,9 +106,9 @@ const generateColorScale = (baseColor: string, name: string) => {
   return scales[name as keyof typeof scales] || scales.primary;
 };
 
-// Main color palette with #072ac8 as primary
+// Main color palette with #423c81 as primary
 export const colors = {
-  // Primary brand colors (based on #072ac8)
+  // Primary brand colors (based on #423c81)
   primary: {
     50: '#f0f4ff',
     100: '#e1e9ff',
@@ -118,9 +118,9 @@ export const colors = {
     500: '#5570ff',
     600: '#3d4ff5',
     700: '#2937d8',
-    800: '#1f2bb0',
-    900: '#072ac8', // Main brand color
-    950: '#051f94'
+    800: '#35306b',
+    900: '#423c81', // Main brand color
+    950: '#2d2960'
   },
   
   // Secondary colors (neutral grays)
@@ -216,7 +216,7 @@ export const colors = {
 export const themeColors = {
   // Brand colors
   brand: {
-    primary: colors.primary[900], // #072ac8
+    primary: colors.primary[900], // #423c81
     primaryLight: colors.primary[100],
     primaryDark: colors.primary[950],
     secondary: colors.secondary[500],
@@ -260,7 +260,7 @@ export const themeColors = {
 
 // Export individual color tokens for easy access
 export const brandColors = {
-  primary: colors.primary[900], // #072ac8
+  primary: colors.primary[900], // #423c81
   primaryHover: colors.primary[800],
   primaryActive: colors.primary[950],
   primaryText: '#ffffff',

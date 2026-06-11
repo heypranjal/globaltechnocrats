@@ -19,17 +19,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          50: '#f0f4ff',
-          100: '#e1e9ff',
-          200: '#c8d6ff',
-          300: '#a3b8ff',
-          400: '#7b94ff',
-          500: '#5570ff',
-          600: '#3d4ff5',
-          700: '#2937d8',
-          800: '#1f2bb0',
-          900: '#072ac8',
-          950: '#051f94'
+          50: '#f4f3fb',
+          100: '#e9e8f7',
+          200: '#d4d2f0',
+          300: '#b3afe4',
+          400: '#8f8ad5',
+          500: '#6e69c5',
+          600: '#5a53b3',
+          700: '#4e48a0',
+          800: '#47428e',
+          900: '#423c81',
+          950: '#2d2960'
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -117,10 +117,10 @@ export default {
           950: '#450a0a'
         },
         brand: {
-          primary: '#072ac8',
-          'primary-hover': '#051f94',
-          'primary-light': '#e1e9ff',
-          'primary-dark': '#051f94'
+          primary: '#423c81',
+          'primary-hover': '#2d2960',
+          'primary-light': '#e9e8f7',
+          'primary-dark': '#2d2960'
         }
       },
       fontFamily: {

@@ -30,7 +30,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
             <div key={item.name}>
               <button
                 className={`w-full flex items-center justify-between px-5 py-4 text-base font-medium text-left ${
-                  isActive(item.path) ? 'text-[#072ac8]' : 'text-gray-800'
+                  isActive(item.path) ? 'text-[#423c81]' : 'text-gray-800'
                 }`}
                 onClick={() => setProductsOpen((v) => !v)}
                 aria-expanded={productsOpen}
@@ -68,7 +68,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                               <Link
                                 key={product.path}
                                 to={product.path}
-                                className="flex items-center gap-1.5 py-1.5 text-sm text-gray-600 hover:text-[#072ac8] transition-colors"
+                                className="flex items-center gap-1.5 py-1.5 text-sm text-gray-600 hover:text-[#423c81] transition-colors"
                                 onClick={onNavigate}
                               >
                                 <ChevronRight className="w-3 h-3 text-gray-300 flex-shrink-0" />
@@ -77,7 +77,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                             ))}
                             <Link
                               to={category.viewAllPath}
-                              className="flex items-center gap-1 pt-1.5 pb-0.5 text-xs font-bold text-[#072ac8]"
+                              className="flex items-center gap-1 pt-1.5 pb-0.5 text-xs font-bold text-[#423c81]"
                               onClick={onNavigate}
                             >
                               {category.viewAllLabel} →
@@ -91,7 +91,7 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
                   <div className="px-6 py-3">
                     <Link
                       to="/products"
-                      className="text-sm font-bold text-[#072ac8]"
+                      className="text-sm font-bold text-[#423c81]"
                       onClick={onNavigate}
                     >
                       Browse All Products →
@@ -109,8 +109,8 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
             to={item.path}
             className={`block px-5 py-4 text-base font-medium transition-colors ${
               isActive(item.path)
-                ? 'text-[#072ac8] bg-blue-50/40'
-                : 'text-gray-800 hover:text-[#072ac8] hover:bg-gray-50'
+                ? 'text-[#423c81] bg-primary-50/40'
+                : 'text-gray-800 hover:text-[#423c81] hover:bg-gray-50'
             }`}
             onClick={onNavigate}
           >
@@ -123,9 +123,9 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
       <div className="px-5 py-5 space-y-3">
         <a
           href="tel:+911146067000"
-          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#072ac8] transition-colors"
+          className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#423c81] transition-colors"
         >
-          <Phone className="w-4 h-4 text-[#072ac8]" />
+          <Phone className="w-4 h-4 text-[#423c81]" />
           +91 11 4606 7000
         </a>
         <Link

@@ -28,8 +28,8 @@ export function DesktopNav({
   const colorClass = (path: string) => {
     const active = isActive(path);
     return active
-      ? 'text-[#072ac8] bg-blue-100/60 font-semibold'
-      : 'text-gray-900 hover:text-[#072ac8] hover:bg-stone-200/70';
+      ? 'text-[#423c81] bg-primary-100/60 font-semibold'
+      : 'text-gray-900 hover:text-[#423c81] hover:bg-stone-200/70';
   };
 
   return (
@@ -38,51 +38,52 @@ export function DesktopNav({
       role="navigation"
       aria-label="Main navigation"
     >
-      {mainNavigation.map((item) => {
+      {mainNavigation.map((item, idx) => {
         if (item.hasMegaMenu) {
           return (
-            <div
-              key={item.name}
-              className="relative"
-              onMouseEnter={onMegaMenuOpen}
-              onMouseLeave={onMegaMenuClose}
-            >
-              <Link
-                to={item.path}
-                className={`${baseLinkClass} ${colorClass(item.path)}`}
-                onClick={onNavigate}
-                aria-haspopup="true"
-                aria-expanded={isMegaMenuOpen}
+            <React.Fragment key={item.name}>
+              {idx > 0 && <span className="w-px h-4 bg-gray-400 flex-shrink-0" aria-hidden="true" />}
+              <div
+                className="relative"
+                onMouseEnter={onMegaMenuOpen}
+                onMouseLeave={onMegaMenuClose}
               >
-                {item.name}
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                    isMegaMenuOpen ? 'rotate-180' : ''
-                  }`}
-                />
-              </Link>
-              {/* Active/open indicator */}
-              {(isMegaMenuOpen || isActive(item.path)) && (
-                <span
-                  className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#072ac8]"
-                />
-              )}
-            </div>
+                <Link
+                  to={item.path}
+                  className={`${baseLinkClass} ${colorClass(item.path)}`}
+                  onClick={onNavigate}
+                  aria-haspopup="true"
+                  aria-expanded={isMegaMenuOpen}
+                >
+                  {item.name}
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                      isMegaMenuOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </Link>
+                {(isMegaMenuOpen || isActive(item.path)) && (
+                  <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#423c81]" />
+                )}
+              </div>
+            </React.Fragment>
           );
         }
 
         return (
-          <Link
-            key={item.name}
-            to={item.path}
-            className={`${baseLinkClass} ${colorClass(item.path)}`}
-            onClick={onNavigate}
-          >
-            {item.name}
-            {isActive(item.path) && (
-              <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#072ac8]" />
-            )}
-          </Link>
+          <React.Fragment key={item.name}>
+            {idx > 0 && <span className="w-px h-4 bg-gray-400 flex-shrink-0" aria-hidden="true" />}
+            <Link
+              to={item.path}
+              className={`${baseLinkClass} ${colorClass(item.path)}`}
+              onClick={onNavigate}
+            >
+              {item.name}
+              {isActive(item.path) && (
+                <span className="absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[#423c81]" />
+              )}
+            </Link>
+          </React.Fragment>
         );
       })}
     </nav>

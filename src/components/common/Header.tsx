@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center gap-5 flex-shrink-0">
             <a
               href="tel:+911146067000"
-              className="flex items-center gap-1.5 text-sm font-medium transition-colors text-gray-800 hover:text-[#072ac8]"
+              className="flex items-center gap-1.5 text-sm font-medium transition-colors text-gray-800 hover:text-[#423c81]"
               aria-label="Call us"
             >
               <Phone className="w-4 h-4" />
@@ -84,7 +84,7 @@ const Header: React.FC = () => {
 
           {/* Mobile menu toggle */}
           <button
-            className="flex lg:hidden items-center justify-center p-2 rounded-lg transition-all duration-200 text-gray-900 hover:text-[#072ac8] hover:bg-stone-200"
+            className="flex lg:hidden items-center justify-center p-2 rounded-lg transition-all duration-200 text-gray-900 hover:text-[#423c81] hover:bg-stone-200"
             onClick={() => setIsMenuOpen((v) => !v)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMenuOpen}

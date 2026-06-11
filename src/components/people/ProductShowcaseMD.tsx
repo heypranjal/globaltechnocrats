@@ -75,7 +75,7 @@ const ProductShowcaseMD: React.FC<ProductShowcaseMDProps> = ({ executive }) => {
                     className="w-full max-w-md mx-auto rounded-xl"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(executive.name)}&size=500&background=072ac8&color=ffffff&bold=true`;
+                      target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(executive.name)}&size=500&background=423c81&color=ffffff&bold=true`;
                     }}
                   />
                   
