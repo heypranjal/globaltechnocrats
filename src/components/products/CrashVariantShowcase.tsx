@@ -16,9 +16,9 @@ const VARIANT_IMAGES: Record<string, string[]> = {
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541128/gauntelt-_2_i9hkuu.jpg',
   ],
   stronghold: [
+    'https://res.cloudinary.com/dy93kgo03/image/upload/v1781180956/WhatsApp_Image_2026-06-11_at_15.15.59_c8lmel.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977778/stronghold4_f7owtb.jpg',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977789/strong_hold_k4_rated.jpeg_4_b0jzbk.jpg',
-    'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977786/strong_hold_k4_fence_abh6r4.png',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977785/strong_hold_k4_fence_2_qtvhor.png',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977784/strong_hold_k4_fence_3_onlq2c.png',
     'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977783/1.5mtr_crash_rated_fence_-strong_hold_fxbnbh.png',
