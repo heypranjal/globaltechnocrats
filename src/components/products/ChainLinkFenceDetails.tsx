@@ -100,30 +100,30 @@ export const ChainLinkFenceDetails: React.FC = () => (
           </p>
         </div>
         <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-          <table className="w-full text-sm min-w-[640px]">
+          <table className="w-full text-sm min-w-[900px]">
             <thead>
               <tr className="bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 text-white">
-                <th className="text-left px-6 py-4 font-bold tracking-wide">Product</th>
-                <th className="text-center px-6 py-4 font-bold tracking-wide">Height Range (m)</th>
-                <th className="text-center px-6 py-4 font-bold tracking-wide">Wire Gauge (mm)</th>
-                <th className="text-center px-6 py-4 font-bold tracking-wide">Mesh Size (mm)</th>
-                <th className="text-left px-6 py-4 font-bold tracking-wide">Finish</th>
+                <th className="text-left px-5 py-4 font-bold tracking-wide">Fence Height</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Panel Width</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Mesh Size</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Wire Diameter (GI)</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Wire Diameter (PVC Coated)</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Fabric Roll Length</th>
+                <th className="text-center px-5 py-4 font-bold tracking-wide">Post Sections</th>
+                <th className="text-left px-5 py-4 font-bold tracking-wide">Surface Finish</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
-              {[
-                { name: 'CL-STD/GI', height: '1.2 – 2.4', gauge: '2.5',        mesh: '50 × 50', finish: 'Hot-Dip Galvanized' },
-                { name: 'CL-HD/GI',  height: '1.8 – 3.6', gauge: '3.15',       mesh: '50 × 50', finish: 'Hot-Dip Galvanized' },
-                { name: 'CL-PVC',    height: '1.2 – 3.0', gauge: '2.5 – 3.15', mesh: '50 × 50', finish: 'PVC Coated' },
-              ].map((row, i) => (
-                <tr key={row.name} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-6 py-4 font-semibold text-gray-800">{row.name}</td>
-                  <td className="px-6 py-4 text-center text-gray-700">{row.height}</td>
-                  <td className="px-6 py-4 text-center text-gray-700">{row.gauge}</td>
-                  <td className="px-6 py-4 text-center text-gray-700">{row.mesh}</td>
-                  <td className="px-6 py-4 text-primary-900 font-semibold">{row.finish}</td>
-                </tr>
-              ))}
+            <tbody>
+              <tr className="bg-white">
+                <td className="px-5 py-5 font-medium text-gray-800">1.0 m – 3.5 m</td>
+                <td className="px-5 py-5 text-center text-gray-700">1.5 m – 3.0 m</td>
+                <td className="px-5 py-5 text-center text-gray-700">50×50 mm, 75×75 mm</td>
+                <td className="px-5 py-5 text-center text-gray-700">2.0 mm – 5.0 mm</td>
+                <td className="px-5 py-5 text-center text-gray-700">2.0 mm – 5.0 mm</td>
+                <td className="px-5 py-5 text-center text-gray-700">7 m – 20 m</td>
+                <td className="px-5 py-5 text-center text-gray-700">SHS, RHS, CHS Pipe</td>
+                <td className="px-5 py-5 text-primary-900 font-semibold">Galvanized / PVC Coated</td>
+              </tr>
             </tbody>
           </table>
         </div>

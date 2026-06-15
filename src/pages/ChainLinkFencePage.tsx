@@ -7,15 +7,20 @@ import { ChainLinkFenceDetails } from '../components/products/ChainLinkFenceDeta
 import BrochureModal from '../components/products/BrochureModal';
 
 const CAROUSEL_IMAGES = [
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986150/chian-link_R-spam_z0nl9f.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986146/chian_link_2.4x1.3m_eolink.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986127/chain_link_yjozjc.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986126/Copilot_20260530_135233_zcnpzu.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986122/chain_link_2_kkeaw8.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986121/chain_-link3_unhxjh.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508206/1.chain_link_o6xyib.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508206/2.chain_-link_gdiezy.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508367/3_nxg2qp.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508201/4_k7cui9.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508201/5_pxmw63.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508202/6._chain_link_zlw6c0.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508202/8_s2syv1.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508201/9.chain_link_fence_u6zwka.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508202/10.chain_link_-gi_keaetq.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508203/11._chain_link_sirws2.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508203/12_asanah.png',
 ];
 
-const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1780986127/chain_link_yjozjc.png';
+const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508213/image_for_What_Is_a_Chain_Link_Fence13_obrktd.png';
 
 const certBadges = [
   { label: 'IS 278',       sub: 'Compliant' },
