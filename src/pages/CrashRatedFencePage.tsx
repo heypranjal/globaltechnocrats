@@ -8,13 +8,13 @@ import { CrashFenceDetails } from '../components/products/CrashFenceDetails';
 import BrochureModal from '../components/products/BrochureModal';
 
 const OVERVIEW_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png';
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977786/strong_hold_k4_fence_abh6r4.png';
 
 const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541129/gauntelt-_10_dhcwub.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541148/gauntelt-_8_nfrtlu.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541220/1.5mtr_crash_rated_fence_-strong_hold_avfxbi.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780541223/strong_hold_k4_fence_nfpc22.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977776/stronghold1_k2ehaj.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1780977778/stronghold4_f7owtb.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1781154613/WhatsApp_Image_2026-06-05_at_14.05.10_2_w4aj50.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508802/WhatsApp_Image_2026-06-12_at_12.20.05_1_afhkln.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1780551269/crash_rated_fence_t8ikes.jpg',

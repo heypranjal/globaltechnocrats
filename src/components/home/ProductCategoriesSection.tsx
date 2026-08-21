@@ -4,9 +4,8 @@
  */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldAlert, Cpu, Globe, Zap } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Globe, Zap } from 'lucide-react';
 import { useInView } from '../../hooks/useInView';
-import type { RefObject } from 'react';
 
 const categories = [
   {
@@ -36,7 +35,7 @@ const categories = [
       { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' }
     ],
-    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1776649743/WhatsApp_Image_2026-04-09_at_11.45.05_anwj1p.jpg',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787288769/fencingsolution_wujd0v.jpg',
     link: '/products/fencing'
   },
   {
@@ -89,41 +88,39 @@ const ProductCategoriesSection: React.FC = () => {
             >
               <div className="flex flex-col h-full">
                 <Link to={category.link} className="block">
-                  <div className="relative h-56 sm:h-64 md:h-72 overflow-hidden p-4 sm:p-6">
-                    <img 
-                      src={category.image} 
+                  <div className="relative h-44 sm:h-52 overflow-hidden">
+                    <img
+                      src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-xl sm:rounded-2xl"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 flex items-center">
-                      <div className="bg-white/95 backdrop-blur-sm p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4 flex items-center">
+                      <div className="bg-white/95 backdrop-blur-sm p-2 sm:p-3 rounded-xl shadow-lg">
                         {category.icon}
                       </div>
-                      <h3 className="typography-card-title text-white ml-4 sm:ml-5">{category.title}</h3>
+                      <h3 className="typography-card-title text-white ml-3">{category.title}</h3>
                     </div>
                   </div>
                 </Link>
-                <div className="p-6 sm:p-8 lg:p-10 flex-grow flex flex-col">
-                  <p className="typography-card-content mb-6">{category.description}</p>
-                  
-                  <div className="mb-6 flex-grow">
-                    <h4 className="typography-badge text-primary-600 uppercase mb-6">Featured Products</h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-3">
+                <div className="p-5 sm:p-6 flex-grow flex flex-col">
+                  <p className="typography-card-content mb-4">{category.description}</p>
+                  <div className="mb-4 flex-grow">
+                    <h4 className="typography-badge text-primary-600 uppercase mb-3">Featured Products</h4>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                       {category.products.map((product, idx) => (
-                        <li key={idx} className="flex items-center typography-body-sm hover:text-primary-600 transition-colors">
-                          <ArrowRight className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" />
-                          <Link to={product.path} className="hover:text-primary-600 transition-colors">
+                        <li key={idx} className="flex items-center">
+                          <ArrowRight className="w-3 h-3 text-primary-500 mr-2 flex-shrink-0" />
+                          <Link to={product.path} className="typography-body-sm hover:text-primary-600 transition-colors">
                             {product.name}
                           </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
-                  <Link 
+                  <Link
                     to={category.link}
-                    className="typography-link inline-flex items-center mt-auto group/link border-t border-gray-100 pt-6"
+                    className="typography-link inline-flex items-center mt-auto group/link border-t border-gray-100 pt-4"
                   >
                     Explore {category.title} <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/link:translate-x-1" />
                   </Link>
