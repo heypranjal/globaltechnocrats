@@ -8,7 +8,6 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
 import ProductDetailPage from './pages/ProductDetailPage';
-import ProductDetailPageDebug from './pages/ProductDetailPageDebug';
 import BlogPage from './pages/BlogPage';
 import OurStoryPage from './pages/OurStoryPage';
 import PeoplePage from './pages/PeoplePage';
@@ -25,6 +24,7 @@ import DRDOTOTPage from './pages/DRDOTOTPage';
 import DefenceTechPage from './pages/DefenceTechPage';
 import CrashRatedFencePage from './pages/CrashRatedFencePage';
 import ChainLinkFencePage from './pages/ChainLinkFencePage';
+import AntiClimbFencePage from './pages/AntiClimbFencePage';
 
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
           {/* Parent page — before the dynamic catch-all */}
           <Route path="products/fencing/crash-rated-fence" element={<CrashRatedFencePage />} />
           <Route path="products/fencing/chain-link-fence" element={<ChainLinkFencePage />} />
+          <Route path="products/fencing/anti-climb" element={<AntiClimbFencePage />} />
           <Route path="products/:category/:productId" element={<ProductDetailPage />} />
           
           {/* Category Pages */}
