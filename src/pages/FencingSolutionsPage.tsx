@@ -24,10 +24,10 @@ const FencingSolutionsPage: React.FC = () => {
       description: 'High-impact resistance fencing designed to withstand vehicular attacks.',
       image: getImageUrl('products', 'crash-rated-security')
     },
-    { 
-      name: 'Concertina Coil Fence', 
-      path: '/products/fencing/concertina-coil-fence', 
-      description: 'Rapid-deployment security barrier providing effective perimeter protection.',
+    {
+      name: 'Concertina Coil',
+      path: '/products/fencing/concertina-coil',
+      description: 'Rapid-deployment security barrier in Standard, SS, and GI variants for every security requirement.',
       image: getImageUrl('products', 'concertina-coil')
     },
     { 
@@ -41,18 +41,6 @@ const FencingSolutionsPage: React.FC = () => {
       path: '/products/fencing/barbed-wire-fence', 
       description: 'Traditional security fencing with sharp wire barbs for deterrence.',
       image: getImageUrl('products', 'barbed-wire')
-    },
-    { 
-      name: 'SS Concertina Coil', 
-      path: '/products/fencing/ss-concertina-coil', 
-      description: 'High-quality stainless steel concertina coil for maximum durability.',
-      image: getImageUrl('products', 'ss-concertina')
-    },
-    { 
-      name: 'GI Concertina Coil', 
-      path: '/products/fencing/gi-concertina-coil', 
-      description: 'Cost-effective galvanized iron concertina coil for perimeter security.',
-      image: getImageUrl('products', 'gi-concertina')
     },
     { 
       name: 'Swing Gates', 

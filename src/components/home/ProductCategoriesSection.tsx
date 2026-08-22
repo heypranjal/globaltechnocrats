@@ -31,11 +31,11 @@ const categories = [
       { name: 'Anti Climb Fencing', path: '/products/fencing/anti-climb' },
       { name: 'Razor Mesh Fencing', path: '/products/fencing/razor-mesh' },
       { name: 'Crash Rated Fence', path: '/products/fencing/crash-rated-fence' },
-      { name: 'Concertina Coil Fence', path: '/products/fencing/concertina-coil-fence' },
+      { name: 'Concertina Coil', path: '/products/fencing/concertina-coil' },
       { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
       { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' }
     ],
-    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787288769/fencingsolution_wujd0v.jpg',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787364154/WhatsApp_Image_2026-08-21_at_11.21.40_r0yxtg.jpg',
     link: '/products/fencing'
   },
   {

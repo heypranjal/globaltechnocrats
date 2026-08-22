@@ -236,6 +236,42 @@ const AntiClimbFencePage: React.FC = () => {
         </div>
       </section>
 
+      {/* ── Feature Cards ────────────────────────────────────────────────────── */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Why Choose Anti Climb Fencing</span>
+            <h2 className="text-3xl font-bold text-gray-900 mt-2">Built-In Security Advantages</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {[
+              { name: 'Difficult to Climb', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/Difficult_to_Climb_vggfca.png' },
+              { name: 'Difficult to Cutting', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290636/Difficult_to_Cutting_augncy.png' },
+              { name: 'High Visibility Anti Climb Fence', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/6_o9lrnw.png' },
+              { name: 'Long Life', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Long_Life_t2reuy.png' },
+              { name: 'Modular', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Modular-1_bqfwdn.png' },
+              { name: 'Strong', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290639/Strong_u7krp2.png' },
+            ].map(({ name, image }) => (
+              <div key={name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
+                <div className="h-52 bg-gray-100">
+                  {image ? (
+                    <img src={image} alt={name} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex flex-col items-center justify-center gap-2">
+                      <Shield className="w-10 h-10 text-gray-300" />
+                      <p className="text-xs text-gray-300 font-medium">Image coming soon</p>
+                    </div>
+                  )}
+                </div>
+                <div className="p-4">
+                  <h3 className="text-sm font-bold text-gray-800 text-center">{name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Specs + Features + Applications ─────────────────────────────────── */}
       <section className="py-24 bg-gray-50">
         <div className="container">

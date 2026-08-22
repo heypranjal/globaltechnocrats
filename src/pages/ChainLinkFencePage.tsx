@@ -20,7 +20,7 @@ const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508203/12_asanah.png',
 ];
 
-const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1781508213/image_for_What_Is_a_Chain_Link_Fence13_obrktd.png';
+const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290633/1_mpgiff.png';
 
 const certBadges = [
   { label: 'IS 278',       sub: 'Compliant' },

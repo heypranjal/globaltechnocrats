@@ -91,10 +91,11 @@ export const productsData: Product[] = [
       { name: 'Maintenance Schedule', value: 'Annual inspection | 5-year coating warranty | 25-year structural warranty' }
     ],
     images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1787364042/WhatsApp_Image_2026-08-21_at_12.06.59_fmxyuj.jpg',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing1_urt06c.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing2_kmuxz3.png'
     ],
-    relatedProducts: ['razor-mesh', 'crash-rated-fence', 'concertina-coil-fence'],
+    relatedProducts: ['razor-mesh', 'crash-rated-fence', 'concertina-coil'],
     seoTitle: 'Anti Climb Fencing | Global Technocrats',
     seoDescription: 'Anti Climb Fencing: Safeguarding Your Premises with Advanced Security Solutions. Effective and reliable solution for deterring intruders and providing robust perimeter protection.'
   },
@@ -302,7 +303,7 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/razormeshfencing1_wmbutx.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/razormeshfencing2_svetj7.png'
     ],
-    relatedProducts: ['anti-climb', 'concertina-coil-fence']
+    relatedProducts: ['anti-climb', 'concertina-coil']
   },
 
   {
@@ -423,132 +424,52 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence1_lqdc8g.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence2_a7w2bn.png'
     ],
-    relatedProducts: ['anti-climb', 'concertina-coil-fence'],
+    relatedProducts: ['anti-climb', 'concertina-coil'],
     seoTitle: 'K4 Crash Rated Fence | Vehicle Impact Protection | Global Technocrats',
     seoDescription: 'K4 rated crash-rated fence system for critical infrastructure protection. Government lab verified and ASTM/PAS 68 certified.'
   },
 
   {
-    id: 'concertina-coil-fence',
-    name: 'Concertina Coil Fence',
+    id: 'concertina-coil',
+    name: 'Concertina Coil',
     category: 'fencing',
     subcategory: 'Fencing Solutions',
-    description: 'High-security concertina coil fencing providing formidable perimeter protection and deterrence.',
-    longDescription: 'Concertina coil fences provide an unmatched level of protection and act as a strong deterrent to potential intruders. Available in single coil, double coil, and razor blade variants, these fences offer enhanced security due to their dense configuration and razor-sharp design.',
+    description: 'High-security concertina coil fencing in Standard, Stainless Steel (SS304/SS316), and Galvanized Iron variants for every security requirement.',
+    longDescription: 'Concertina coil fences provide an unmatched level of protection and act as a strong deterrent to potential intruders. Available in Standard galvanized steel, Stainless Steel (SS304/SS316) for marine environments, and Galvanized Iron for cost-effective wide-area deployment.',
     features: [
-      'Single and double coil configurations',
-      'Razor blade concertina options',
-      'High-tensile galvanized steel construction',
-      'Crossed spiral design for integrity',
-      'Clip fastener installation system',
-      'Weather-resistant galvanized finish',
+      'Three variants: Standard, SS Concertina, and GI Concertina',
+      'Razor blade and single/double coil configurations',
+      'Crossed spiral design maintains structural integrity',
+      'Hot-dip galvanized and SS304/SS316 material options',
+      'Clip fastener rapid-deployment installation system',
+      'Coil diameters from 450mm to 980mm',
       'Low maintenance requirements'
     ],
     applications: [
       'Military and defense facilities',
-      'Industrial and commercial properties',
       'Border security',
+      'Coastal and marine installations',
+      'Industrial and commercial properties',
       'Correctional facilities',
-      'Critical infrastructure',
-      'High-security installations'
+      'Residential and agricultural security'
     ],
     specifications: [
-      { name: 'Material', value: 'High-tensile galvanized steel' },
-      { name: 'Coil Types', value: 'Single, double, razor blade' },
-      { name: 'Wire Diameter', value: '2.5mm high-carbon steel' },
+      { name: 'Variants', value: 'Standard GI · SS Concertina (SS304/SS316) · GI Concertina' },
+      { name: 'Wire Diameter', value: '2.5mm high-carbon or stainless steel' },
       { name: 'Coil Diameter', value: '450mm, 600mm, 700mm, 980mm' },
+      { name: 'Tensile Strength', value: 'Up to 1270–1570 N/mm² (SS grade)' },
       { name: 'Installation', value: 'Clip fastener system' },
-      { name: 'Finish', value: 'Hot-dip galvanized' }
+      { name: 'Finish', value: 'Hot-dip galvanized / SS304 / SS316' }
     ],
     images: [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777398/ConcertinaCoilFence1_truxp8.png',
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777433/ConcertinaCoilFence2_rqdlc7.png'
-    ],
-    relatedProducts: ['ss-concertina-coil', 'gi-concertina-coil', 'razor-mesh'],
-    seoTitle: 'Concertina Coil Fence | High-Security Perimeter Protection | Global Technocrats',
-    seoDescription: 'Professional concertina coil fencing for maximum security. Available in single, double, and razor blade configurations.'
-  },
-
-  {
-    id: 'ss-concertina-coil',
-    name: 'SS Concertina Coil',
-    category: 'fencing',
-    subcategory: 'Fencing Solutions',
-    description: 'Stainless steel concertina coil offering superior durability and corrosion resistance for coastal environments.',
-    longDescription: 'SS concertina coils are highly effective security barriers made from stainless steel, offering exceptional durability and corrosion resistance. The stainless steel construction ensures long-lasting protection even in harsh environmental conditions, making them ideal for coastal areas and high-humidity environments.',
-    features: [
-      'Stainless steel construction for superior durability',
-      'Excellent corrosion and rust resistance',
-      'High tensile strength and razor-sharp design',
-      'Suitable for harsh environmental conditions',
-      'Crossed spiral design maintains integrity',
-      'Multiple coil diameter options',
-      'Long-lasting performance'
-    ],
-    applications: [
-      'Coastal installations',
-      'Marine environments',
-      'Chemical plants',
-      'High-humidity locations',
-      'Premium security installations',
-      'Long-term outdoor applications'
-    ],
-    specifications: [
-      { name: 'Material', value: 'Stainless steel (SS304/SS316)' },
-      { name: 'Wire Diameter', value: '2.5mm stainless steel' },
-      { name: 'Coil Diameter', value: '450mm, 600mm, 700mm' },
-      { name: 'Corrosion Resistance', value: 'Excellent in marine environments' },
-      { name: 'Temperature Range', value: '-40°C to +120°C' },
-      { name: 'Tensile Strength', value: '1270-1570 N/mm²' }
-    ],
-    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777433/ConcertinaCoilFence2_rqdlc7.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775911/SSConcertinaCoil1_uwgha6.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776018/SsImage2_lgojr8.png'
     ],
-    relatedProducts: ['concertina-coil-fence', 'gi-concertina-coil'],
-    seoTitle: 'SS Concertina Coil | Stainless Steel Security Barrier | Global Technocrats',
-    seoDescription: 'Stainless steel concertina coil for superior corrosion resistance and durability in harsh environments.'
-  },
-
-  {
-    id: 'gi-concertina-coil',
-    name: 'GI Concertina Coil',
-    category: 'fencing',
-    subcategory: 'Fencing Solutions',
-    description: 'Galvanized iron concertina coil providing cost-effective high-security perimeter protection.',
-    longDescription: 'GI Concertina Coil is a versatile and cost-effective security solution for perimeter protection. Made from high-quality galvanized iron wire, it provides formidable deterrence against intruders while offering excellent durability and weather resistance at an economical price point.',
-    features: [
-      'High-quality galvanized iron construction',
-      'Cost-effective security solution',
-      'High deterrence and detection capability',
-      'Weather resistance and longevity',
-      'Concertina effect for enhanced security',
-      'Easy installation and low maintenance',
-      'Multiple coil diameter options'
-    ],
-    applications: [
-      'Residential security',
-      'Commercial and industrial security',
-      'Critical infrastructure protection',
-      'Border and military installations',
-      'Correctional facilities',
-      'Agricultural and livestock protection'
-    ],
-    specifications: [
-      { name: 'Material', value: 'Galvanized iron (GI)' },
-      { name: 'Wire Gauge', value: '12-16 gauge' },
-      { name: 'Coil Diameter', value: '450mm, 600mm, 700mm, 980mm' },
-      { name: 'Barb Spacing', value: '10-15cm intervals' },
-      { name: 'Galvanization', value: 'Hot-dip galvanized coating' },
-      { name: 'Lifespan', value: '10-15+ years with maintenance' }
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1567513177553-5e1049591218?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    ],
-    relatedProducts: ['concertina-coil-fence', 'ss-concertina-coil', 'barbed-wire-fence'],
-    seoTitle: 'GI Concertina Coil | Cost-Effective Security Barrier | Global Technocrats',
-    seoDescription: 'Galvanized iron concertina coil offering reliable perimeter security at an economical price with excellent durability.'
+    relatedProducts: ['razor-mesh', 'barbed-wire-fence', 'anti-climb'],
+    seoTitle: 'Concertina Coil | Standard · SS · GI Variants | Global Technocrats',
+    seoDescription: 'Concertina coil fencing in Standard, Stainless Steel, and Galvanized Iron variants for defence, border, industrial, and residential security.'
   },
 
   {
@@ -628,7 +549,7 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775128/barbedwirefence1_bhxu8k.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/barbedwirefence2_xajctr.png'
     ],
-    relatedProducts: ['chain-link-fence', 'gi-concertina-coil'],
+    relatedProducts: ['chain-link-fence', 'concertina-coil'],
     seoTitle: 'Barbed Wire Fence | Agricultural & Livestock Security | Global Technocrats',
     seoDescription: 'Traditional barbed wire fencing for agricultural boundaries, livestock containment, and cost-effective perimeter security.'
   },
@@ -888,7 +809,18 @@ export interface ProductCategory {
 }
 
 // Pre-computed category products - eliminate O(n) filtering per render
-const fencingProducts = productsData.filter(p => p.category === 'fencing');
+const FENCING_ORDER = [
+  'crash-rated-fence',
+  'chain-link-fence',
+  'anti-climb',
+  'decorative-fencing',
+  'razor-mesh',
+  'concertina-coil',
+  'barbed-wire-fence',
+];
+const fencingProducts = FENCING_ORDER
+  .map(id => productsData.find(p => p.id === id))
+  .filter((p): p is Product => p !== undefined);
 const gatesProducts = productsData.filter(p => p.category === 'gates');
 const drdoProducts = productsData.filter(p => p.category === 'drdo');
 const defenceProducts = productsData.filter(p => p.category === 'defence-tech');
