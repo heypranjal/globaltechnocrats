@@ -26,6 +26,7 @@ import CrashRatedFencePage from './pages/CrashRatedFencePage';
 import ChainLinkFencePage from './pages/ChainLinkFencePage';
 import AntiClimbFencePage from './pages/AntiClimbFencePage';
 import ConcertinaCoilPage from './pages/ConcertinaCoilPage';
+import DecorativeFencingPage from './pages/DecorativeFencingPage';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="products/fencing/chain-link-fence" element={<ChainLinkFencePage />} />
           <Route path="products/fencing/anti-climb" element={<AntiClimbFencePage />} />
           <Route path="products/fencing/concertina-coil" element={<ConcertinaCoilPage />} />
+          <Route path="products/fencing/decorative-fencing" element={<DecorativeFencingPage />} />
           <Route path="products/:category/:productId" element={<ProductDetailPage />} />
           
           {/* Category Pages */}

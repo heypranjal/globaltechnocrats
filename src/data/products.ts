@@ -421,6 +421,7 @@ export const productsData: Product[] = [
       { name: 'Certification', value: 'Government lab verified' }
     ],
     images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237967/WhatsApp_Image_2026-08-21_at_14.07.57_pnjt96.jpg',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence1_lqdc8g.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/crashratedfence2_a7w2bn.png'
     ],
@@ -505,6 +506,7 @@ export const productsData: Product[] = [
       { name: 'Post Spacing', value: '6-10 feet intervals' }
     ],
     images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237967/WhatsApp_Image_2026-08-21_at_14.13.53_i7xomq.jpg',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775129/chainlinkfence1_vhosi4.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775129/chainlinkfence2_fsswl8.png'
     ],
