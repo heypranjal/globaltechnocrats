@@ -85,21 +85,31 @@ const ContactInfo: React.FC = () => {
           
           <div className="flex items-center">
             <Mail className="w-5 h-5 mr-3 text-primary-600" />
-            <a 
-              href="mailto:info@globaltechnocrats.in" 
+            <a
+              href="mailto:info@globaltechnocrats.in"
               className="text-primary-600 hover:text-primary-700"
             >
               info@globaltechnocrats.in
             </a>
           </div>
-          
+
           <div className="flex items-center">
-            <Phone className="w-5 h-5 mr-3 text-primary-600" />
-            <a 
-              href="tel:+91-124-4982000" 
+            <Mail className="w-5 h-5 mr-3 text-primary-600" />
+            <a
+              href="mailto:sales@globaltechnocrats.in"
               className="text-primary-600 hover:text-primary-700"
             >
-              +91-124-4982000
+              sales@globaltechnocrats.in
+            </a>
+          </div>
+
+          <div className="flex items-center">
+            <Phone className="w-5 h-5 mr-3 text-primary-600" />
+            <a
+              href="tel:+919810282636"
+              className="text-primary-600 hover:text-primary-700"
+            >
+              +91 9810282636
             </a>
           </div>
         </div>

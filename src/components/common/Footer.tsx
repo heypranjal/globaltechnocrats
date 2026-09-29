@@ -35,16 +35,17 @@ const Footer: React.FC = () => {
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-primary-500 mr-3 mt-0.5" />
                 <span className="text-gray-600">
-                  Regd. Office: Plot No. 139-140, Kapashera, New Delhi-110097 (India)
+                  Global Technocrats Limited<br />
+                  Regd. Office: 139-140, Kapashera, South West Delhi - 110037 (India)
                 </span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-primary-500 mr-3" />
-                <span className="text-gray-600">91-9810002636, +91-9871299327</span>
+                <span className="text-gray-600">+91 9810282636</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-primary-500 mr-3" />
-                <span className="text-gray-600">sales@globaltechnocrats.in info@globaltechnocrats.in</span>
+                <span className="text-gray-600">sales@globaltechnocrats.in, info@globaltechnocrats.in</span>
               </div>
               <div className="text-gray-600 text-sm mt-2">
                 <strong>Hours:</strong> Mon-Fri 9:00AM - 5:00PM

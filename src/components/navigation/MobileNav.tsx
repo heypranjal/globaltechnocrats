@@ -122,11 +122,11 @@ export function MobileNav({ onNavigate }: MobileNavProps) {
       {/* Footer actions */}
       <div className="px-5 py-5 space-y-3">
         <a
-          href="tel:+911146067000"
+          href="tel:+919810282636"
           className="flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-[#423c81] transition-colors"
         >
           <Phone className="w-4 h-4 text-[#423c81]" />
-          +91 11 4606 7000
+          +91 9810282636
         </a>
         <Link
           to="/contact"

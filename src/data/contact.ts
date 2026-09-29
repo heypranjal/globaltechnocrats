@@ -15,31 +15,13 @@ export interface ContactInfo {
 export const contactLocations: ContactInfo[] = [
   {
     type: 'headquarters',
-    name: 'Global Headquarters',
-    address: 'Tower B, 4th Floor, Spaze iTech Park, Sector 49',
-    city: 'Gurugram, Haryana 122018',
+    name: 'Global Technocrats Limited',
+    address: '139-140, Kapashera',
+    city: 'South West Delhi - 110037',
     country: 'India',
-    phone: '+91-124-4982000',
+    phone: '+91 9810282636',
     email: 'info@globaltechnocrats.in',
-    coordinates: { lat: 28.4089, lng: 77.0671 }
-  },
-  {
-    type: 'regional',
-    name: 'Middle East Operations',
-    address: 'Dubai International Financial Centre',
-    city: 'Dubai',
-    country: 'United Arab Emirates',
-    phone: '+971-4-1234567',
-    email: 'middleeast@globaltechnocrats.in'
-  },
-  {
-    type: 'regional',
-    name: 'European Operations',
-    address: 'London Office Park',
-    city: 'London',
-    country: 'United Kingdom',
-    phone: '+44-20-1234567',
-    email: 'europe@globaltechnocrats.in'
+    coordinates: { lat: 28.5108, lng: 77.0654 }
   }
 ];
 

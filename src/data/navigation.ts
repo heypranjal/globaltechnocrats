@@ -53,43 +53,11 @@ export const megaMenuCategories: MegaMenuCategory[] = [
     viewAllPath: '/products/gates',
     viewAllLabel: 'View All Gates',
   },
-  {
-    id: 'defence',
-    name: 'Defence Solutions',
-    path: '/products/defence',
-    description: 'Military-grade protection for strategic assets',
-    items: [
-      { name: 'Hesco Barriers', path: '/products/gates/hesco-box' },
-      { name: 'Gabion Systems', path: '/products/gates/architectural-gabions' },
-      { name: 'Blast Protection Systems', path: '/products/defence' },
-      { name: 'Military Security Solutions', path: '/products/defence' },
-      { name: 'DRDO TOT: Bukhari', path: '/products/drdo/bukhari' },
-      { name: 'DRDO TOT: Vajra', path: '/products/drdo/vajra' },
-    ],
-    viewAllPath: '/products/defence',
-    viewAllLabel: 'View All Defence',
-  },
-  {
-    id: 'technology',
-    name: 'Technology & AI',
-    path: '/products/ai',
-    description: 'Advanced intelligence and surveillance technologies',
-    items: [
-      { name: 'Deep Socmint', path: '/products/ai/deepsocmint' },
-      { name: 'Image Enhancer', path: '/products/ai/image-enhancer' },
-      { name: 'Project Consulting', path: '/contact' },
-      { name: 'Custom Security Design', path: '/contact' },
-    ],
-    viewAllPath: '/products/ai',
-    viewAllLabel: 'View All Technology',
-  },
 ];
 
 export const mainNavigation: NavItem[] = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: '/products', hasMegaMenu: true },
-  { name: 'Industries', path: '/industries' },
-  { name: 'Projects', path: '/projects' },
   { name: 'About Us', path: '/our-story' },
   { name: 'Resources', path: '/blog' },
   { name: 'Contact Us', path: '/contact' },
@@ -108,7 +76,7 @@ export const navigationConfig = {
   productCategories,
   ctaButton: { text: 'Get a Quote', path: '/contact' },
   contactInfo: {
-    phone: '+91 11 4606 7000',
-    phoneHref: 'tel:+911146067000',
+    phone: '+91 9810282636',
+    phoneHref: 'tel:+919810282636',
   },
 };

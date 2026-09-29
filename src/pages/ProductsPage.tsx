@@ -38,8 +38,15 @@ const ProductsPage: React.FC = () => {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="bg-secondary-900 py-24 md:py-32">
-        <div className="container">
+      <section
+        className="relative py-24 md:py-32 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://res.cloudinary.com/dy93kgo03/image/upload/v1790722502/WhatsApp_Image_2026-09-09_at_09.52.19_cb5gzs.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-secondary-900/70" />
+        <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block text-primary-100 px-6 py-3 rounded-full bg-primary-600/20 border border-primary-400/30 mb-6 text-sm font-semibold">
               COMPLETE SOLUTIONS CATALOG
@@ -47,7 +54,7 @@ const ProductsPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Products & Solutions
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-200">
               Discover our comprehensive range of defence and security solutions designed to meet the highest standards of protection and reliability.
             </p>
           </div>
