@@ -66,59 +66,59 @@ export const mediaAssets: MediaAssets = {
 
   products: {
     'anti-climb-fencing': {
-      url: '/images/Anti-Climb-Fencing-2.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787364042/WhatsApp_Image_2026-08-21_at_12.06.59_fmxyuj.jpg',
       alt: 'Anti Climb Fencing Solution'
     },
     'razor-mesh-fencing': {
-      url: '/images/Razor-Mesh-Fencing-2.jpg', 
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/razormeshfencing1_wmbutx.png',
       alt: 'Razor Mesh Fencing Solution'
     },
     'crash-rated-security': {
-      url: '/images/Crash-Rated-Security-Fencing-768x274.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237967/WhatsApp_Image_2026-08-21_at_14.07.57_pnjt96.jpg',
       alt: 'Crash Rated Security Fencing'
     },
     'concertina-coil': {
-      url: '/images/Concertina-coil-Fence-768x274.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777398/ConcertinaCoilFence1_truxp8.png',
       alt: 'Concertina Coil Fence'
     },
     'chain-link': {
-      url: '/images/Chain-Link-Fence-1-1024x366.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237967/WhatsApp_Image_2026-08-21_at_14.13.53_i7xomq.jpg',
       alt: 'Chain Link Fence'
     },
     'barbed-wire': {
-      url: '/images/Barbed-Wire-2-1024x366.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775128/barbedwirefence1_bhxu8k.png',
       alt: 'Barbed Wire Fencing'
     },
     'ss-concertina': {
-      url: '/images/SS-Concertina-coil-768x274.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777398/ConcertinaCoilFence1_truxp8.png',
       alt: 'Stainless Steel Concertina Coil'
     },
     'gi-concertina': {
-      url: '/images/GI-Concertina-Coil-768x274.png',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777433/ConcertinaCoilFence2_rqdlc7.png',
       alt: 'GI Concertina Coil'
     },
     'swing-gates': {
-      url: '/images/Swing-Gates-768x274.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776218/swingGates1_enitpo.png',
       alt: 'Swing Gates'
     },
     'sliding-gates': {
-      url: '/images/Sliding-Gates-768x274.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776290/WhatsApp_Image_2026-05-25_at_14.19.20_vnymai.jpg',
       alt: 'Sliding Gates'
     },
     'gabion': {
-      url: '/images/Gabion-768x274.jpg',
+      url: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       alt: 'Gabion Barriers'
     },
     'bukhari': {
-      url: '/images/Bukhari-768x384.png',
+      url: 'https://images.unsplash.com/photo-1687348747353-0c42d3c05983?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       alt: 'Bukhari DRDO Product'
     },
     'vajra': {
-      url: '/images/Vajra-1-1536x768.png',
+      url: 'https://images.unsplash.com/photo-1633412802994-5c058f151b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       alt: 'Vajra DRDO Product'
     },
     'placeholder': {
-      url: '/images/placeholder.jpg',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing1_urt06c.png',
       alt: 'Product placeholder image'
     }
   },
