@@ -3,46 +3,86 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Shield, FileText, Phone, Award, CheckCircle, ChevronLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ConcertinaVariantCards } from '../components/products/ConcertinaVariantCards';
 import BrochureModal from '../components/products/BrochureModal';
 
 const OVERVIEW_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728928/Copilot_20260907_134912_g5tjyv.png';
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729680/1_asmheb.png';
 
 const CAROUSEL_IMAGES = [
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728926/1_lgmyfr.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728927/2_qaaygf.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728925/3_jjjvgw.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728927/4_z5sbvx.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728928/5_pwib7l.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728927/6_f0z7v4.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728925/7_mmkaom.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790728926/8_dez5gq.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729680/1_asmheb.png',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729678/2_zurswi.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729679/3_phl0ko.jpg',
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729679/4_jey6ks.jpg',
 ];
 
 const certBadges = [
-  { label: 'SS304/316', sub: 'Grade Option' },
-  { label: 'IS 4759', sub: 'Certified' },
+  { label: 'IS 278', sub: 'Certified' },
+  { label: 'ASTM A121', sub: 'Compliant' },
   { label: 'Hot-dip', sub: 'Galvanized' },
-  { label: 'Multi-Config', sub: 'Available' },
+  { label: 'High Tensile', sub: 'Steel Core' },
 ];
 
 const ctaCards = [
-  { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our security consultants', cta: 'Call Now', href: 'tel:+911146067000', openModal: false },
+  { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our security consultants', cta: 'Call Now', href: 'tel:+919810282636', openModal: false },
   { Icon: FileText, label: 'Download Brochure', sub: 'Full specs and variant selection guide', cta: 'Download PDF', href: undefined, openModal: true },
   { Icon: Shield, label: 'Request a Quote', sub: 'Custom pricing for your project scope', cta: 'Get Quote', href: '/contact', openModal: false },
 ];
 
 const overviewPoints = [
-  'Crossed-spiral design maintains structural integrity even when individual strands are cut',
-  'Available in Standard GI, Stainless Steel (SS304/SS316), and heavy-duty razor blade configurations',
-  'Coil diameters from 450mm to 980mm — scalable to threat level and installation type',
-  'Hot-dip galvanized finish per IS 4759 for long-term weather and corrosion resistance',
-  'Rapid deployment with clip fastener system across varied terrain conditions',
-  'Compatible with existing fence-top, ground-level, and standalone barrier applications',
+  'High-tensile steel wire with strategically spaced 4-point barbs for deterrence',
+  'Available in Galvanized Iron, High-Tensile, and PVC-coated variants',
+  'Hot-dip galvanized finish per IS 278 for long-term corrosion resistance',
+  'Wire gauges from 12.5 to 15.5 for varied strength and deterrence needs',
+  'Rapid installation over long perimeters with minimal ground preparation',
+  'Compatible with fence-top additions, agricultural, and boundary applications',
 ];
 
-const ConcertinaCoilPage: React.FC = () => {
+const variants = [
+  {
+    name: 'GI Barbed Wire',
+    tagline: 'Standard Galvanized',
+    description:
+      'Traditional galvanized iron barbed wire — the most cost-effective option for wide-area agricultural, livestock and boundary applications. Zinc coating for weather resistance.',
+    image:
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729678/2_zurswi.jpg',
+    features: [
+      'Standard 12.5–14 gauge galvanized wire',
+      'Cost-effective for large perimeter runs',
+      '4-point barbs at 4–6 inch intervals',
+      'Ideal for rural, agricultural and boundary marking',
+    ],
+  },
+  {
+    name: 'High-Tensile Barbed Wire',
+    tagline: 'Reinforced Security',
+    description:
+      'High-tensile steel core with increased breaking strength for industrial and defence-grade perimeters. Retains tension over long runs with fewer intermediate posts.',
+    image:
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729679/3_phl0ko.jpg',
+    features: [
+      'Tensile strength 1,400–2,000 lbs',
+      'Fewer posts required — longer spans',
+      'Suitable for industrial and defence installations',
+      'Superior deterrence against forced entry',
+    ],
+  },
+  {
+    name: 'PVC-Coated Barbed Wire',
+    tagline: 'Corrosion-Resistant',
+    description:
+      'Galvanized core with a bonded PVC outer sheath — maximum corrosion protection for coastal, chemical and high-humidity environments. Available in multiple colours.',
+    image:
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790729679/4_jey6ks.jpg',
+    features: [
+      'PVC sheath over galvanized core for dual protection',
+      'Ideal for coastal, marine and chemical plants',
+      'Available in green, black and grey finishes',
+      'Extended service life over conventional GI wire',
+    ],
+  },
+];
+
+const BarbedWireFencePage: React.FC = () => {
   const [current, setCurrent] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -53,12 +93,12 @@ const ConcertinaCoilPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Concertina Coil Fencing | Standard · SS · GI | Global Technocrats</title>
+        <title>Barbed Wire Fence | GI · High-Tensile · PVC Coated | Global Technocrats</title>
         <meta
           name="description"
-          content="Concertina coil fencing in Standard, Stainless Steel (SS304/SS316), and Galvanized Iron variants. High-security perimeter barriers for defence, border, industrial, and residential applications."
+          content="Barbed wire fencing in Galvanized Iron, High-Tensile and PVC-coated variants. Cost-effective, corrosion-resistant perimeter barriers for agricultural, industrial and defence applications."
         />
-        <meta name="keywords" content="concertina coil fence, SS concertina coil, GI concertina coil, razor coil fence, perimeter security, high security barrier" />
+        <meta name="keywords" content="barbed wire fence, GI barbed wire, high tensile barbed wire, PVC coated barbed wire, perimeter security, boundary fencing" />
       </Helmet>
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
@@ -77,20 +117,20 @@ const ConcertinaCoilPage: React.FC = () => {
                 <ChevronRight className="w-3 h-3" />
                 <Link to="/products/fencing" className="hover:text-gray-600 transition-colors">Fencing Solutions</Link>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-gray-500">Concertina Coil</span>
+                <span className="text-gray-500">Barbed Wire Fence</span>
               </nav>
 
               <div className="inline-flex items-center gap-2 bg-primary-900 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
-                <Shield className="w-3.5 h-3.5" /> High-Security Barrier
+                <Shield className="w-3.5 h-3.5" /> Perimeter Deterrent
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.1] mb-3">
-                Concertina Coil<br />
+                Barbed Wire<br />
                 <span className="text-primary-900">Fencing System</span>
               </h1>
-              <p className="text-lg font-medium text-primary-900 mb-5">Standard · SS Concertina · GI Concertina Series</p>
+              <p className="text-lg font-medium text-primary-900 mb-5">GI · High-Tensile · PVC-Coated Series</p>
               <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-lg">
-                A formidable perimeter barrier available in three material variants — Standard Galvanized, Stainless Steel, and Galvanized Iron — for every security requirement from border defence to residential protection.
+                A time-tested perimeter deterrent available in three material variants — Galvanized Iron, High-Tensile and PVC-Coated — for every application from agricultural boundaries to industrial perimeters.
               </p>
 
               <div className="grid grid-cols-4 gap-3 max-w-sm">
@@ -112,7 +152,7 @@ const ConcertinaCoilPage: React.FC = () => {
                     <motion.img
                       key={current}
                       src={CAROUSEL_IMAGES[current]}
-                      alt={`Concertina coil view ${current + 1}`}
+                      alt={`Barbed wire view ${current + 1}`}
                       className="absolute inset-0 w-full h-full object-contain"
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -134,7 +174,7 @@ const ConcertinaCoilPage: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-[11px] text-gray-400 font-medium">3 Variants Available</p>
-                    <p className="text-sm font-bold text-gray-900">Standard · SS · GI</p>
+                    <p className="text-sm font-bold text-gray-900">GI · HT · PVC</p>
                   </div>
                 </div>
               </div>
@@ -158,15 +198,15 @@ const ConcertinaCoilPage: React.FC = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-bold uppercase tracking-widest text-primary-900">What Is Concertina Coil Fencing?</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary-900">What Is Barbed Wire Fencing?</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">
-                Concertina Coil —<br /> Rapid-Deployment Security Barrier
+                Barbed Wire —<br /> Time-Tested Perimeter Deterrent
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Concertina coil fences provide an unmatched level of protection and act as a strong deterrent to potential intruders. The razor-sharp crossed-spiral design is engineered to entangle and delay any intrusion attempt while remaining highly visible as a psychological deterrent.
+                Barbed wire fencing is a proven and cost-effective boundary solution combining high-tensile steel wire with strategically spaced barbs to create a formidable physical and psychological deterrent. Widely deployed across agricultural, industrial and defence perimeters.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Global Technocrats supplies concertina coil in Standard (high-tensile galvanized steel), SS Concertina (stainless steel for marine and corrosive environments), and GI Concertina (galvanized iron for cost-effective wide-area deployment).
+                Global Technocrats supplies barbed wire in Galvanized Iron (standard), High-Tensile (reinforced strength), and PVC-Coated (maximum corrosion resistance) variants — each engineered for a specific environment and threat profile.
               </p>
               <ul className="space-y-3">
                 {overviewPoints.map(pt => (
@@ -178,14 +218,44 @@ const ConcertinaCoilPage: React.FC = () => {
               </ul>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-100 aspect-video bg-gray-100">
-              <img src={OVERVIEW_IMAGE} alt="Concertina coil fencing installation" className="w-full h-full object-cover" />
+              <img src={OVERVIEW_IMAGE} alt="Barbed wire fencing installation" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ── Variant Cards ────────────────────────────────────────────────────── */}
-      <ConcertinaVariantCards />
+      <section className="py-24 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-14">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Choose Your Variant</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Three Purpose-Built Configurations</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {variants.map((v) => (
+              <div key={v.name} className="bg-white rounded-2xl overflow-hidden shadow-md ring-1 ring-gray-100 flex flex-col">
+                <div className="aspect-video bg-gray-100 overflow-hidden">
+                  <img src={v.image} alt={v.name} className="w-full h-full object-cover" />
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <p className="text-xs font-bold uppercase tracking-widest text-primary-900 mb-2">{v.tagline}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{v.name}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">{v.description}</p>
+                  <ul className="space-y-2.5 mt-auto">
+                    {v.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2.5 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-primary-900 flex-shrink-0 mt-0.5" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── Bottom CTA ───────────────────────────────────────────────────────── */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-primary-950">
@@ -193,7 +263,7 @@ const ConcertinaCoilPage: React.FC = () => {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Secure Your Perimeter?</h2>
             <p className="text-blue-200 max-w-xl mx-auto text-sm leading-relaxed">
-              Our security specialists will help you select the right concertina coil variant and quantity for your installation.
+              Our security specialists will help you select the right barbed wire variant and quantity for your installation.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -222,4 +292,4 @@ const ConcertinaCoilPage: React.FC = () => {
   );
 };
 
-export default ConcertinaCoilPage;
+export default BarbedWireFencePage;

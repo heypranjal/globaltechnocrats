@@ -42,10 +42,10 @@ const FencingSolutionsPage: React.FC = () => {
       description: 'Traditional security fencing with sharp wire barbs for deterrence.',
       image: getImageUrl('products', 'barbed-wire')
     },
-    { 
-      name: 'Swing Gates', 
-      path: '/products/fencing/swing-gates', 
-      description: 'High-quality swing gates for secure and convenient access control.',
+    {
+      name: 'Swing & Cantilever Gates',
+      path: '/products/gates/swing-gates',
+      description: 'High-quality swing and cantilever gates for secure and convenient access control.',
       image: getImageUrl('products', 'swing-gates')
     },
   ];

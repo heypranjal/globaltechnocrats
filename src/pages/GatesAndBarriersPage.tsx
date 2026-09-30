@@ -6,35 +6,11 @@ import { getImageUrl } from '../data/mediaAssets';
 
 const GatesAndBarriersPage: React.FC = () => {
   const products = [
-    { 
-      name: 'Swing Gates', 
-      path: '/products/gates/swing-gates', 
-      description: 'High-security swing gates with advanced access control integration.',
+    {
+      name: 'Swing & Cantilever Gates',
+      path: '/products/gates/swing-gates',
+      description: 'High-security swing and cantilever gates with advanced access control integration.',
       image: getImageUrl('products', 'swing-gates')
-    },
-    { 
-      name: 'Sliding Gates', 
-      path: '/products/gates/sliding-gates', 
-      description: 'Space-efficient sliding security gates for locations with limited clearance.',
-      image: getImageUrl('products', 'sliding-gates')
-    },
-    { 
-      name: 'Collapsible Barrier', 
-      path: '/products/gates/collapsible-barrier', 
-      description: 'Rapidly deployable security barriers for temporary or emergency scenarios.',
-      image: getImageUrl('products', 'gabion') // Using a similar barrier image
-    },
-    { 
-      name: 'Architectural Gabions', 
-      path: '/products/gates/architectural-gabions', 
-      description: 'Decorative yet functional security barriers for perimeter protection.',
-      image: getImageUrl('products', 'gabion')
-    },
-    { 
-      name: 'Hesco Box', 
-      path: '/products/gates/hesco-box', 
-      description: 'Military-grade defensive barriers for rapid deployment in high-risk areas.',
-      image: getImageUrl('products', 'gabion') // Using a similar barrier image
     },
   ];
 

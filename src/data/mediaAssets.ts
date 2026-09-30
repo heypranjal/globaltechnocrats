@@ -99,7 +99,7 @@ export const mediaAssets: MediaAssets = {
     },
     'swing-gates': {
       url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776218/swingGates1_enitpo.png',
-      alt: 'Swing Gates'
+      alt: 'Swing & Cantilever Gates'
     },
     'sliding-gates': {
       url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776290/WhatsApp_Image_2026-05-25_at_14.19.20_vnymai.jpg',

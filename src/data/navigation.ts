@@ -44,11 +44,7 @@ export const megaMenuCategories: MegaMenuCategory[] = [
     path: '/products/gates',
     description: 'Automated and manual gate systems for access control',
     items: [
-      { name: 'Sliding Gates', path: '/products/gates/sliding-gates' },
-      { name: 'Swing Gates', path: '/products/gates/swing-gates' },
-      { name: 'Collapsible Barriers', path: '/products/gates/collapsible-barrier' },
-      { name: 'Crash Rated Gates', path: '/products/fencing/crash-rated-fence' },
-      { name: 'Architectural Gabions', path: '/products/gates/architectural-gabions' },
+      { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' },
     ],
     viewAllPath: '/products/gates',
     viewAllLabel: 'View All Gates',

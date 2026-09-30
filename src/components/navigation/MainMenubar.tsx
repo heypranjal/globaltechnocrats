@@ -45,11 +45,7 @@ export function MainMenubar({ isScrolled = false, onNavigate }: MainMenubarProps
   ];
 
   const gatesProducts = [
-    { name: 'Swing Gates', path: '/products/gates/swing-gates' },
-    { name: 'Sliding Gates', path: '/products/gates/sliding-gates' },
-    { name: 'Collapsible Barrier', path: '/products/gates/collapsible-barrier' },
-    { name: 'Architectural Gabions', path: '/products/gates/architectural-gabions' },
-    { name: 'Hesco Box', path: '/products/gates/hesco-box' },
+    { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' },
   ];
 
   const aiProducts = [

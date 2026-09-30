@@ -559,7 +559,7 @@ export const productsData: Product[] = [
   // Gates & Barriers Products
   {
     id: 'swing-gates',
-    name: 'Swing Gates',
+    name: 'Swing & Cantilever Gates',
     category: 'gates',
     subcategory: 'Gates & Barriers',
     description: 'Versatile swing gate systems offering secure access control with manual or automated operation.',

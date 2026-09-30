@@ -44,11 +44,7 @@ const categories = [
     description: 'Secure access control solutions for controlled entry and exit management.',
     icon: <Zap className="w-10 h-10 text-primary-500" />,
     products: [
-      { name: 'Swing Gates', path: '/products/gates/swing-gates' },
-      { name: 'Sliding Gates', path: '/products/gates/sliding-gates' },
-      { name: 'Collapsible Barrier', path: '/products/gates/collapsible-barrier' },
-      { name: 'Architectural Gabions', path: '/products/gates/architectural-gabions' },
-      { name: 'Hesco Box', path: '/products/gates/hesco-box' }
+      { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' }
     ],
     image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-slidinggate.png',
     link: '/products/gates'
