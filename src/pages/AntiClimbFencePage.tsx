@@ -237,17 +237,17 @@ const AntiClimbFencePage: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
-              { name: 'Difficult to Climb', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/Difficult_to_Climb_vggfca.png' },
-              { name: 'Difficult to Cutting', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290636/Difficult_to_Cutting_augncy.png' },
-              { name: 'High Visibility Anti Climb Fence', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/6_o9lrnw.png' },
-              { name: 'Long Life', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Long_Life_t2reuy.png' },
-              { name: 'Modular', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Modular-1_bqfwdn.png' },
-              { name: 'Strong', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290639/Strong_u7krp2.png' },
-            ].map(({ name, image }) => (
+              { name: 'Difficult to Climb', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/Difficult_to_Climb_vggfca.png', zoom: false },
+              { name: 'Difficult to Cutting', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290636/Difficult_to_Cutting_augncy.png', zoom: false },
+              { name: 'High Visibility Anti Climb Fence', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/6_o9lrnw.png', zoom: false },
+              { name: 'Long Life', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Long_Life_t2reuy.png', zoom: false },
+              { name: 'Modular', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1791264954/WhatsApp_Image_2026-10-06_at_11.04.25_vqkeve.jpg', zoom: false },
+              { name: 'Strong', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290639/Strong_u7krp2.png', zoom: false },
+            ].map(({ name, image, zoom }) => (
               <div key={name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
-                <div className="h-52 bg-gray-50 p-4">
+                <div className={`h-52 ${zoom ? 'bg-gray-100' : 'bg-gray-50 p-4'}`}>
                   {image ? (
-                    <img src={image} alt={name} className="w-full h-full object-contain" />
+                    <img src={image} alt={name} className={`w-full h-full ${zoom ? 'object-cover' : 'object-contain'}`} />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                       <Shield className="w-10 h-10 text-gray-300" />
