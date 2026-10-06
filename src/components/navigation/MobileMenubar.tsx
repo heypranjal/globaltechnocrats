@@ -32,14 +32,15 @@ export function MobileMenubar({ onNavigate }: MobileMenubarProps) {
     { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
     { name: 'Concertina Coil Fence', path: '/products/fencing/concertina-coil-fence' },
     { name: 'Crash Rated Fencing', path: '/products/fencing/crash-rated-fence' },
-    { name: 'Decorative Fencing', path: '/products/fencing/decorative' },
+    { name: 'Decorative Fencing', path: '/products/fencing/decorative-fencing' },
     { name: 'GI Concertina Coil', path: '/products/fencing/gi-concertina-coil' },
     { name: 'Razor Mesh Fencing', path: '/products/fencing/razor-mesh' },
     { name: 'SS Concertina Coil', path: '/products/fencing/ss-concertina-coil' },
   ];
 
   const gatesProducts = [
-    { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' },
+    { name: 'Swing Gates', path: '/products/gates/swing-gates' },
+    { name: 'Cantilever Gates', path: '/products/gates/cantilever-gates' },
   ];
 
   const aiProducts = [
@@ -118,13 +119,13 @@ export function MobileMenubar({ onNavigate }: MobileMenubarProps) {
               )}
             </div>
 
-            {/* Gates & Barriers */}
+            {/* Engineered Gate Solutions */}
             <div>
-              <button 
+              <button
                 className="flex items-center justify-between w-full text-sm font-medium text-gray-600 hover:text-primary-900"
                 onClick={() => toggleMenu('gates')}
               >
-                Gates & Barriers
+                Engineered Gate Solutions
                 <ChevronDown className={`w-3 h-3 transition-transform ${expandedMenu === 'gates' ? 'rotate-180' : ''}`} />
               </button>
               {expandedMenu === 'gates' && (

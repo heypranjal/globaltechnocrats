@@ -556,12 +556,12 @@ export const productsData: Product[] = [
     seoDescription: 'Traditional barbed wire fencing for agricultural boundaries, livestock containment, and cost-effective perimeter security.'
   },
 
-  // Gates & Barriers Products
+  // Engineered Gate Solutions Products
   {
     id: 'swing-gates',
-    name: 'Swing & Cantilever Gates',
+    name: 'Swing Gates',
     category: 'gates',
-    subcategory: 'Gates & Barriers',
+    subcategory: 'Engineered Gate Solutions',
     description: 'Versatile swing gate systems offering secure access control with manual or automated operation.',
     longDescription: 'Swing gates are a popular access control solution offering efficient design and versatility in various settings. Available in single or double swing configurations, these gates can be crafted from wood, steel, or aluminum with optional automation for enhanced security and convenience.',
     features: [
@@ -602,7 +602,7 @@ export const productsData: Product[] = [
     id: 'sliding-gates',
     name: 'Sliding Gates',
     category: 'gates',
-    subcategory: 'Gates & Barriers',
+    subcategory: 'Engineered Gate Solutions',
     description: 'Space-efficient sliding gate systems combining security, elegance, and automated convenience.',
     longDescription: 'Sliding gates represent the perfect fusion of security and elegance, offering practical and stylish solutions for modern properties. These gates are ideal for areas with limited space, providing enhanced security while maintaining aesthetic appeal through various design options and automation capabilities.',
     features: [
@@ -643,7 +643,7 @@ export const productsData: Product[] = [
     id: 'architectural-gabions',
     name: 'Architectural Gabions',
     category: 'gates',
-    subcategory: 'Gates & Barriers',
+    subcategory: 'Engineered Gate Solutions',
     description: 'Stone-filled wire mesh structures providing both functional barriers and aesthetic landscape features.',
     longDescription: 'Architectural Gabions are essentially cages or boxes filled with rocks, concrete, or decorative materials. Originally used for civil engineering purposes, they have found their place in modern architectural designs for both aesthetic and functional reasons, serving as retaining walls, noise barriers, and decorative landscape features.',
     features: [
@@ -684,7 +684,7 @@ export const productsData: Product[] = [
     id: 'collapsible-barrier',
     name: 'Collapsible Barrier',
     category: 'gates',
-    subcategory: 'Gates & Barriers',
+    subcategory: 'Engineered Gate Solutions',
     description: 'Portable and adaptable barrier systems for crowd control, traffic management, and temporary security.',
     longDescription: 'Collapsible barriers offer convenient solutions for controlling crowds, managing traffic, and ensuring security across different industries. These innovative barriers provide a flexible way to create temporary boundaries with easy setup and storage capabilities, making them invaluable for events, construction sites, and emergency situations.',
     features: [
@@ -725,7 +725,7 @@ export const productsData: Product[] = [
     id: 'hesco-box',
     name: 'Hesco Box',
     category: 'gates',
-    subcategory: 'Gates & Barriers',
+    subcategory: 'Engineered Gate Solutions',
     description: 'Military-grade collapsible barriers for blast protection, flood control, and perimeter security.',
     longDescription: 'Hesco boxes are modern gabion-like structures used for force protection and flood control. They consist of collapsible wire mesh containers with heavy-duty fabric liners, designed for rapid deployment in military, emergency, and security applications where quick barrier establishment is critical.',
     features: [
@@ -779,7 +779,7 @@ export const getAllCategories = (): string[] => {
 export const getCategoryTitle = (category: string): string => {
   const categoryTitles: Record<string, string> = {
     'fencing': 'Fencing Solutions',
-    'gates': 'Gates & Barriers', 
+    'gates': 'Engineered Gate Solutions',
     'ai': 'Advanced AI Products',
     'drdo': 'DRDO TOT Products',
     'defence-tech': 'Defence Tech'
@@ -791,7 +791,7 @@ export const getCategoryTitle = (category: string): string => {
 export const categoryFilters = [
   'All Categories',
   'Fencing Solutions',
-  'Gates & Barriers',
+  'Engineered Gate Solutions',
   'Advanced AI Products',
   'DRDO TOT Products',
   'Defence Tech'
@@ -839,7 +839,7 @@ export const productCategories: ProductCategory[] = [
   },
   {
     id: 'gates',
-    title: 'Gates & Barriers',
+    title: 'Engineered Gate Solutions',
     description: 'Professional gate systems and barrier solutions for access control and perimeter security.',
     icon: 'DoorOpen',
     products: gatesProducts,

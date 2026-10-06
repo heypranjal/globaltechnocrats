@@ -38,14 +38,15 @@ export function MainMenubar({ isScrolled = false, onNavigate }: MainMenubarProps
     { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
     { name: 'Concertina Coil Fence', path: '/products/fencing/concertina-coil-fence' },
     { name: 'Crash Rated Fencing', path: '/products/fencing/crash-rated-fence' },
-    { name: 'Decorative Fencing', path: '/products/fencing/decorative' },
+    { name: 'Decorative Fencing', path: '/products/fencing/decorative-fencing' },
     { name: 'GI Concertina Coil', path: '/products/fencing/gi-concertina-coil' },
     { name: 'Razor Mesh Fencing', path: '/products/fencing/razor-mesh' },
     { name: 'SS Concertina Coil', path: '/products/fencing/ss-concertina-coil' },
   ];
 
   const gatesProducts = [
-    { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' },
+    { name: 'Swing Gates', path: '/products/gates/swing-gates' },
+    { name: 'Cantilever Gates', path: '/products/gates/cantilever-gates' },
   ];
 
   const aiProducts = [
@@ -114,7 +115,7 @@ export function MainMenubar({ isScrolled = false, onNavigate }: MainMenubarProps
 
             <MenubarSub>
               <MenubarSubTrigger className="w-full justify-between text-sm">
-                Gates & Barriers
+                Engineered Gate Solutions
               </MenubarSubTrigger>
               <MenubarSubContent className="min-w-[200px]">
                 {gatesProducts.map((product) => (

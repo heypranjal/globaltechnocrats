@@ -8,7 +8,6 @@ import { Helmet } from 'react-helmet';
 // Components
 import HeroSection from '../components/home/HeroSection';
 import ProductCategoriesSection from '../components/home/ProductCategoriesSection';
-import FeaturedProductsSection from '../components/home/FeaturedProductsSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import GlobalPresenceSection from '../components/home/GlobalPresenceSection';
 import NewsSection from '../components/home/NewsSection';
@@ -27,7 +26,6 @@ const HomePage: React.FC = () => {
       <div className="relative bg-white z-20">
         <ClientsSection />
         <ProductCategoriesSection />
-        <FeaturedProductsSection />
         <TestimonialsSection />
         <GlobalPresenceSection />
         <NewsSection />

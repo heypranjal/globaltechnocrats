@@ -36,17 +36,17 @@ const FencingSolutionsPage: React.FC = () => {
       description: 'Durable and versatile chain link fencing solutions for various applications.',
       image: getImageUrl('products', 'chain-link')
     },
-    { 
-      name: 'Barbed Wire Fence', 
-      path: '/products/fencing/barbed-wire-fence', 
+    {
+      name: 'Barbed Wire Fence',
+      path: '/products/fencing/barbed-wire-fence',
       description: 'Traditional security fencing with sharp wire barbs for deterrence.',
       image: getImageUrl('products', 'barbed-wire')
     },
     {
-      name: 'Swing & Cantilever Gates',
-      path: '/products/gates/swing-gates',
-      description: 'High-quality swing and cantilever gates for secure and convenient access control.',
-      image: getImageUrl('products', 'swing-gates')
+      name: 'Decorative Fencing',
+      path: '/products/fencing/decorative-fencing',
+      description: 'Elegant and aesthetically pleasing fencing solutions that add elegance and security to your landscape.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/1_fcdkqr.png'
     },
   ];
 

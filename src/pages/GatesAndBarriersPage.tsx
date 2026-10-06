@@ -7,17 +7,23 @@ import { getImageUrl } from '../data/mediaAssets';
 const GatesAndBarriersPage: React.FC = () => {
   const products = [
     {
-      name: 'Swing & Cantilever Gates',
+      name: 'Swing Gates',
       path: '/products/gates/swing-gates',
-      description: 'High-security swing and cantilever gates with advanced access control integration.',
-      image: getImageUrl('products', 'swing-gates')
+      description: 'Hinged swing gates with single or double leaf configurations and CE-marked automation.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726780/2_qky6aq.png'
+    },
+    {
+      name: 'Cantilever Gates',
+      path: '/products/gates/cantilever-gates',
+      description: 'Track-free sliding gates for openings up to 12 m — ideal for uneven or heavy-traffic sites.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726780/1._i9nefi.png'
     },
   ];
 
   return (
     <div className="pt-24 pb-16">
       <Helmet>
-        <title>Gates & Barriers | Global Technocrats</title>
+        <title>Engineered Gate Solutions | Global Technocrats</title>
         <meta name="description" content="Secure access control solutions for controlled entry and exit management." />
       </Helmet>
 
@@ -28,14 +34,14 @@ const GatesAndBarriersPage: React.FC = () => {
           <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
           <Link to="/products" className="text-gray-500 hover:text-primary-500">Products</Link>
           <ChevronRight className="w-4 h-4 mx-2 text-gray-400" />
-          <span className="text-gray-800">Gates & Barriers</span>
+          <span className="text-gray-800">Engineered Gate Solutions</span>
         </div>
 
         {/* Category Header */}
         <div className="mb-12">
           <div className="flex items-center mb-6">
             <Zap className="w-6 h-6 text-primary-500 mr-3" />
-            <h1 className="text-3xl md:text-4xl font-bold">Gates & Barriers</h1>
+            <h1 className="text-3xl md:text-4xl font-bold">Engineered Gate Solutions</h1>
           </div>
           <p className="text-lg text-gray-700 max-w-3xl">
             Secure access control solutions for controlled entry and exit management. Our gates and barriers provide reliable security while ensuring efficient traffic flow for authorized personnel and vehicles.
@@ -68,7 +74,7 @@ const GatesAndBarriersPage: React.FC = () => {
 
         {/* Category Description */}
         <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 mb-12">
-          <h2 className="text-2xl font-bold mb-6">About Our Gates & Barriers</h2>
+          <h2 className="text-2xl font-bold mb-6">About Our Engineered Gate Solutions</h2>
           <p className="text-gray-700 mb-6">
             Global Technocrats provides a comprehensive range of gates and barrier systems designed to control access to secure facilities while maintaining efficient operations. Our solutions range from manual to fully automated systems with advanced access control integration.
           </p>

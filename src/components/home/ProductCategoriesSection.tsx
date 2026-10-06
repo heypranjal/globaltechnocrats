@@ -40,11 +40,12 @@ const categories = [
   },
   {
     id: 'gates',
-    title: 'Gates & Barriers',
+    title: 'Engineered Gate Solutions',
     description: 'Secure access control solutions for controlled entry and exit management.',
     icon: <Zap className="w-10 h-10 text-primary-500" />,
     products: [
-      { name: 'Swing & Cantilever Gates', path: '/products/gates/swing-gates' }
+      { name: 'Swing Gates', path: '/products/gates/swing-gates' },
+      { name: 'Cantilever Gates', path: '/products/gates/cantilever-gates' }
     ],
     image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-slidinggate.png',
     link: '/products/gates'

@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/products/gates" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" /> Gates & Barriers
+                  <ArrowRight className="w-4 h-4 mr-2" /> Engineered Gate Solutions
                 </Link>
               </li>
               <li>

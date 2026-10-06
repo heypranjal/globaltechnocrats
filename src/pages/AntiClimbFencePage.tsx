@@ -6,13 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
 
 const OVERVIEW_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290633/1_mpgiff.png';
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1791256515/WhatsApp_Image_2026-10-01_at_10.15.55_ckrllm.jpg';
 
 const CAROUSEL_IMAGES = [
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing1_urt06c.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/anticlimbing2_kmuxz3.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290633/1_mpgiff.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290633/2_r0povb.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/3_wdp2hd.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/4-a_afa8rn.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/5_di7yqc.png',
@@ -253,9 +249,9 @@ const AntiClimbFencePage: React.FC = () => {
               { name: 'Strong', image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290639/Strong_u7krp2.png' },
             ].map(({ name, image }) => (
               <div key={name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col">
-                <div className="h-52 bg-gray-100">
+                <div className="h-52 bg-gray-50 p-4">
                   {image ? (
-                    <img src={image} alt={name} className="w-full h-full object-cover" />
+                    <img src={image} alt={name} className="w-full h-full object-contain" />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
                       <Shield className="w-10 h-10 text-gray-300" />

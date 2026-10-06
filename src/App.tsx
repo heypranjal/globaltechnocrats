@@ -27,7 +27,8 @@ import ChainLinkFencePage from './pages/ChainLinkFencePage';
 import AntiClimbFencePage from './pages/AntiClimbFencePage';
 import ConcertinaCoilPage from './pages/ConcertinaCoilPage';
 import DecorativeFencingPage from './pages/DecorativeFencingPage';
-import SwingCantileverGatesPage from './pages/SwingCantileverGatesPage';
+import SwingGatesPage from './pages/SwingGatesPage';
+import CantileverGatesPage from './pages/CantileverGatesPage';
 import BarbedWireFencePage from './pages/BarbedWireFencePage';
 import RazorMeshFencePage from './pages/RazorMeshFencePage';
 
@@ -54,7 +55,8 @@ function App() {
           <Route path="products/fencing/barbed-wire-fence" element={<BarbedWireFencePage />} />
           <Route path="products/fencing/razor-mesh" element={<RazorMeshFencePage />} />
           <Route path="products/fencing/decorative-fencing" element={<DecorativeFencingPage />} />
-          <Route path="products/gates/swing-gates" element={<SwingCantileverGatesPage />} />
+          <Route path="products/gates/swing-gates" element={<SwingGatesPage />} />
+          <Route path="products/gates/cantilever-gates" element={<CantileverGatesPage />} />
           <Route path="products/:category/:productId" element={<ProductDetailPage />} />
           
           {/* Category Pages */}
