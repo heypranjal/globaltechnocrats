@@ -48,7 +48,7 @@ const categories = [
       { name: 'Swing Gates', path: '/products/gates/swing-gates' },
       { name: 'Cantilever Gates', path: '/products/gates/cantilever-gates' }
     ],
-    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1791264026/Cantiever_gate_full_balck_color_stecuj.png',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1791264281/1_ppy5ze.png',
     link: '/products/gates'
   }
 ];
