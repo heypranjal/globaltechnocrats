@@ -48,7 +48,7 @@ const categories = [
       { name: 'Swing Gates', path: '/products/gates/swing-gates' },
       { name: 'Cantilever Gates', path: '/products/gates/cantilever-gates' }
     ],
-    image: 'https://pbkxpylwatscfjzbmwur.supabase.co/storage/v1/object/public/globaltechnocrats//thumb-hp-slidinggate.png',
+    image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1791264026/Cantiever_gate_full_balck_color_stecuj.png',
     link: '/products/gates'
   }
 ];
