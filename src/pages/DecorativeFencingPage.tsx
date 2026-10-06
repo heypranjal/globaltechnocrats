@@ -8,9 +8,9 @@ import BrochureModal from '../components/products/BrochureModal';
 const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png';
 
 const CAROUSEL_IMAGES = [
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/1_fcdkqr.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237332/2_e09s74.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/4_ea8paj.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237331/5_ri4dp6.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237331/6_v17iyy.png',
