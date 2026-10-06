@@ -27,15 +27,13 @@ export function MobileMenubar({ onNavigate }: MobileMenubarProps) {
   };
 
   const fencingProducts = [
-    { name: 'Anti-Climb Fencing', path: '/products/fencing/anti-climb' },
-    { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' },
-    { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
-    { name: 'Concertina Coil Fence', path: '/products/fencing/concertina-coil-fence' },
     { name: 'Crash Rated Fencing', path: '/products/fencing/crash-rated-fence' },
+    { name: 'Chain Link Fence', path: '/products/fencing/chain-link-fence' },
+    { name: 'Anti-Climb Fencing', path: '/products/fencing/anti-climb' },
     { name: 'Decorative Fencing', path: '/products/fencing/decorative-fencing' },
-    { name: 'GI Concertina Coil', path: '/products/fencing/gi-concertina-coil' },
     { name: 'Razor Mesh Fencing', path: '/products/fencing/razor-mesh' },
-    { name: 'SS Concertina Coil', path: '/products/fencing/ss-concertina-coil' },
+    { name: 'Concertina Coil', path: '/products/fencing/concertina-coil' },
+    { name: 'Barbed Wire Fence', path: '/products/fencing/barbed-wire-fence' },
   ];
 
   const gatesProducts = [

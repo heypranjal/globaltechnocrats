@@ -47,13 +47,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) =>
       <div className="flex flex-col h-full">
         {/* Product Image */}
         <Link to={getProductLink()} className="block overflow-hidden">
-          <div className="relative h-56 md:h-64 overflow-hidden">
-            <img 
-              src={getProductImage()} 
+          <div className={`relative h-56 md:h-64 overflow-hidden ${product.category === 'gates' ? 'bg-gray-50 p-4' : ''}`}>
+            <img
+              src={getProductImage()}
               alt={product.name}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${product.category === 'gates' ? 'object-contain' : 'object-cover'}`}
               onError={(e) => {
-                // Fallback to placeholder if image fails to load
                 const target = e.target as HTMLImageElement;
                 target.src = 'https://images.unsplash.com/photo-1567194974473-68d83240a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
               }}

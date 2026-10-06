@@ -6,23 +6,35 @@ import { getImageUrl } from '../data/mediaAssets';
 
 const FencingSolutionsPage: React.FC = () => {
   const products = [
-    { 
-      name: 'Anti Climb Fencing', 
-      path: '/products/fencing/anti-climb', 
+    {
+      name: 'Crash Rated Fence',
+      path: '/products/fencing/crash-rated-fence',
+      description: 'High-impact resistance fencing designed to withstand vehicular attacks.',
+      image: getImageUrl('products', 'crash-rated-security')
+    },
+    {
+      name: 'Chain Link Fence',
+      path: '/products/fencing/chain-link-fence',
+      description: 'Durable and versatile chain link fencing solutions for various applications.',
+      image: getImageUrl('products', 'chain-link')
+    },
+    {
+      name: 'Anti Climb Fencing',
+      path: '/products/fencing/anti-climb',
       description: 'High-security anti-climb fencing designed to prevent unauthorized access.',
       image: getImageUrl('products', 'anti-climb-fencing')
     },
-    { 
-      name: 'Razor Mesh Fencing', 
-      path: '/products/fencing/razor-mesh', 
+    {
+      name: 'Decorative Fencing',
+      path: '/products/fencing/decorative-fencing',
+      description: 'Elegant and aesthetically pleasing fencing solutions that add elegance and security to your landscape.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/1_fcdkqr.png'
+    },
+    {
+      name: 'Razor Mesh Fencing',
+      path: '/products/fencing/razor-mesh',
       description: 'Advanced razor mesh fencing providing maximum security for sensitive installations.',
       image: getImageUrl('products', 'razor-mesh-fencing')
-    },
-    { 
-      name: 'Crash Rated Fence', 
-      path: '/products/fencing/crash-rated-fence', 
-      description: 'High-impact resistance fencing designed to withstand vehicular attacks.',
-      image: getImageUrl('products', 'crash-rated-security')
     },
     {
       name: 'Concertina Coil',
@@ -30,23 +42,11 @@ const FencingSolutionsPage: React.FC = () => {
       description: 'Rapid-deployment security barrier in Standard, SS, and GI variants for every security requirement.',
       image: getImageUrl('products', 'concertina-coil')
     },
-    { 
-      name: 'Chain Link Fence', 
-      path: '/products/fencing/chain-link-fence', 
-      description: 'Durable and versatile chain link fencing solutions for various applications.',
-      image: getImageUrl('products', 'chain-link')
-    },
     {
       name: 'Barbed Wire Fence',
       path: '/products/fencing/barbed-wire-fence',
       description: 'Traditional security fencing with sharp wire barbs for deterrence.',
       image: getImageUrl('products', 'barbed-wire')
-    },
-    {
-      name: 'Decorative Fencing',
-      path: '/products/fencing/decorative-fencing',
-      description: 'Elegant and aesthetically pleasing fencing solutions that add elegance and security to your landscape.',
-      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/1_fcdkqr.png'
     },
   ];
 

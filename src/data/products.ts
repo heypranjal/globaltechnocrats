@@ -590,12 +590,53 @@ export const productsData: Product[] = [
       { name: 'Weight Capacity', value: 'Up to 1500 lbs per leaf' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776218/swingGates1_enitpo.png',
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776510/swinggates2_rznfaj.png'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726780/2_qky6aq.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726781/3_bmdq6d.jpg'
     ],
-    relatedProducts: ['sliding-gates', 'architectural-gabions'],
+    relatedProducts: ['cantilever-gates'],
     seoTitle: 'Swing Gates | Automated Access Control Systems | Global Technocrats',
     seoDescription: 'Professional swing gate systems for residential and commercial access control with automation options and security features.'
+  },
+
+  {
+    id: 'cantilever-gates',
+    name: 'Cantilever Gates',
+    category: 'gates',
+    subcategory: 'Engineered Gate Solutions',
+    description: 'Track-free sliding gates with clear openings up to 12 m — ideal for uneven terrain and heavy-traffic sites.',
+    longDescription: 'Cantilever gates slide horizontally without touching the ground, carried on a counterbalanced beam with precision roller assemblies. Perfect for logistics yards, industrial estates and high-security perimeters where a conventional ground track is impractical.',
+    features: [
+      'Track-free design — no ground rail required',
+      'Clear openings up to 12 m',
+      'Operates smoothly over debris, snow and uneven terrain',
+      'Precision roller assemblies with sealed bearings',
+      'CE-marked automation with IP 55 rated motors',
+      'Optional crash-rated variants for high-threat perimeters',
+      'Manual override for uninterrupted operation during power loss'
+    ],
+    applications: [
+      'Logistics and distribution yards',
+      'Industrial estates and manufacturing plants',
+      'Heavy-vehicle entrances',
+      'Defence and government installations',
+      'Data centres and critical infrastructure',
+      'Any site where a ground track is impractical'
+    ],
+    specifications: [
+      { name: 'Opening Width', value: 'Up to 12 m clear opening' },
+      { name: 'Frame', value: 'MS box section with reinforced bottom beam, hot-dip galvanized' },
+      { name: 'Panel Infill', value: 'Mesh, palisade, aluminium slat or solid sheet' },
+      { name: 'Roller System', value: 'Precision-machined assemblies with sealed bearings' },
+      { name: 'Operators', value: 'CE-marked rack-and-pinion drive, 230V AC or 24V DC' },
+      { name: 'Standards', value: 'ISO 9001, IS 4759, EN 12453, EN 12604' }
+    ],
+    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726780/1._i9nefi.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790726783/6_qj1vim.jpg'
+    ],
+    relatedProducts: ['swing-gates'],
+    seoTitle: 'Cantilever Gates | Track-Free Sliding Gates | Global Technocrats',
+    seoDescription: 'Track-free cantilever sliding gates with openings up to 12 m, CE-marked automation and crash-rated options for industrial and high-security sites.'
   },
 
   {
@@ -791,10 +832,7 @@ export const getCategoryTitle = (category: string): string => {
 export const categoryFilters = [
   'All Categories',
   'Fencing Solutions',
-  'Engineered Gate Solutions',
-  'Advanced AI Products',
-  'DRDO TOT Products',
-  'Defence Tech'
+  'Engineered Gate Solutions'
 ];
 
 // All products flat list for search functionality
@@ -823,10 +861,10 @@ const FENCING_ORDER = [
 const fencingProducts = FENCING_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);
-const gatesProducts = productsData.filter(p => p.category === 'gates');
-const drdoProducts = productsData.filter(p => p.category === 'drdo');
-const defenceProducts = productsData.filter(p => p.category === 'defence-tech');
-const aiProducts = productsData.filter(p => p.category === 'ai');
+const GATES_ORDER = ['swing-gates', 'cantilever-gates'];
+const gatesProducts = GATES_ORDER
+  .map(id => productsData.find(p => p.id === id))
+  .filter((p): p is Product => p !== undefined);
 
 export const productCategories: ProductCategory[] = [
   {
@@ -844,29 +882,5 @@ export const productCategories: ProductCategory[] = [
     icon: 'DoorOpen',
     products: gatesProducts,
     categoryLink: '/products/gates'
-  },
-  {
-    id: 'drdo',
-    title: 'DRDO TOT Products',
-    description: 'Technology transfer products developed in collaboration with Defence Research and Development Organisation.',
-    icon: 'Award',
-    products: drdoProducts,
-    categoryLink: '/products/drdo'
-  },
-  {
-    id: 'defence-tech',
-    title: 'Defence Tech',
-    description: 'Advanced defense technology solutions for military and defense applications.',
-    icon: 'Globe',
-    products: defenceProducts,
-    categoryLink: '/products/defence'
-  },
-  {
-    id: 'ai',
-    title: 'Advanced AI Products',
-    description: 'Cutting-edge artificial intelligence solutions for security and surveillance applications.',
-    icon: 'Cpu',
-    products: aiProducts,
-    categoryLink: '/products/ai'
   }
 ];

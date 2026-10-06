@@ -54,11 +54,11 @@ const GatesAndBarriersPage: React.FC = () => {
             <div key={product.path} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-custom transition duration-300 border border-gray-100">
               <Link to={product.path} className="block p-6">
                 <div className="flex items-center mb-3">
-                  <div className="w-8 h-8 mr-3 flex-shrink-0 overflow-hidden rounded-sm">
-                    <img 
-                      src={product.image} 
+                  <div className="w-8 h-8 mr-3 flex-shrink-0 overflow-hidden rounded-sm bg-gray-50 p-0.5">
+                    <img
+                      src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <h3 className="text-xl font-bold">{product.name}</h3>
