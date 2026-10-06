@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
 
 const OVERVIEW_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1791256515/WhatsApp_Image_2026-10-01_at_10.15.55_ckrllm.jpg';
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290633/1_mpgiff.png';
 
 const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/3_wdp2hd.png',
