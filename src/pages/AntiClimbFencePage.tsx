@@ -15,10 +15,6 @@ const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/6_o9lrnw.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290634/78_exeyea.jpg',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290635/Difficult_to_Climb_vggfca.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290636/i_beam_with_anti_climb_fence_qxcdco.jpg',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290639/Strong_u7krp2.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Modular-1_bqfwdn.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1787290638/Long_Life_t2reuy.png',
 ];
 
 const certBadges = [
