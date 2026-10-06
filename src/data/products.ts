@@ -300,7 +300,7 @@ export const productsData: Product[] = [
       { name: 'Post Spacing', value: '2.5 meters' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/razormeshfencing1_wmbutx.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1790730040/1.a_wmnrwz.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775127/razormeshfencing2_svetj7.png'
     ],
     relatedProducts: ['anti-climb', 'concertina-coil']

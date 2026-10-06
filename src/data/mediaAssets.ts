@@ -70,7 +70,7 @@ export const mediaAssets: MediaAssets = {
       alt: 'Anti Climb Fencing Solution'
     },
     'razor-mesh-fencing': {
-      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779775130/razormeshfencing1_wmbutx.png',
+      url: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1790730040/1.a_wmnrwz.png',
       alt: 'Razor Mesh Fencing Solution'
     },
     'crash-rated-security': {
