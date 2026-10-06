@@ -8,6 +8,7 @@ import BrochureModal from '../components/products/BrochureModal';
 const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png';
 
 const CAROUSEL_IMAGES = [
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1791266586/decorative_mesh_fence_tn7p8p.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/1_fcdkqr.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237332/2_e09s74.jpg',
