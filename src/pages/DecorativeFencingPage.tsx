@@ -5,7 +5,7 @@ import { ChevronRight, Shield, FileText, Phone, Award, CheckCircle, ChevronLeft 
 import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
 
-const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1788237328/3_bfy9x4.png';
+const OVERVIEW_IMAGE = 'https://res.cloudinary.com/dy93kgo03/image/upload/v1791267295/decorative_image_house_as7ygd.png';
 
 const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1791266586/decorative_mesh_fence_tn7p8p.png',
