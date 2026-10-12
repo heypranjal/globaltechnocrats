@@ -27,7 +27,7 @@ const OurStoryPage: React.FC = () => {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Unlocking the 
+              Unlocking the{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                 Future
               </span>

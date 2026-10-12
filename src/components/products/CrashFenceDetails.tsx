@@ -171,44 +171,6 @@ export const CrashFenceDetails: React.FC = () => (
       </div>
     </section>
 
-    {/* Impact Classification */}
-    <section className="py-24 bg-white">
-      <div className="container">
-        <div className="text-center mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Certified Performance</span>
-          <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-3">Impact Classification</h2>
-          <p className="text-gray-500 text-sm max-w-xl mx-auto">
-            Independent crash test results demonstrating certified penetration distances at defined vehicle weights and speeds.
-          </p>
-        </div>
-        <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm max-w-2xl mx-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-gradient-to-r from-slate-900 via-slate-800 to-primary-900 text-white">
-                <th className="text-left px-6 py-4 font-bold tracking-wide">Parameter</th>
-                <th className="text-left px-6 py-4 font-bold tracking-wide">Value</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {[
-                { param: 'Vehicle Weight (Kg)', value: '6800' },
-                { param: 'Vehicle Type', value: 'N2' },
-                { param: 'Test Speed (kph)', value: '48' },
-                { param: 'Impact Angle (°)', value: '90' },
-                { param: 'Penetration (m)', value: '1.01-7' },
-                { param: 'Dispersion of Major Debris (m)', value: '0' },
-              ].map(({ param, value }, i) => (
-                <tr key={param} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="px-6 py-4 font-semibold text-gray-700">{param}</td>
-                  <td className="px-6 py-4 font-bold text-gray-900">{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
     {/* Comparison table */}
     <section className="py-24 bg-white">
       <div className="container">

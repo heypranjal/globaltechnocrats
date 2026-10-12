@@ -10,7 +10,6 @@ import HeroSection from '../components/home/HeroSection';
 import ProductCategoriesSection from '../components/home/ProductCategoriesSection';
 import TestimonialsSection from '../components/home/TestimonialsSection';
 import GlobalPresenceSection from '../components/home/GlobalPresenceSection';
-import NewsSection from '../components/home/NewsSection';
 import CTASection from '../components/home/CTASection';
 import ClientsSection from '../components/home/ClientsSection';
 
@@ -28,7 +27,6 @@ const HomePage: React.FC = () => {
         <ProductCategoriesSection />
         <TestimonialsSection />
         <GlobalPresenceSection />
-        <NewsSection />
         <CTASection />
       </div>
     </>

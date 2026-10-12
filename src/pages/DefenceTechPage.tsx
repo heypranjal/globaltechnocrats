@@ -5,10 +5,7 @@ import { ChevronRight, Globe, ArrowRight } from 'lucide-react';
 
 const DefenceTechPage: React.FC = () => {
   const products = [
-    { name: 'Mobile Mortar System', path: '/defence/mobile-mortar-system', description: 'Advanced mobile mortar system providing indirect fire support with enhanced mobility and accuracy.' },
     { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO.' },
-    { name: 'Bhukhari', path: '/drdo/bhukhari', description: 'Advanced heating solution for extreme cold environments, developed with DRDO technology.' },
-    { name: 'Vajra', path: '/drdo/vajra', description: 'High-durability protective equipment for specialized defense operations.' },
   ];
 
   return (

@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-600 mb-6">
-              Leading Defence Tech Company operating in India and Middle East, providing innovative security and defense solutions.
+              Leading Defence Tech Company operating in India, providing innovative security and defense solutions.
             </p>
             <div className="space-y-3">
               <div className="flex items-start">
