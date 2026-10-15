@@ -60,79 +60,40 @@ const OurStoryPage: React.FC = () => {
       {/* Mission & Vision Section */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-white to-gray-50">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-12">
-              <div>
-                <div className="inline-flex items-center bg-gradient-to-r from-primary-50 to-orange-50 text-primary-700 rounded-full py-2 px-6 mb-8 text-sm font-medium border border-primary-100">
-                  <Shield className="w-5 h-5 mr-2" /> Our Purpose
-                </div>
-                
-                <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-                  Mission & Vision
-                </h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-14">
+              <div className="inline-flex items-center bg-gradient-to-r from-primary-50 to-orange-50 text-primary-700 rounded-full py-2 px-6 mb-8 text-sm font-medium border border-primary-100">
+                <Shield className="w-5 h-5 mr-2" /> Our Purpose
               </div>
-              
-              <div className="space-y-10">
-                <div className="group">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-6">
-                      <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-4 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                        <Target className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
-                      <p className="text-lg text-gray-600 leading-relaxed">
-                        To pioneer innovative defense and security solutions that safeguard our nation's borders, 
-                        critical infrastructure, and strategic installations. We combine cutting-edge AI technology 
-                        with engineering excellence to deliver comprehensive security systems that exceed our clients' expectations.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="group">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 mr-6">
-                      <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-4 rounded-2xl shadow-lg group-hover:shadow-xl transition-shadow duration-300">
-                        <TrendingUp className="w-8 h-8 text-white" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
-                      <p className="text-lg text-gray-600 leading-relaxed">
-                        To be the most trusted name in defense technology, recognized globally for pushing 
-                        technological boundaries and setting new standards in security innovation. We envision 
-                        a future where our solutions contribute to national security and global peace.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                Mission & Vision
+              </h2>
             </div>
-            
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-orange-500/10 rounded-3xl transform rotate-6"></div>
-              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-                <img 
-                  src={getImageUrl('company', 'story', 'team-meeting')} 
-                  alt={getImageAlt('company', 'story', 'team-meeting')} 
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute -bottom-8 -right-8 bg-gradient-to-r from-primary-600 to-primary-700 text-white p-8 rounded-2xl shadow-2xl max-w-sm">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-white/20 p-2 rounded-lg mr-4">
-                      <Award className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-2xl font-bold">20+ Years</p>
-                      <p className="text-primary-100">of Excellence</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-primary-100 leading-relaxed">
-                    Pioneering defense technology with AI-driven innovations and strategic partnerships with DRDO.
-                  </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ring-1 ring-gray-100">
+                <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-4 rounded-2xl shadow-lg w-fit mb-6">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Mission</h3>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  To pioneer innovative defense and security solutions that safeguard our nation's borders,
+                  critical infrastructure, and strategic installations. We combine cutting-edge AI technology
+                  with engineering excellence to deliver comprehensive security systems that exceed our clients' expectations.
+                </p>
+              </div>
+
+              <div className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ring-1 ring-gray-100">
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-4 rounded-2xl shadow-lg w-fit mb-6">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">Our Vision</h3>
+                <p className="text-base text-gray-600 leading-relaxed">
+                  To be the most trusted name in defense technology, recognized globally for pushing
+                  technological boundaries and setting new standards in security innovation. We envision
+                  a future where our solutions contribute to national security and global peace.
+                </p>
               </div>
             </div>
           </div>
@@ -154,115 +115,53 @@ const OurStoryPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="space-y-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-1">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-2">2003</h3>
-                  <h4 className="text-xl font-bold mb-3">Founding & Early Vision</h4>
-                  <p className="text-gray-600">
-                    Global Technocrats was established with a vision to become India's leading defense technology company. 
-                    Starting with specialized engineering expertise, we began developing innovative security solutions for 
-                    borders and high-security installations.
-                  </p>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-200 via-primary-300 to-primary-200 md:-translate-x-1/2" />
+
+            <div className="space-y-10">
+              {[
+                {
+                  year: '2003',
+                  title: 'Founding & Early Vision',
+                  description:
+                    "Global Technocrats was established with a vision to become India's leading defense technology company. Starting with specialized engineering expertise, we began developing innovative security solutions for borders and high-security installations.",
+                },
+                {
+                  year: '2010',
+                  title: 'Manufacturing Excellence',
+                  description:
+                    'Established our first manufacturing unit with ISO 9001, 45001, and 14001 certifications. Developed in-house coating plant for enhanced product durability and began scaling operations to meet growing demand for defense solutions.',
+                },
+                {
+                  year: '2015',
+                  title: 'DRDO Collaboration',
+                  description:
+                    'Formed strategic partnerships with DRDO and Parallel Flight Technologies, marking our entry into advanced defense technology. Began development of specialized products like the Mobile Mortar Solution and DRDO Bhukhari systems.',
+                },
+                {
+                  year: '2020',
+                  title: 'AI & Innovation',
+                  description:
+                    'Launched AI-powered threat assessment systems and expanded into Heavy Lift Drones technology. Established second manufacturing unit, bringing our annual capacity to over 60,000 metric tons to serve growing defense sector demands.',
+                },
+                {
+                  year: '2023-Present',
+                  title: 'Leading the Future',
+                  description:
+                    "Today we stand as India's premier defense technology company, with comprehensive solutions including Anti Riot Vehicle Vajra, Crash Rated Fencing, and advanced AI systems. Our 20+ years of expertise continues to drive innovation in border security and defense technology.",
+                },
+              ].map((milestone) => (
+                <div key={milestone.year} className="relative flex items-start md:items-center gap-6">
+                  <div className="relative z-10 flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-lg md:absolute md:left-1/2 md:-translate-x-1/2">
+                    <Award className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  </div>
+                  <div className="flex-1 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow ring-1 ring-gray-100 md:w-[calc(50%-1.5rem)] md:ml-auto md:odd:ml-0 md:odd:mr-auto">
+                    <h3 className="text-2xl font-bold text-primary-600 mb-2">{milestone.year}</h3>
+                    <h4 className="text-xl font-bold mb-3">{milestone.title}</h4>
+                    <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="md:col-span-2">
-                <img 
-                  src={getImageUrl('company', 'story', 'innovation')} 
-                  alt={getImageAlt('company', 'story', 'innovation')} 
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2 order-2 md:order-1">
-                <img 
-                  src={getImageUrl('company', 'story', 'manufacturing')} 
-                  alt={getImageAlt('company', 'story', 'manufacturing')} 
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-              
-              <div className="md:col-span-1 order-1 md:order-2">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-2">2010</h3>
-                  <h4 className="text-xl font-bold mb-3">Manufacturing Excellence</h4>
-                  <p className="text-gray-600">
-                    Established our first manufacturing unit with ISO 9001, 45001, and 14001 certifications. 
-                    Developed in-house coating plant for enhanced product durability and began scaling operations 
-                    to meet growing demand for defense solutions.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-1">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-2">2015</h3>
-                  <h4 className="text-xl font-bold mb-3">DRDO Collaboration</h4>
-                  <p className="text-gray-600">
-                    Formed strategic partnerships with DRDO and Parallel Flight Technologies, marking our entry 
-                    into advanced defense technology. Began development of specialized products like the Mobile Mortar 
-                    Solution and DRDO Bhukhari systems.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2">
-                <img 
-                  src={getImageUrl('company', 'story', 'quality-control')} 
-                  alt={getImageAlt('company', 'story', 'quality-control')} 
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-2 order-2 md:order-1">
-                <img 
-                  src={getImageUrl('company', 'story', 'global-reach')} 
-                  alt={getImageAlt('company', 'story', 'global-reach')} 
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
-              
-              <div className="md:col-span-1 order-1 md:order-2">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-2">2020</h3>
-                  <h4 className="text-xl font-bold mb-3">AI & Innovation</h4>
-                  <p className="text-gray-600">
-                    Launched AI-powered threat assessment systems and expanded into Heavy Lift Drones technology. 
-                    Established second manufacturing unit, bringing our annual capacity to over 60,000 metric tons 
-                    to serve growing defense sector demands.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="md:col-span-1">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-2xl font-bold text-primary-600 mb-2">2023-Present</h3>
-                  <h4 className="text-xl font-bold mb-3">Leading the Future</h4>
-                  <p className="text-gray-600">
-                    Today we stand as India's premier defense technology company, with comprehensive solutions 
-                    including Anti Riot Vehicle Vajra, Crash Rated Fencing, and advanced AI systems. Our 20+ years 
-                    of expertise continues to drive innovation in border security and defense technology.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="md:col-span-2">
-                <img 
-                  src={getImageUrl('company', 'story', 'future-vision')} 
-                  alt={getImageAlt('company', 'story', 'future-vision')} 
-                  className="rounded-xl shadow-lg"
-                />
-              </div>
+              ))}
             </div>
           </div>
         </div>
