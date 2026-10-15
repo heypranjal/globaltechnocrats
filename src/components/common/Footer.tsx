@@ -68,11 +68,6 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" /> Blog
-                </Link>
-              </li>
-              <li>
                 <Link to="/our-story" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" /> Our Story
                 </Link>
@@ -85,11 +80,6 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/careers" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" /> Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/investor-relations" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" /> Investor Relations
                 </Link>
               </li>
               <li>
@@ -112,11 +102,6 @@ const Footer: React.FC = () => {
               <li>
                 <Link to="/products/gates" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" /> Engineered Gate Solutions
-                </Link>
-              </li>
-              <li>
-                <Link to="/products/ai" className="text-gray-600 hover:text-primary-600 transition-colors flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" /> Advanced AI Products
                 </Link>
               </li>
               <li>

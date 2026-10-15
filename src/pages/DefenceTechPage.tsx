@@ -6,6 +6,8 @@ import { ChevronRight, Globe, ArrowRight } from 'lucide-react';
 const DefenceTechPage: React.FC = () => {
   const products = [
     { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO.' },
+    { name: 'Bukhari', path: '/products/defence/bhukhari', description: 'DRDO (DIPAS) space heating device engineered for extreme cold and high-altitude deployments.' },
+    { name: 'Vajra', path: '/products/defence/vajra', description: 'DRDO technology-transfer product providing high-durability protection for specialised defence operations.' },
   ];
 
   return (

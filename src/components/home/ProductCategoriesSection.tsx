@@ -14,7 +14,9 @@ const categories = [
     description: 'Advanced defense technology solutions for military and defense applications.',
     icon: <Globe className="w-10 h-10 text-primary-500" />,
     products: [
-      { name: 'DRDO TOT Products', path: '/products/drdo' }
+      { name: 'DRDO TOT Products', path: '/products/drdo' },
+      { name: 'Bukhari', path: '/products/defence/bhukhari' },
+      { name: 'Vajra', path: '/products/defence/vajra' }
     ],
     image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777679/defenceteck1_irr6dw.png',
     link: '/products/defence'
