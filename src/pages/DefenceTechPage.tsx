@@ -8,6 +8,7 @@ const DefenceTechPage: React.FC = () => {
     { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO.' },
     { name: 'Bukhari', path: '/products/defence/bhukhari', description: 'DRDO (DIPAS) space heating device engineered for extreme cold and high-altitude deployments.' },
     { name: 'Vajra', path: '/products/defence/vajra', description: 'DRDO technology-transfer product providing high-durability protection for specialised defence operations.' },
+    { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system', description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.' },
   ];
 
   return (
