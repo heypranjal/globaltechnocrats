@@ -4,6 +4,9 @@ import { Helmet } from 'react-helmet';
 // Layouts
 import MainLayout from './layouts/MainLayout';
 
+// Global navigation side-effects
+import ScrollToTopOnNavigate from './components/common/ScrollToTopOnNavigate';
+
 // Pages
 import HomePage from './pages/HomePage';
 import ProductsPage from './pages/ProductsPage';
@@ -46,6 +49,8 @@ function App() {
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
       
+      <ScrollToTopOnNavigate />
+
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<HomePage />} />
