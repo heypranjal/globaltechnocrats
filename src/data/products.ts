@@ -308,7 +308,7 @@ export const productsData: Product[] = [
 
   {
     id: 'vajra',
-    name: 'Vajra',
+    name: 'Riot Control Vehicle',
     category: 'drdo',
     subcategory: 'DRDO TOT Products',
     description: 'High-durability protective equipment for specialized defense operations and personnel safety.',

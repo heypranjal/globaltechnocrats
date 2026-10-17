@@ -54,7 +54,7 @@ export function MainMenubar({ isScrolled = false, onNavigate }: MainMenubarProps
 
   const drdoProducts = [
     { name: 'Bukhari', path: '/products/drdo/bukhari' },
-    { name: 'Vajra', path: '/products/drdo/vajra' },
+    { name: 'Riot Control Vehicle', path: '/products/defence/vajra' },
   ];
 
   return (

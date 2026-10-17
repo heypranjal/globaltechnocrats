@@ -48,7 +48,7 @@ export function MobileMenubar({ onNavigate }: MobileMenubarProps) {
 
   const drdoProducts = [
     { name: 'Bukhari', path: '/products/drdo/bukhari' },
-    { name: 'Vajra', path: '/products/drdo/vajra' },
+    { name: 'Riot Control Vehicle', path: '/products/defence/vajra' },
   ];
 
   return (

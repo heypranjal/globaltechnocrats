@@ -71,10 +71,10 @@ const VajraPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Vajra &amp; Mini Vajra | Anti-Riot Law Enforcement Vehicle | Global Technocrats</title>
+        <title>Riot Control Vehicle | Anti-Riot Law Enforcement Vehicle | Global Technocrats</title>
         <meta
           name="description"
-          content="Vajra and Mini Vajra — purpose-built light vehicles for law enforcement and security forces. 26-troop capacity, roof-mounted tear gas launchers, firing ports, 2.4 kVA power and explosive-suppression fuel tank."
+          content="Riot Control Vehicle (Vajra & Mini Vajra) — purpose-built light vehicles for law enforcement and security forces. 26-troop capacity, roof-mounted tear gas launchers, firing ports, 2.4 kVA power and explosive-suppression fuel tank."
         />
         <meta name="keywords" content="vajra, mini vajra, anti riot vehicle, law enforcement vehicle, security forces transport, tear gas launcher, riot control, DRDO TOT" />
       </Helmet>
@@ -92,7 +92,7 @@ const VajraPage: React.FC = () => {
               <ChevronRight className="w-3 h-3" />
               <Link to="/products/defence" className="hover:text-gray-600 transition-colors">Defence Tech</Link>
               <ChevronRight className="w-3 h-3" />
-              <span className="text-gray-500">Vajra</span>
+              <span className="text-gray-500">Riot Control Vehicle</span>
             </nav>
 
             <div className="inline-flex items-center gap-2 bg-primary-900 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
@@ -100,14 +100,14 @@ const VajraPage: React.FC = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.1] mb-5">
-              Vajra &amp; Mini Vajra
+              Riot Control Vehicle
             </h1>
             <p className="text-lg font-medium text-primary-900 mb-5">
               Revolutionising Law Enforcement &amp; Security-Force Transportation
             </p>
             <p className="text-gray-600 text-base leading-relaxed max-w-2xl mx-auto">
               In an ever-evolving landscape of security challenges, law enforcement agencies need robust, versatile and
-              efficient vehicles to carry out their duties effectively. The Vajra and Mini Vajra light vehicles are
+              efficient vehicles to carry out their duties effectively. Our Riot Control Vehicle range — Vajra and Mini Vajra — is
               purpose-built for exactly that — rapid deployment, crowd control and safe transport of security forces
               into affected areas.
             </p>
@@ -118,7 +118,7 @@ const VajraPage: React.FC = () => {
             <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-gray-200 bg-gray-50">
               <img
                 src={HERO_IMAGE}
-                alt="Vajra anti-riot law enforcement vehicle"
+                alt="Riot Control Vehicle — anti-riot law enforcement vehicle"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -205,7 +205,7 @@ const VajraPage: React.FC = () => {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-primary-950">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Interested in Vajra?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Interested in the Riot Control Vehicle?</h2>
             <p className="text-blue-200 max-w-xl mx-auto text-sm leading-relaxed">
               Our specialists can share detailed specifications, variant options and support deployment planning for
               your force.

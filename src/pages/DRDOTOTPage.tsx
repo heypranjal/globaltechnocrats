@@ -6,17 +6,23 @@ import { getImageUrl } from '../data/mediaAssets';
 
 const DRDOTOTPage: React.FC = () => {
   const products = [
-    { 
-      name: 'Bukhari', 
-      path: '/products/drdo/bukhari', 
-      description: 'Advanced heating solution for extreme cold environments, developed with DRDO technology.',
-      image: getImageUrl('products', 'bukhari')
+    {
+      name: 'Bukhari',
+      path: '/products/defence/bhukhari',
+      description: 'DRDO (DIPAS) space heating device engineered for extreme cold and high-altitude deployments.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792064881/Bukhari_ml8kk4.png'
     },
-    { 
-      name: 'Vajra', 
-      path: '/products/drdo/vajra', 
-      description: 'High-durability protective equipment for specialized defense operations.',
-      image: getImageUrl('products', 'vajra')
+    {
+      name: 'Riot Control Vehicle',
+      path: '/products/defence/vajra',
+      description: 'Anti-riot troop carrier with 26-troop capacity, tear gas launchers and explosive-suppression fuel tank.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792065017/Vajra-1-1536x768_av33ow.png'
+    },
+    {
+      name: 'Mobile Mortar System',
+      path: '/products/defence/mobile-mortar-system',
+      description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.',
+      image: getImageUrl('products', 'placeholder')
     },
   ];
 
