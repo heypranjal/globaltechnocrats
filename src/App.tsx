@@ -37,6 +37,8 @@ import RazorMeshFencePage from './pages/RazorMeshFencePage';
 import BhukhariPage from './pages/BhukhariPage';
 import VajraPage from './pages/VajraPage';
 import MobileMortarSystemPage from './pages/MobileMortarSystemPage';
+import SliderPage from './pages/SliderPage';
+import ATVCabinDesignPage from './pages/ATVCabinDesignPage';
 
 
 function App() {
@@ -65,6 +67,8 @@ function App() {
           <Route path="products/defence/bhukhari" element={<BhukhariPage />} />
           <Route path="products/defence/vajra" element={<VajraPage />} />
           <Route path="products/defence/mobile-mortar-system" element={<MobileMortarSystemPage />} />
+          <Route path="products/defence/slider" element={<SliderPage />} />
+          <Route path="products/defence/atv-cabin-design" element={<ATVCabinDesignPage />} />
           <Route path="products/fencing/decorative-fencing" element={<DecorativeFencingPage />} />
           <Route path="products/gates/swing-gates" element={<SwingGatesPage />} />
           <Route path="products/gates/cantilever-gates" element={<CantileverGatesPage />} />

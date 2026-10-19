@@ -21,7 +21,7 @@ import {
 import BrochureModal from '../components/products/BrochureModal';
 
 const HERO_IMAGE =
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792065017/Vajra-1-1536x768_av33ow.png';
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408598/vajra01_bk32lg.png';
 
 const ctaCards = [
   { Icon: Phone, label: 'Talk to an Expert', sub: 'Speak with our DRDO TOT consultants', cta: 'Call Now', href: 'tel:+919810282636', openModal: false },

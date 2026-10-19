@@ -5,7 +5,10 @@ import { ChevronRight, Globe, ArrowRight } from 'lucide-react';
 
 const DefenceTechPage: React.FC = () => {
   const products = [
-    { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari, Vajra and Mobile Mortar System.' },
+    { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari and Riot Control Vehicle (Vajra).' },
+    { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system', description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.' },
+    { name: 'Slider', path: '/products/defence/slider', description: 'Military-grade all-terrain electric mobility platform — 2WD/4WD, silent electric drive and lithium battery system.' },
+    { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design', description: 'All-terrain command and surveillance platform with mast-mounted cameras, radar, surveillance drone, DG set, dual-screen control room and anti-drone gun.' },
   ];
 
   return (
