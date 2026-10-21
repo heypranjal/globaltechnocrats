@@ -26,6 +26,7 @@ export interface Product {
   seoDescription?: string;
   seoKeywords?: string;
   link?: string;
+  cardFit?: 'contain' | 'cover';
 }
 
 export const productsData: Product[] = [
@@ -134,13 +135,14 @@ export const productsData: Product[] = [
       { name: 'Flame Control', value: 'Controllable blue flame' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792574361/WhatsApp_Image_2026-10-21_at_14.25.26_towycz.jpg',
       'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ],
     relatedProducts: ['vajra'],
     seoTitle: 'Bukhari | DRDO TOT Products | Global Technocrats',
     seoDescription: 'Bukhari is a space heating device designed and developed by DIPAS (DRDO) with multiple safety features and high efficiency.',
-    link: '/products/defence/bhukhari'
+    link: '/products/defence/bhukhari',
+    cardFit: 'contain'
   },
   {
     id: 'image-enhancer',

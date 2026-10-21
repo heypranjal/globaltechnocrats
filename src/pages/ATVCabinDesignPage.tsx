@@ -21,9 +21,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
 
 const CAROUSEL_IMAGES = [
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792612006/11211_a4fff9.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408809/Screenshot_2026-10-19_at_4.48.58_PM_sox6bn.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408810/Screenshot_2026-10-19_at_4.49.12_PM_ut0knu.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408811/Screenshot_2026-10-19_at_4.49.21_PM_wymcc9.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408823/Screenshot_2026-10-19_at_4.49.32_PM_mek4s5.png',
 ];
 

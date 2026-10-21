@@ -46,17 +46,20 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) =>
   };
 
   const productImage = getProductImage();
+  const useContain =
+    ('cardFit' in product && product.cardFit === 'contain') ||
+    product.category === 'gates';
   return (
     <div className={`bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ${className}`}>
       <div className="flex flex-col h-full">
         {/* Product Image */}
         {productImage && (
           <Link to={getProductLink()} className="block overflow-hidden">
-            <div className={`relative h-56 md:h-64 overflow-hidden ${product.category === 'gates' ? 'bg-gray-50 p-4' : ''}`}>
+            <div className={`relative h-56 md:h-64 overflow-hidden ${useContain ? 'bg-gray-50 p-4' : ''}`}>
               <img
                 src={productImage}
                 alt={product.name}
-                className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${product.category === 'gates' ? 'object-contain' : 'object-cover'}`}
+                className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${useContain ? 'object-contain' : 'object-cover'}`}
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = 'https://images.unsplash.com/photo-1567194974473-68d83240a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';

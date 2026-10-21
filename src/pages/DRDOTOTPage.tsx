@@ -9,7 +9,7 @@ const DRDOTOTPage: React.FC = () => {
       name: 'Bukhari',
       path: '/products/defence/bhukhari',
       description: 'DRDO (DIPAS) space heating device engineered for extreme cold and high-altitude deployments.',
-      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png'
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792574361/WhatsApp_Image_2026-10-21_at_14.25.26_towycz.jpg'
     },
     {
       name: 'Riot Control Vehicle',

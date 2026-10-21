@@ -1,72 +1,107 @@
 import React from 'react';
-import { Shield, Globe, Award } from 'lucide-react';
+import { Shield, Landmark, Building2 } from 'lucide-react';
 import { useInView } from '../../hooks/useInView';
+
+type OrganisationGroup = {
+  Icon: React.ComponentType<{ className?: string }>;
+  heading: string;
+  organisations: string[];
+  cols?: 1 | 2;
+};
+
+const organisationGroups: OrganisationGroup[] = [
+  {
+    Icon: Shield,
+    heading: 'Defence Forces & Security',
+    organisations: [
+      'Indian Army',
+      'Indian Navy',
+      'Central Reserve Police Force (CRPF)',
+      'Border Security Force (BSF)',
+      'Indian Railways',
+    ],
+  },
+  {
+    Icon: Landmark,
+    heading: 'Government Enterprises',
+    organisations: [
+      'Bharat Electronics Limited (BEL)',
+      'Bharat Heavy Electricals Limited (BHEL)',
+      'National Thermal Power Corporation (NTPC)',
+      'Indian Oil Corporation Limited (IndianOil)',
+      'GAIL (India) Limited',
+    ],
+  },
+  {
+    Icon: Building2,
+    heading: 'Private Sector & Technology Partners',
+    cols: 2,
+    organisations: [
+      'Mahindra Defence Systems',
+      'New Technologies Global Systems (NTGS)',
+      'Microsoft',
+      'Google',
+      'Adani Group',
+      'AECOM',
+      'Suroj Buildcon',
+      'Tata Projects',
+      'Larsen & Toubro',
+      'Bearys Group',
+      'NCC Limited',
+      'Kalpataru Power Transmission Limited',
+    ],
+  },
+];
 
 const ClientsSection: React.FC = () => {
   const [sectionRef, isInView] = useInView();
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className={`py-11 section-alternate-luxury section-luxury opacity-0 transition-all duration-1000 ${
+      aria-labelledby="trusted-by-heading"
+      className={`py-10 md:py-12 section-alternate-luxury section-luxury opacity-0 transition-all duration-1000 ${
         isInView ? 'opacity-100 translate-y-0' : 'translate-y-10'
       }`}
     >
       <div className="container">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className={`mb-10 lg:mb-0 lg:w-1/3 opacity-0 transition-all duration-1000 delay-200 text-center lg:text-left ${
-            isInView ? 'opacity-100 translate-y-0' : 'translate-y-10'
-          }`}>
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Trusted by Leading Organizations</h3>
-            <p className="text-gray-600">
-              Our solutions are deployed by defense forces, government agencies, and security organizations worldwide.
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="lg:col-span-1">
+            <h2
+              id="trusted-by-heading"
+              className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 leading-tight"
+            >
+              Trusted by Leading Organizations
+            </h2>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Our solutions serve India's defence forces, government organizations, public-sector
+              enterprises, and leading private companies across defence, infrastructure, energy, and
+              technology.
             </p>
           </div>
-          
-          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-8 lg:w-2/3 opacity-0 transition-all duration-1000 delay-400 ${
-            isInView ? 'opacity-100 translate-y-0' : 'translate-y-10'
-          }`}>
-            <div className="flex flex-col items-center text-center">
-              <div className={`w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-gray-50 rounded-full mb-3 sm:mb-4 shadow-subtle opacity-0 transition-all duration-700 delay-600 ${
-                isInView ? 'opacity-100 scale-100' : 'scale-50'
-              }`}>
-                <Shield className="w-8 h-8 text-primary-500" />
+
+          <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {organisationGroups.map(({ Icon, heading, organisations, cols }) => (
+              <div key={heading}>
+                <div className="flex items-center gap-2 mb-3">
+                  <Icon className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                  <h3 className="text-xs font-semibold text-gray-900 uppercase tracking-wider leading-tight">
+                    {heading}
+                  </h3>
+                </div>
+                <ul
+                  className={`text-sm text-gray-600 leading-snug ${
+                    cols === 2 ? 'grid grid-cols-2 gap-x-4 gap-y-1.5' : 'space-y-1.5'
+                  }`}
+                >
+                  {organisations.map((name) => (
+                    <li key={name} className="hover:text-primary-700 transition-colors">
+                      {name}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <span className="text-base sm:text-lg font-semibold text-gray-900">Defence Forces</span>
-              <div className="mt-2 text-sm text-gray-600 flex flex-col gap-1">
-                <span>Indian Army</span>
-                <span>Indian Navy</span>
-                <span>Vayusena</span>
-                
-              </div>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className={`w-16 h-16 flex items-center justify-center bg-gray-50 rounded-full mb-4 shadow-subtle opacity-0 transition-all duration-700 delay-800 ${
-                isInView ? 'opacity-100 scale-100' : 'scale-50'
-              }`}>
-                <Globe className="w-8 h-8 text-primary-500" />
-              </div>
-              <span className="text-lg font-semibold text-gray-900">Government Agencies</span>
-              <div className="mt-2 text-sm text-gray-600 flex flex-col gap-1">
-                <span>BSF</span>
-                <span>CISF</span>
-              </div>
-            </div>
-            <div className="flex flex-col items-center text-center">
-              <div className={`w-16 h-16 flex items-center justify-center bg-gray-50 rounded-full mb-4 shadow-subtle opacity-0 transition-all duration-700 delay-1000 ${
-                isInView ? 'opacity-100 scale-100' : 'scale-50'
-              }`}>
-                <Award className="w-8 h-8 text-primary-500" />
-              </div>
-              <span className="text-lg font-semibold text-gray-900">Security Organizations</span>
-              <div className="mt-2 text-sm text-gray-600 flex flex-col gap-1">
-                <span>J&K Police</span>
-                <span>Jharkhand Police</span>
-                <span>Mahendra Defence Systems</span>
-                <span>Reliance Industries Limited</span>
-                <span>Larsen & Toubro</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
