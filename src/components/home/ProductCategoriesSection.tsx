@@ -15,9 +15,10 @@ const categories = [
     icon: <Globe className="w-10 h-10 text-primary-500" />,
     products: [
       { name: 'DRDO TOT Products', path: '/products/drdo' },
-      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
       { name: 'ATV Panther', path: '/products/defence/panther' },
-      { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design' }
+      { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design' },
+      { name: 'Anti Drone Cage', path: '/products/defence/anti-drone-cage' },
+      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' }
     ],
     image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png',
     link: '/products/defence'

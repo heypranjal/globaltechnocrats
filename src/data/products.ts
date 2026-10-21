@@ -458,6 +458,40 @@ export const productsData: Product[] = [
     seoTitle: 'ATV Cabin Design | Mobile Command & Surveillance | Global Technocrats',
     seoDescription: 'All-terrain command and surveillance platform with cameras, radar, surveillance drone, DG set and anti-drone gun.'
   },
+  {
+    id: 'anti-drone-cage',
+    name: 'Anti Drone Cage',
+    category: 'defence',
+    subcategory: 'Defence Tech',
+    description: 'Woven, double-twisted hexagonal wire mesh — a high-tensile anti-drone cage that arrests drones up to 80 kg at 250 km/h and contains ~5 kg explosive payloads.',
+    longDescription: 'The Anti Drone Protection Cage integrates a heavy-duty Fuel Storage Cage with an Anti-Drone Cage/Fence — a high-tensile, impact-resistant perimeter and roof barrier that arrests airborne intrusion before it reaches the asset. Purpose-built for critical infrastructure, defence installations, hazardous storage zones, refineries and high-risk industrial environments.',
+    features: [
+      '700 MPa tensile wire construction',
+      'Stops drones up to 80 kg travelling at 250 km/h',
+      'Contains explosive payloads of approximately 5 kg',
+      'Heavy-duty steel structure with corrosion-resistant coating',
+      'Interlocked twisted-wire mesh with steel wire rope reinforcement',
+      'IS structural and coating standards compliant',
+      'Suited to outdoor industrial, defence and coastal environments'
+    ],
+    applications: [
+      'Oil & Gas refineries, tank farms and bunded fuel depots',
+      'Defence bases, airports, power generation and desalination plants',
+      'Seaports, LNG terminals and bonded yards',
+      'Data centres, grid substations, telecom towers and control rooms'
+    ],
+    specifications: [
+      { name: 'Material Strength', value: '700 MPa tensile wires' },
+      { name: 'Impact Resistance', value: 'Up to 80 kg drone @ 250 km/h' },
+      { name: 'Payload Mitigation', value: '~5 kg explosive payloads' },
+      { name: 'Wire Grade (Fence)', value: '500 MPa tensile' },
+      { name: 'Compliance', value: 'IS structural and coating standards' }
+    ],
+    images: [],
+    relatedProducts: ['atv-cabin-design', 'panther'],
+    seoTitle: 'Anti Drone Protection Cage | Woven Hexagonal Wire Mesh | Global Technocrats',
+    seoDescription: 'Anti Drone Protection Cage — woven, double-twisted hexagonal wire mesh for critical infrastructure. 700 MPa tensile wires arrest drones up to 80 kg at 250 km/h.'
+  },
 
   // Additional Fencing Products
   {
@@ -980,7 +1014,7 @@ const GATES_ORDER = ['swing-gates', 'cantilever-gates'];
 const gatesProducts = GATES_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);
-const DEFENCE_ORDER = ['mobile-mortar-system', 'panther', 'atv-cabin-design'];
+const DEFENCE_ORDER = ['panther', 'atv-cabin-design', 'anti-drone-cage', 'mobile-mortar-system'];
 const defenceProducts = DEFENCE_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);

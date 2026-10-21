@@ -39,6 +39,7 @@ import VajraPage from './pages/VajraPage';
 import MobileMortarSystemPage from './pages/MobileMortarSystemPage';
 import PantherPage from './pages/PantherPage';
 import ATVCabinDesignPage from './pages/ATVCabinDesignPage';
+import AntiDroneCagePage from './pages/AntiDroneCagePage';
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
           <Route path="products/defence/mobile-mortar-system" element={<MobileMortarSystemPage />} />
           <Route path="products/defence/panther" element={<PantherPage />} />
           <Route path="products/defence/atv-cabin-design" element={<ATVCabinDesignPage />} />
+          <Route path="products/defence/anti-drone-cage" element={<AntiDroneCagePage />} />
           <Route path="products/fencing/decorative-fencing" element={<DecorativeFencingPage />} />
           <Route path="products/gates/swing-gates" element={<SwingGatesPage />} />
           <Route path="products/gates/cantilever-gates" element={<CantileverGatesPage />} />

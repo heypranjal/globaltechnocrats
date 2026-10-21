@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Globe, ArrowRight } from 'lucide-react';
+import { ChevronRight, Globe, ArrowRight, ImageIcon } from 'lucide-react';
 
 const DefenceTechPage: React.FC = () => {
   const products: Array<{
@@ -10,18 +10,13 @@ const DefenceTechPage: React.FC = () => {
     description: string;
     image?: string;
     fit: 'contain' | 'cover';
+    placeholder?: boolean;
   }> = [
     {
       name: 'DRDO TOT Products',
       path: '/products/drdo',
       description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari and Riot Control Vehicle (Vajra).',
       image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792574361/WhatsApp_Image_2026-10-21_at_14.25.26_towycz.jpg',
-      fit: 'cover',
-    },
-    {
-      name: 'Mobile Mortar System',
-      path: '/products/defence/mobile-mortar-system',
-      description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.',
       fit: 'cover',
     },
     {
@@ -37,6 +32,19 @@ const DefenceTechPage: React.FC = () => {
       description: 'All-terrain command and surveillance platform with mast-mounted cameras, radar, surveillance drone, DG set, dual-screen control room and anti-drone gun.',
       image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408809/Screenshot_2026-10-19_at_4.48.58_PM_sox6bn.png',
       fit: 'contain',
+    },
+    {
+      name: 'Anti Drone Cage',
+      path: '/products/defence/anti-drone-cage',
+      description: 'Woven, double-twisted hexagonal wire mesh — a high-tensile anti-drone cage that arrests drones up to 80 kg at 250 km/h and contains ~5 kg explosive payloads.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792576122/Screenshot_2026-10-21_at_3.18.27_PM_jc4xro.png',
+      fit: 'contain',
+    },
+    {
+      name: 'Mobile Mortar System',
+      path: '/products/defence/mobile-mortar-system',
+      description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.',
+      fit: 'cover',
     },
   ];
 
@@ -73,7 +81,7 @@ const DefenceTechPage: React.FC = () => {
           {products.map((product) => (
             <div key={product.path} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-custom transition duration-300 border border-gray-100">
               <Link to={product.path} className="flex flex-col sm:flex-row h-full">
-                {product.image && (
+                {product.image ? (
                   <div className={`sm:w-2/5 flex-shrink-0 h-48 sm:h-auto overflow-hidden ${product.fit === 'contain' ? 'bg-gray-50 p-4' : ''}`}>
                     <img
                       src={product.image}
@@ -81,8 +89,13 @@ const DefenceTechPage: React.FC = () => {
                       className={`w-full h-full ${product.fit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 hover:scale-105`}
                     />
                   </div>
-                )}
-                <div className={`${product.image ? 'sm:w-3/5' : 'w-full'} p-6 flex flex-col justify-center`}>
+                ) : product.placeholder ? (
+                  <div className="sm:w-2/5 flex-shrink-0 h-48 sm:h-auto bg-gradient-to-br from-gray-100 to-gray-200 flex flex-col items-center justify-center gap-2 text-gray-400">
+                    <ImageIcon className="w-10 h-10" />
+                    <span className="text-xs font-semibold uppercase tracking-wider">Image coming soon</span>
+                  </div>
+                ) : null}
+                <div className={`${product.image || product.placeholder ? 'sm:w-3/5' : 'w-full'} p-6 flex flex-col justify-center`}>
                   <h3 className="text-xl font-bold mb-3">{product.name}</h3>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">{product.description}</p>
                   <div className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700">

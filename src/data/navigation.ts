@@ -29,9 +29,10 @@ export const megaMenuCategories: MegaMenuCategory[] = [
     description: 'Mission-ready platforms, mobility and surveillance systems',
     items: [
       { name: 'DRDO TOT Products', path: '/products/drdo' },
-      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
       { name: 'ATV Panther', path: '/products/defence/panther' },
       { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design' },
+      { name: 'Anti Drone Cage', path: '/products/defence/anti-drone-cage' },
+      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
     ],
     viewAllPath: '/products/defence',
     viewAllLabel: 'View All Defence Tech',
