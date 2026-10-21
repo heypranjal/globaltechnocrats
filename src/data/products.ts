@@ -346,6 +346,119 @@ export const productsData: Product[] = [
     seoDescription: 'Vajra: High-durability protective equipment for specialized defense operations and personnel safety.'
   },
 
+  // Defence Tech Products
+  {
+    id: 'mobile-mortar-system',
+    name: 'Mobile Mortar System',
+    category: 'defence',
+    subcategory: 'Defence Tech',
+    description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.',
+    longDescription: 'A cutting-edge advancement in mobile artillery technology developed under collaboration — the Mobile Mortar System combines mobility, firepower and precision to provide a versatile solution for dynamic military scenarios.',
+    features: [
+      'Rapid deployment across diverse terrains',
+      'Compact yet potent mortar platform',
+      'Precision-guided munitions compatible',
+      'Advanced targeting and fire-control electronics',
+      'User-friendly interface for operational efficiency',
+      'Combat-ready, modern battlefield design'
+    ],
+    applications: [
+      'Mobile indirect fire support',
+      'Rapid-response ground operations',
+      'Border and frontier deployments',
+      'Combined-arms operations'
+    ],
+    specifications: [
+      { name: 'Platform', value: 'Mobile artillery vehicle' },
+      { name: 'Deployment', value: 'Rapid, all-terrain' },
+      { name: 'Munitions', value: 'Precision-guided compatible' },
+      { name: 'Control', value: 'Integrated fire-control system' }
+    ],
+    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png'
+    ],
+    relatedProducts: ['slider', 'atv-cabin-design'],
+    seoTitle: 'Mobile Mortar System | Defence Tech | Global Technocrats',
+    seoDescription: 'Mobile Mortar System — mobile artillery platform combining mobility, firepower and precision for the modern battlefield.'
+  },
+  {
+    id: 'slider',
+    name: 'Slider',
+    category: 'defence',
+    subcategory: 'Defence Tech',
+    description: 'Military-grade all-terrain electric mobility platform — 2WD/4WD, silent electric drive and lithium battery system.',
+    longDescription: 'Slider is a military-grade all-terrain electric mobility platform developed by Global Technocrats Ltd with electric hub motors. Designed for reliable, silent, stealth and powerful mobility across mountains, jungles and industrial environments.',
+    features: [
+      'Military-grade rugged construction',
+      '2WD and 4WD drive configurations',
+      'High-performance 60V lithium battery system',
+      'Silent electric drive for stealth operations',
+      'All-terrain mobility capability',
+      '4-wheel disc brake safety system',
+      'LED display and advanced control system',
+      'Eco-friendly and low maintenance'
+    ],
+    applications: [
+      'Police and paramilitary mobility',
+      'Military patrol and tactical operations',
+      'Border security and surveillance',
+      'Industrial and plant mobility',
+      'Security patrol in large facilities',
+      'Off-road inspection and maintenance'
+    ],
+    specifications: [
+      { name: 'Weight', value: '70 kg' },
+      { name: 'Max Speed', value: '45 km/h' },
+      { name: 'Battery', value: '60V, 50 Ah Lithium' },
+      { name: 'Load Capacity', value: '300 kg' },
+      { name: 'Range', value: '60 km per charge (expandable)' },
+      { name: 'Max Slope', value: '25°' }
+    ],
+    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408996/Screenshot_2026-10-19_at_4.52.16_PM_f5lei8.png'
+    ],
+    relatedProducts: ['atv-cabin-design', 'mobile-mortar-system'],
+    seoTitle: 'Slider | All Terrain Warrior Mobility System | Global Technocrats',
+    seoDescription: 'Military-grade all-terrain electric mobility platform with 2WD/4WD configurations and silent electric drive.'
+  },
+  {
+    id: 'atv-cabin-design',
+    name: 'ATV Cabin Design',
+    category: 'defence',
+    subcategory: 'Defence Tech',
+    description: 'All-terrain command and surveillance platform with mast-mounted cameras, radar, surveillance drone, DG set, dual-screen control room and anti-drone gun.',
+    longDescription: 'A purpose-engineered command and surveillance cabin integrated onto an all-terrain vehicle — bringing mast-mounted optics, radar, a surveillance drone, onboard power, a dual-screen control room and counter-drone capability into a single mission-ready platform.',
+    features: [
+      'All-terrain mobility across hostile environments',
+      'Day camera (10 km) and night camera (5 km) on telescopic mast',
+      'Integrated radar for situational awareness',
+      'Surveillance drone with onboard launch pad',
+      'Compact DG set for onboard power',
+      'Dual-screen control room with full equipment control',
+      'Anti-drone gun for counter-UAS defence'
+    ],
+    applications: [
+      'Mobile command and control',
+      'Border surveillance',
+      'Counter-UAS operations',
+      'Rapid-deployment reconnaissance'
+    ],
+    specifications: [
+      { name: 'Mobility', value: 'All-terrain ATV platform' },
+      { name: 'Optics', value: 'Day (10 km) + Night (5 km) on mast' },
+      { name: 'Radar', value: 'Integrated surveillance radar' },
+      { name: 'Aerial Asset', value: 'Surveillance drone + launch pad' },
+      { name: 'Power', value: 'Compact DG set' },
+      { name: 'Counter-UAS', value: 'Onboard anti-drone gun' }
+    ],
+    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408809/Screenshot_2026-10-19_at_4.48.58_PM_sox6bn.png'
+    ],
+    relatedProducts: ['slider', 'mobile-mortar-system'],
+    seoTitle: 'ATV Cabin Design | Mobile Command & Surveillance | Global Technocrats',
+    seoDescription: 'All-terrain command and surveillance platform with cameras, radar, surveillance drone, DG set and anti-drone gun.'
+  },
+
   // Additional Fencing Products
   {
     id: 'decorative-fencing',
@@ -819,6 +932,7 @@ export const getAllCategories = (): string[] => {
 
 export const getCategoryTitle = (category: string): string => {
   const categoryTitles: Record<string, string> = {
+    'defence': 'Defence Tech',
     'fencing': 'Fencing Solutions',
     'gates': 'Engineered Gate Solutions',
     'ai': 'Advanced AI Products',
@@ -831,6 +945,7 @@ export const getCategoryTitle = (category: string): string => {
 // Category filter options for ProductFilters component
 export const categoryFilters = [
   'All Categories',
+  'Defence Tech',
   'Fencing Solutions',
   'Engineered Gate Solutions'
 ];
@@ -865,8 +980,20 @@ const GATES_ORDER = ['swing-gates', 'cantilever-gates'];
 const gatesProducts = GATES_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);
+const DEFENCE_ORDER = ['mobile-mortar-system', 'slider', 'atv-cabin-design'];
+const defenceProducts = DEFENCE_ORDER
+  .map(id => productsData.find(p => p.id === id))
+  .filter((p): p is Product => p !== undefined);
 
 export const productCategories: ProductCategory[] = [
+  {
+    id: 'defence',
+    title: 'Defence Tech',
+    description: 'Mission-ready mobility, surveillance and command platforms engineered for defence and security forces.',
+    icon: 'Globe',
+    products: defenceProducts,
+    categoryLink: '/products/defence'
+  },
   {
     id: 'fencing',
     title: 'Fencing Solutions',

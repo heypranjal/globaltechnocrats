@@ -23,6 +23,20 @@ export interface NavItem {
 
 export const megaMenuCategories: MegaMenuCategory[] = [
   {
+    id: 'defence',
+    name: 'Defence Tech',
+    path: '/products/defence',
+    description: 'Mission-ready platforms, mobility and surveillance systems',
+    items: [
+      { name: 'DRDO TOT Products', path: '/products/drdo' },
+      { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
+      { name: 'Slider', path: '/products/defence/slider' },
+      { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design' },
+    ],
+    viewAllPath: '/products/defence',
+    viewAllLabel: 'View All Defence Tech',
+  },
+  {
     id: 'perimeter',
     name: 'Perimeter Security',
     path: '/products/fencing',
