@@ -28,7 +28,8 @@ const CAROUSEL_IMAGES = [
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408994/Screenshot_2026-10-19_at_4.51.58_PM_jjlgtb.png',
 ];
 
-const OVERVIEW_IMAGE = CAROUSEL_IMAGES[0];
+const OVERVIEW_IMAGE =
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792566901/WhatsApp_Image_2026-10-21_at_12.44.38_myplri.jpg';
 
 const certBadges = [
   { label: 'Military', sub: 'Grade' },
