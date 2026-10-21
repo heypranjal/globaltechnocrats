@@ -14,14 +14,14 @@ const locations = [
     id: 2,
     country: 'India',
     city: 'Biwandi, Rajasthan',
-    type: 'Regional Office',
+    type: 'Regional Plant',
     pinPosition: { top: '55%', left: '68%' }
   },
   {
     id: 3,
     country: 'India',
     city: 'Jhansi, Uttar Pradesh',
-    type: 'Regional Office',
+    type: 'Regional Plant',
     pinPosition: { top: '52%', left: '69%' }
   }
 ];
