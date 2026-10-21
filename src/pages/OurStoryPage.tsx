@@ -139,12 +139,6 @@ const OurStoryPage: React.FC = () => {
                     'Formed strategic partnerships with DRDO and Parallel Flight Technologies, marking our entry into advanced defense technology. Began development of specialized products like the Mobile Mortar Solution and DRDO Bhukhari systems.',
                 },
                 {
-                  year: '2020',
-                  title: 'AI & Innovation',
-                  description:
-                    'Launched AI-powered threat assessment systems and expanded into Heavy Lift Drones technology. Established second manufacturing unit, bringing our annual capacity to over 60,000 metric tons to serve growing defense sector demands.',
-                },
-                {
                   year: '2023-Present',
                   title: 'Leading the Future',
                   description:
