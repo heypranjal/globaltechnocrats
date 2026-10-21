@@ -16,7 +16,7 @@ const categories = [
     products: [
       { name: 'DRDO TOT Products', path: '/products/drdo' },
       { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system' },
-      { name: 'Slider', path: '/products/defence/slider' },
+      { name: 'ATV Panther', path: '/products/defence/panther' },
       { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design' }
     ],
     image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png',

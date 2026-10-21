@@ -377,17 +377,17 @@ export const productsData: Product[] = [
     images: [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png'
     ],
-    relatedProducts: ['slider', 'atv-cabin-design'],
+    relatedProducts: ['panther', 'atv-cabin-design'],
     seoTitle: 'Mobile Mortar System | Defence Tech | Global Technocrats',
     seoDescription: 'Mobile Mortar System — mobile artillery platform combining mobility, firepower and precision for the modern battlefield.'
   },
   {
-    id: 'slider',
-    name: 'Slider',
+    id: 'panther',
+    name: 'ATV Panther',
     category: 'defence',
     subcategory: 'Defence Tech',
     description: 'Military-grade all-terrain electric mobility platform — 2WD/4WD, silent electric drive and lithium battery system.',
-    longDescription: 'Slider is a military-grade all-terrain electric mobility platform developed by Global Technocrats Ltd with electric hub motors. Designed for reliable, silent, stealth and powerful mobility across mountains, jungles and industrial environments.',
+    longDescription: 'Panther is a military-grade all-terrain electric mobility platform developed by Global Technocrats Ltd with electric hub motors. Designed for reliable, silent, stealth and powerful mobility across mountains, jungles and industrial environments.',
     features: [
       'Military-grade rugged construction',
       '2WD and 4WD drive configurations',
@@ -418,7 +418,7 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408996/Screenshot_2026-10-19_at_4.52.16_PM_f5lei8.png'
     ],
     relatedProducts: ['atv-cabin-design', 'mobile-mortar-system'],
-    seoTitle: 'Slider | All Terrain Warrior Mobility System | Global Technocrats',
+    seoTitle: 'Panther | All Terrain Warrior Mobility System | Global Technocrats',
     seoDescription: 'Military-grade all-terrain electric mobility platform with 2WD/4WD configurations and silent electric drive.'
   },
   {
@@ -454,7 +454,7 @@ export const productsData: Product[] = [
     images: [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408809/Screenshot_2026-10-19_at_4.48.58_PM_sox6bn.png'
     ],
-    relatedProducts: ['slider', 'mobile-mortar-system'],
+    relatedProducts: ['panther', 'mobile-mortar-system'],
     seoTitle: 'ATV Cabin Design | Mobile Command & Surveillance | Global Technocrats',
     seoDescription: 'All-terrain command and surveillance platform with cameras, radar, surveillance drone, DG set and anti-drone gun.'
   },
@@ -980,7 +980,7 @@ const GATES_ORDER = ['swing-gates', 'cantilever-gates'];
 const gatesProducts = GATES_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);
-const DEFENCE_ORDER = ['mobile-mortar-system', 'slider', 'atv-cabin-design'];
+const DEFENCE_ORDER = ['mobile-mortar-system', 'panther', 'atv-cabin-design'];
 const defenceProducts = DEFENCE_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);

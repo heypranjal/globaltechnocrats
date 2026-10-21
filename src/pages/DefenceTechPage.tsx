@@ -5,10 +5,34 @@ import { ChevronRight, Globe, ArrowRight } from 'lucide-react';
 
 const DefenceTechPage: React.FC = () => {
   const products = [
-    { name: 'DRDO TOT Products', path: '/products/drdo', description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari and Riot Control Vehicle (Vajra).' },
-    { name: 'Mobile Mortar System', path: '/products/defence/mobile-mortar-system', description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.' },
-    { name: 'Slider', path: '/products/defence/slider', description: 'Military-grade all-terrain electric mobility platform — 2WD/4WD, silent electric drive and lithium battery system.' },
-    { name: 'ATV Cabin Design', path: '/products/defence/atv-cabin-design', description: 'All-terrain command and surveillance platform with mast-mounted cameras, radar, surveillance drone, DG set, dual-screen control room and anti-drone gun.' },
+    {
+      name: 'DRDO TOT Products',
+      path: '/products/drdo',
+      description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari and Riot Control Vehicle (Vajra).',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png',
+      fit: 'contain' as const,
+    },
+    {
+      name: 'Mobile Mortar System',
+      path: '/products/defence/mobile-mortar-system',
+      description: 'Next-generation mobile artillery platform combining mobility, firepower and precision for the modern battlefield.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png',
+      fit: 'cover' as const,
+    },
+    {
+      name: 'ATV Panther',
+      path: '/products/defence/panther',
+      description: 'Military-grade all-terrain electric mobility platform — 2WD/4WD, silent electric drive and lithium battery system.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792565626/WhatsApp_Image_2026-10-21_at_11.01.47_hlx67k.jpg',
+      fit: 'contain' as const,
+    },
+    {
+      name: 'ATV Cabin Design',
+      path: '/products/defence/atv-cabin-design',
+      description: 'All-terrain command and surveillance platform with mast-mounted cameras, radar, surveillance drone, DG set, dual-screen control room and anti-drone gun.',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408809/Screenshot_2026-10-19_at_4.48.58_PM_sox6bn.png',
+      fit: 'contain' as const,
+    },
   ];
 
   return (
@@ -42,12 +66,21 @@ const DefenceTechPage: React.FC = () => {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {products.map((product) => (
-            <div key={product.path} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-custom transition duration-300 border border-gray-100">
-              <Link to={product.path} className="block p-6">
-                <h3 className="text-xl font-bold mb-3">{product.name}</h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700">
-                  View Details <ArrowRight className="w-4 h-4 ml-2" />
+            <div key={product.path} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-custom transition duration-300 border border-gray-100 flex flex-col">
+              <Link to={product.path} className="block">
+                <div className={`h-56 overflow-hidden ${product.fit === 'contain' ? 'bg-gray-50 p-4' : ''}`}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className={`w-full h-full ${product.fit === 'contain' ? 'object-contain' : 'object-cover'} transition-transform duration-500 hover:scale-105`}
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-3">{product.name}</h3>
+                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <div className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700">
+                    View Details <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
                 </div>
               </Link>
             </div>

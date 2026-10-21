@@ -95,7 +95,7 @@ const technicalTable: Array<{ spec: string; twd: string; fwd: string }> = [
   { spec: 'Load Capacity', twd: '90 kg', fwd: '90 kg' },
 ];
 
-const SliderPage: React.FC = () => {
+const PantherPage: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [current, setCurrent] = useState(0);
 
@@ -106,12 +106,12 @@ const SliderPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Slider | All Terrain Warrior Mobility System | Global Technocrats</title>
+        <title>ATV Panther | All Terrain Warrior Mobility System | Global Technocrats</title>
         <meta
           name="description"
-          content="Slider — a military-grade all-terrain electric mobility platform with 2WD and 4WD configurations, lithium battery system and silent electric drive for defence, security, industrial and urban applications."
+          content="ATV Panther — a military-grade all-terrain electric mobility platform with 2WD and 4WD configurations, lithium battery system and silent electric drive for defence, security, industrial and urban applications."
         />
-        <meta name="keywords" content="slider, all terrain mobility, electric mobility platform, military mobility, 4WD electric vehicle, border security mobility, defence tech" />
+        <meta name="keywords" content="panther, all terrain mobility, electric mobility platform, military mobility, 4WD electric vehicle, border security mobility, defence tech" />
       </Helmet>
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
@@ -130,7 +130,7 @@ const SliderPage: React.FC = () => {
                 <ChevronRight className="w-3 h-3" />
                 <Link to="/products/defence" className="hover:text-gray-600 transition-colors">Defence Tech</Link>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-gray-500">Slider</span>
+                <span className="text-gray-500">ATV Panther</span>
               </nav>
 
               <div className="inline-flex items-center gap-2 bg-primary-900 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-6">
@@ -138,8 +138,8 @@ const SliderPage: React.FC = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-gray-900 leading-[1.1] mb-3">
-                SLIDER<br />
-                <span className="text-primary-900">Warrior Mobility</span>
+                ATV<br />
+                <span className="text-primary-900">Panther</span>
               </h1>
               <p className="text-lg font-medium text-primary-900 mb-3">All Terrain Warrior Mobility System</p>
               <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-5">
@@ -169,7 +169,7 @@ const SliderPage: React.FC = () => {
                     <motion.img
                       key={current}
                       src={CAROUSEL_IMAGES[current]}
-                      alt={`Slider view ${current + 1}`}
+                      alt={`ATV Panther view ${current + 1}`}
                       className="absolute inset-0 w-full h-full object-contain"
                       initial={{ opacity: 0, x: 40 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -221,10 +221,10 @@ const SliderPage: React.FC = () => {
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Product Overview</span>
               <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">
-                Slider —<br /> Reliable, Silent &amp; Stealth Mobility
+                ATV Panther —<br /> Reliable, Silent &amp; Stealth Mobility
               </h2>
               <p className="text-gray-600 leading-relaxed mb-5">
-                Slider is a military-grade all-terrain electric mobility platform developed by Global Technocrats Ltd
+                ATV Panther is a military-grade all-terrain electric mobility platform developed by Global Technocrats Ltd
                 with electric hub motors. Designed for reliable, silent, stealth and powerful mobility across extreme
                 terrains including mountains, jungles and industrial environments.
               </p>
@@ -242,7 +242,7 @@ const SliderPage: React.FC = () => {
               </ul>
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-100 aspect-video bg-gray-50 p-6">
-              <img src={OVERVIEW_IMAGE} alt="Slider all-terrain mobility platform" className="w-full h-full object-contain" />
+              <img src={OVERVIEW_IMAGE} alt="ATV Panther all-terrain mobility platform" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>
@@ -277,7 +277,7 @@ const SliderPage: React.FC = () => {
             {/* Applications */}
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Applications</span>
-              <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">Where Slider Delivers</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">Where ATV Panther Delivers</h2>
               <ul className="space-y-3">
                 {applications.map((item) => (
                   <li key={item} className="flex items-start gap-3 bg-gray-50 rounded-xl px-5 py-4 text-gray-700">
@@ -345,7 +345,7 @@ const SliderPage: React.FC = () => {
       <section className="py-24 bg-gradient-to-br from-slate-900 to-primary-950">
         <div className="container">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Deploy Slider?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Deploy ATV Panther?</h2>
             <p className="text-blue-200 max-w-xl mx-auto text-sm leading-relaxed">
               Our mobility systems specialists will help you select the right configuration and support deployment
               planning for your force.
@@ -382,4 +382,4 @@ const SliderPage: React.FC = () => {
   );
 };
 
-export default SliderPage;
+export default PantherPage;
