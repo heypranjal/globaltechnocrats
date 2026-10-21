@@ -415,10 +415,10 @@ export const productsData: Product[] = [
       { name: 'Max Slope', value: '25°' }
     ],
     images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408996/Screenshot_2026-10-19_at_4.52.16_PM_f5lei8.png'
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792565626/WhatsApp_Image_2026-10-21_at_11.01.47_hlx67k.jpg'
     ],
     relatedProducts: ['atv-cabin-design', 'mobile-mortar-system'],
-    seoTitle: 'Panther | All Terrain Warrior Mobility System | Global Technocrats',
+    seoTitle: 'ATV Panther | All Terrain Warrior Mobility System | Global Technocrats',
     seoDescription: 'Military-grade all-terrain electric mobility platform with 2WD/4WD configurations and silent electric drive.'
   },
   {
