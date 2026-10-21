@@ -49,7 +49,7 @@ function App() {
         <title>Global Technocrats | Defence Tech Company</title>
         <meta name="description" content="Global Technocrats - Leading Defence Tech Company operating in India and Middle East, providing innovative security and defense solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/dy93kgo03/image/upload/v1792613076/Screenshot_2026-10-22_at_1.34.08_AM_fkfs8v.png" />
       </Helmet>
       
       <ScrollToTopOnNavigate />
