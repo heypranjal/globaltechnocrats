@@ -15,8 +15,8 @@ const DefenceTechPage: React.FC = () => {
       name: 'DRDO TOT Products',
       path: '/products/drdo',
       description: 'Defense products developed through Transfer of Technology from DRDO — Bukhari and Riot Control Vehicle (Vajra).',
-      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png',
-      fit: 'contain',
+      image: 'https://res.cloudinary.com/dy93kgo03/image/upload/v1792574361/WhatsApp_Image_2026-10-21_at_14.25.26_towycz.jpg',
+      fit: 'cover',
     },
     {
       name: 'Mobile Mortar System',
