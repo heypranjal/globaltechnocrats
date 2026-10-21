@@ -14,6 +14,7 @@ import {
   Anchor,
   ServerCog,
   Radio,
+  ImageIcon,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
@@ -39,7 +40,7 @@ const impactStats = [
 
 const keyFeatures = [
   'Heavy-duty steel structure with corrosion-resistant coating',
-  'High-impact anti-drone cage/fence built on 500 MPa tensile wires',
+  'High-impact anti-drone cage/fence built on 700 MPa tensile wires',
   'Designed and tested for explosive-payload resistance',
   'Interlocked twisted-wire mesh combined with steel wire rope for superior load distribution',
   'Fully compliant with IS structural and coating standards',
@@ -124,14 +125,9 @@ const AntiDroneCagePage: React.FC = () => {
 
               {/* Compact Applications grid */}
               <div className="max-w-lg">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="inline-flex items-center gap-1.5 bg-primary-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    <Radio className="w-3 h-3" /> Gulf Region
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-primary-900">
-                    High-Value Application Areas
-                  </span>
-                </div>
+                <h2 className="text-sm md:text-base font-extrabold uppercase tracking-widest text-primary-900 mb-4">
+                  High-Value Application Areas
+                </h2>
 
                 <div className="grid grid-cols-2 gap-3">
                   {applications.map(({ Icon, title, text }) => (
@@ -200,27 +196,8 @@ const AntiDroneCagePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ── System Overview ──────────────────────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary-900">System Overview</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
-              Integrated Fuel Storage &amp; Anti-Drone Protection
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              Engineered for critical infrastructure, defence installations, hazardous storage zones, refineries and
-              high-risk industrial environments. The system integrates a heavy-duty <strong>Fuel Storage Cage</strong>
-              — a structural enclosure protecting tanks and bunded areas — with an <strong>Anti-Drone Cage / Fence</strong>,
-              a high-tensile, impact-resistant perimeter and roof barrier that arrests airborne intrusion before it
-              reaches the asset.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── Impact Stats ─────────────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-xs font-bold uppercase tracking-widest text-primary-900">Impact &amp; Payload Resistance</span>
@@ -229,7 +206,7 @@ const AntiDroneCagePage: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {impactStats.map(({ Icon, title, value, text }) => (
-              <div key={title} className="bg-white rounded-2xl p-8 ring-1 ring-gray-100 shadow-sm text-center">
+              <div key={title} className="bg-gray-50 rounded-2xl p-8 ring-1 ring-gray-100 shadow-sm text-center">
                 <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center mx-auto mb-5">
                   <Icon className="w-7 h-7 text-primary-900" />
                 </div>
@@ -238,6 +215,34 @@ const AntiDroneCagePage: React.FC = () => {
                 <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── System Overview ──────────────────────────────────────────────── */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary-900">System Overview</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6">
+                Integrated Fuel Storage &amp; Anti-Drone Protection
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                Engineered for critical infrastructure, defence installations, hazardous storage zones, refineries and
+                high-risk industrial environments. The system integrates a heavy-duty <strong>Fuel Storage Cage</strong>
+                — a structural enclosure protecting tanks and bunded areas — with an <strong>Anti-Drone Cage / Fence</strong>,
+                a high-tensile, impact-resistant perimeter and roof barrier that arrests airborne intrusion before it
+                reaches the asset.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 aspect-video bg-gray-50">
+              <img
+                src="https://res.cloudinary.com/dy93kgo03/image/upload/v1792578001/WhatsApp_Image_2026-10-21_at_15.47.17_htod4z.jpg"
+                alt="Integrated Fuel Storage and Anti-Drone Protection system"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
