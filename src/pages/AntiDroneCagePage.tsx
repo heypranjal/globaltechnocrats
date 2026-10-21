@@ -116,11 +116,35 @@ const AntiDroneCagePage: React.FC = () => {
               <p className="text-sm font-semibold text-primary-900 uppercase tracking-widest mb-5">
                 Woven · Double-Twisted · Hexagonal Wire Mesh
               </p>
-              <p className="text-gray-600 text-base leading-relaxed max-w-lg">
+              <p className="text-gray-600 text-base leading-relaxed max-w-lg mb-8">
                 A high-tensile, impact-resistant perimeter and roof barrier engineered to arrest airborne intrusion
                 before it reaches the asset — purpose-built for critical infrastructure, defence installations and
                 high-risk industrial environments.
               </p>
+
+              {/* Compact Applications grid */}
+              <div className="max-w-lg">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="inline-flex items-center gap-1.5 bg-primary-900 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                    <Radio className="w-3 h-3" /> Gulf Region
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary-900">
+                    High-Value Application Areas
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {applications.map(({ Icon, title, text }) => (
+                    <div key={title} className="bg-gray-50 border border-gray-200 rounded-xl p-3">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <Icon className="w-4 h-4 text-primary-900 flex-shrink-0" />
+                        <h3 className="text-[11px] font-bold text-gray-900 uppercase tracking-wide leading-tight">{title}</h3>
+                      </div>
+                      <p className="text-gray-600 text-[11px] leading-snug">{text}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             {/* Right — image carousel */}
@@ -227,38 +251,14 @@ const AntiDroneCagePage: React.FC = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Mesh With Horizontal Steel Wire Rope</h2>
             </div>
 
-            <ul className="grid md:grid-cols-2 gap-3">
+            <ul className="grid md:grid-cols-2 gap-4">
               {keyFeatures.map((item) => (
                 <li key={item} className="flex items-start gap-3 bg-gray-50 rounded-xl px-5 py-4 text-gray-700">
-                  <CheckCircle className="w-5 h-5 text-primary-900 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{item}</span>
+                  <CheckCircle className="w-5 h-5 text-primary-900 flex-shrink-0 mt-1" />
+                  <span className="text-base leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Applications ─────────────────────────────────────────────────── */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary-900 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">
-              <Radio className="w-3.5 h-3.5" /> Gulf Region
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">High-Value Application Areas</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {applications.map(({ Icon, title, text }) => (
-              <div key={title} className="bg-white rounded-2xl p-6 ring-1 ring-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-primary-900" />
-                </div>
-                <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug uppercase tracking-wide">{title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{text}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>

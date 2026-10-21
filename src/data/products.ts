@@ -25,6 +25,7 @@ export interface Product {
   seoTitle?: string;
   seoDescription?: string;
   seoKeywords?: string;
+  link?: string;
 }
 
 export const productsData: Product[] = [
@@ -133,56 +134,14 @@ export const productsData: Product[] = [
       { name: 'Flame Control', value: 'Controllable blue flame' }
     ],
     images: [
-      '/images/Bukhari-768x384.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png',
       'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ],
     relatedProducts: ['vajra'],
     seoTitle: 'Bukhari | DRDO TOT Products | Global Technocrats',
-    seoDescription: 'Bukhari is a space heating device designed and developed by DIPAS (DRDO) with multiple safety features and high efficiency.'
+    seoDescription: 'Bukhari is a space heating device designed and developed by DIPAS (DRDO) with multiple safety features and high efficiency.',
+    link: '/products/defence/bhukhari'
   },
-  // Existing products from ProductDetailPage.tsx
-  {
-    id: 'mobile-mortar-system',
-    name: 'Mobile Mortar System',
-    category: 'defence-tech',
-    subcategory: 'Defence Tech',
-    description: 'Advanced mobile mortar system providing indirect fire support with enhanced mobility and accuracy.',
-    longDescription: 'The Mobile Mortar System by Global Technocrats is a state-of-the-art indirect fire support platform designed for rapid deployment and superior accuracy. The system integrates advanced ballistic computing, GPS positioning, and automated loading to deliver exceptional firepower in a highly mobile package.',
-    features: [
-      'Advanced fire control system',
-      'GPS-guided targeting',
-      'Semi-automatic loading mechanism',
-      'Reduced crew requirement (2-3 operators)',
-      'Quick setup and teardown (under 2 minutes)',
-      'Integrated ballistic computer',
-      'Multiple caliber options'
-    ],
-    applications: [
-      'Infantry fire support',
-      'Special operations',
-      'Rapid reaction forces',
-      'Border security operations',
-      'Counter-insurgency operations'
-    ],
-    specifications: [
-      { name: 'Caliber Options', value: '60mm, 81mm, 120mm' },
-      { name: 'Range (81mm)', value: 'Up to 6,200 meters' },
-      { name: 'Rate of Fire', value: '16 rounds per minute (rapid)' },
-      { name: 'Setup Time', value: '< 2 minutes' },
-      { name: 'Crew', value: '2-3 personnel' },
-      { name: 'Total System Weight', value: '162 kg (81mm configuration)' },
-      { name: 'Traverse', value: '360 degrees' },
-      { name: 'Elevation', value: '45 to 85 degrees' },
-      { name: 'Fire Control', value: 'Digital w/ manual backup' },
-      { name: 'Transport Options', value: 'Vehicle-mounted or towed' }
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1687348747353-0c42d3c05983?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1569241641262-d5d7beb96d8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-    ],
-    relatedProducts: ['bukhari', 'vajra']
-  },
-
   {
     id: 'image-enhancer',
     name: 'Image Enhancer', 
@@ -338,12 +297,13 @@ export const productsData: Product[] = [
       { name: 'Certification', value: 'DRDO approved' }
     ],
     images: [
-      '/images/Vajra-1-1536x768.png',
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408598/vajra01_bk32lg.png',
       'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     ],
     relatedProducts: ['bukhari'],
     seoTitle: 'Vajra | DRDO TOT Products | Global Technocrats',
-    seoDescription: 'Vajra: High-durability protective equipment for specialized defense operations and personnel safety.'
+    seoDescription: 'Vajra: High-durability protective equipment for specialized defense operations and personnel safety.',
+    link: '/products/defence/vajra'
   },
 
   // Defence Tech Products
@@ -374,9 +334,7 @@ export const productsData: Product[] = [
       { name: 'Munitions', value: 'Precision-guided compatible' },
       { name: 'Control', value: 'Integrated fire-control system' }
     ],
-    images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792407958/DEFENCE_svusmt.png'
-    ],
+    images: [],
     relatedProducts: ['panther', 'atv-cabin-design'],
     seoTitle: 'Mobile Mortar System | Defence Tech | Global Technocrats',
     seoDescription: 'Mobile Mortar System — mobile artillery platform combining mobility, firepower and precision for the modern battlefield.'
@@ -487,7 +445,9 @@ export const productsData: Product[] = [
       { name: 'Wire Grade (Fence)', value: '500 MPa tensile' },
       { name: 'Compliance', value: 'IS structural and coating standards' }
     ],
-    images: [],
+    images: [
+      'https://res.cloudinary.com/dy93kgo03/image/upload/v1792576122/Screenshot_2026-10-21_at_3.18.27_PM_jc4xro.png'
+    ],
     relatedProducts: ['atv-cabin-design', 'panther'],
     seoTitle: 'Anti Drone Protection Cage | Woven Hexagonal Wire Mesh | Global Technocrats',
     seoDescription: 'Anti Drone Protection Cage — woven, double-twisted hexagonal wire mesh for critical infrastructure. 700 MPa tensile wires arrest drones up to 80 kg at 250 km/h.'
@@ -1014,7 +974,7 @@ const GATES_ORDER = ['swing-gates', 'cantilever-gates'];
 const gatesProducts = GATES_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);
-const DEFENCE_ORDER = ['panther', 'atv-cabin-design', 'anti-drone-cage', 'mobile-mortar-system'];
+const DEFENCE_ORDER = ['bukhari', 'vajra', 'panther', 'atv-cabin-design', 'anti-drone-cage', 'mobile-mortar-system'];
 const defenceProducts = DEFENCE_ORDER
   .map(id => productsData.find(p => p.id === id))
   .filter((p): p is Product => p !== undefined);

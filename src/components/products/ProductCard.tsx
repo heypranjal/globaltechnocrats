@@ -24,17 +24,19 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) => {
-  // Helper to get the main product image
-  const getProductImage = () => {
-    if ('images' in product && product.images?.length > 0) {
+  // Helper to get the main product image (returns null when the product
+  // intentionally has no image, so the image block can be skipped).
+  const getProductImage = (): string | null => {
+    if ('images' in product) {
+      if (!product.images || product.images.length === 0) return null;
       return product.images[0];
     }
     if ('image' in product && product.image) {
       return product.image;
     }
-    return 'https://images.unsplash.com/photo-1567194974473-68d83240a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+    return null;
   };
-  
+
   // Helper to get product link
   const getProductLink = () => {
     if ('link' in product && product.link) {
@@ -42,24 +44,28 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, className = '' }) =>
     }
     return `/products/${product.category}/${product.id}`;
   };
+
+  const productImage = getProductImage();
   return (
     <div className={`bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ${className}`}>
       <div className="flex flex-col h-full">
         {/* Product Image */}
-        <Link to={getProductLink()} className="block overflow-hidden">
-          <div className={`relative h-56 md:h-64 overflow-hidden ${product.category === 'gates' ? 'bg-gray-50 p-4' : ''}`}>
-            <img
-              src={getProductImage()}
-              alt={product.name}
-              className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${product.category === 'gates' ? 'object-contain' : 'object-cover'}`}
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = 'https://images.unsplash.com/photo-1567194974473-68d83240a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
-              }}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-        </Link>
+        {productImage && (
+          <Link to={getProductLink()} className="block overflow-hidden">
+            <div className={`relative h-56 md:h-64 overflow-hidden ${product.category === 'gates' ? 'bg-gray-50 p-4' : ''}`}>
+              <img
+                src={productImage}
+                alt={product.name}
+                className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${product.category === 'gates' ? 'object-contain' : 'object-cover'}`}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = 'https://images.unsplash.com/photo-1567194974473-68d83240a366?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </Link>
+        )}
         
         {/* Product Content */}
         <div className="p-6 flex-grow flex flex-col">
