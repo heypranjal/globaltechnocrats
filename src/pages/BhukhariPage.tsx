@@ -128,7 +128,7 @@ const BhukhariPage: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-gray-200 aspect-[4/5] bg-gray-50 p-6">
                 <img
-                  src="https://res.cloudinary.com/dy93kgo03/image/upload/v1792574361/WhatsApp_Image_2026-10-21_at_14.25.26_towycz.jpg"
+                  src="https://res.cloudinary.com/dy93kgo03/image/upload/v1792408592/bukhari01_qxiozl.png"
                   alt="Bukhari — DRDO DIPAS space heating device"
                   className="w-full h-full object-contain"
                 />

@@ -22,8 +22,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import BrochureModal from '../components/products/BrochureModal';
 
 const CAROUSEL_IMAGES = [
+  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792663713/panther_ylwqmi.png',
   'https://res.cloudinary.com/dy93kgo03/image/upload/v1792566460/slider-4_sqxv5w.png',
-  'https://res.cloudinary.com/dy93kgo03/image/upload/v1792408994/Screenshot_2026-10-19_at_4.51.58_PM_jjlgtb.png',
 ];
 
 const OVERVIEW_IMAGE =
