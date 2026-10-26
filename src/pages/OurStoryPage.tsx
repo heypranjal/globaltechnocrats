@@ -356,7 +356,7 @@ const OurStoryPage: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="font-bold text-2xl mb-1">Mr. Atul Aggarwal</p>
+                    <p className="font-bold text-2xl mb-1 text-black">Mr. Atul Aggarwal</p>
                     <p className="text-white/70 text-lg">Managing Director</p>
                   </div>
                 </div>
