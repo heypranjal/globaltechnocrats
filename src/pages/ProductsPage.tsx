@@ -22,7 +22,7 @@ const ProductsPage: React.FC = () => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           product.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesCategory = selectedCategory === 'All Categories' || product.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All Categories' || product.subcategory === selectedCategory;
     
     return matchesSearch && matchesCategory;
   });
