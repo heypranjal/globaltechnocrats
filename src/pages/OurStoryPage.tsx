@@ -130,7 +130,7 @@ const OurStoryPage: React.FC = () => {
                   year: '2010',
                   title: 'Manufacturing Excellence',
                   description:
-                    'Established our first manufacturing unit with ISO 9001, 45001, and 14001 certifications. Developed in-house coating plant for enhanced product durability and began scaling operations to meet growing demand for defense solutions.',
+                    'Established our first manufacturing unit with ISO 9001, 45001, and 14001 certifications. Developed in-house powder coating plant for enhanced product durability and began scaling operations to meet growing demand for defense solutions.',
                 },
                 {
                   year: '2015',
