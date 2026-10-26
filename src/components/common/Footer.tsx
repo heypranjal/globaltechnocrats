@@ -1,17 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Youtube, 
-  Instagram, 
-  ArrowRight 
-} from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -138,43 +127,15 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </form>
-            <div className="flex items-center mt-6 space-x-4">
-              <a href="#" className="text-gray-500 hover:text-primary-600">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary-600">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary-600">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary-600">
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-500 hover:text-primary-600">
-                <Instagram className="w-5 h-5" />
-              </a>
-            </div>
           </div>
         </div>
 
         {/* Bottom Footer */}
         <div className="border-t border-gray-200 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex justify-center items-center">
             <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} Global Technocrats. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy-policy" className="text-gray-500 text-sm hover:text-primary-600">
-                Privacy Policy
-              </Link>
-              <Link to="/terms-of-service" className="text-gray-500 text-sm hover:text-primary-600">
-                Terms of Service
-              </Link>
-              <Link to="/sitemap" className="text-gray-500 text-sm hover:text-primary-600">
-                Sitemap
-              </Link>
-            </div>
           </div>
         </div>
       </div>
