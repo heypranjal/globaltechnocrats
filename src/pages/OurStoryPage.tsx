@@ -139,10 +139,10 @@ const OurStoryPage: React.FC = () => {
                     'Formed strategic partnerships with DRDO and Parallel Flight Technologies, marking our entry into advanced defense technology. Began development of specialized products like the Mobile Mortar Solution and DRDO Bhukhari systems.',
                 },
                 {
-                  year: '2023-Present',
+                  year: 'Present-',
                   title: 'Leading the Future',
                   description:
-                    "Today we stand as India's premier defense technology company, with comprehensive solutions including Anti Riot Vehicle Vajra, Crash Rated Fencing, and advanced AI systems. Our 20+ years of expertise continues to drive innovation in border security and defense technology.",
+                    "Today we stand as India's premier defense technology company, with comprehensive solutions including Anti Riot Vehicle Vajra, Crash Rated Fencing, data centre, and advanced AI systems. Our 20+ years of expertise continues to drive innovation in border security and defense technology.",
                 },
               ].map((milestone) => (
                 <div key={milestone.year} className="relative flex items-start md:items-center gap-6">

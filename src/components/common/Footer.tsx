@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
                 <span className="text-gray-600">sales@globaltechnocrats.in, info@globaltechnocrats.in</span>
               </div>
               <div className="text-gray-600 text-sm mt-2">
-                <strong>Hours:</strong> Mon-Fri 9:00AM - 5:00PM
+                <strong>Hours:</strong> Mon-Sat 10:00AM - 6:00PM
               </div>
             </div>
           </div>

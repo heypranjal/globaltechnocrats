@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                     India
                   </p>
                   <div className="text-sm text-gray-600 space-y-1">
-                    <p><strong className="text-gray-900">Hours:</strong> Mon-Fri, 9:00 AM - 5:00 PM</p>
+                    <p><strong className="text-gray-900">Hours:</strong> Mon-Sat, 10:00 AM - 6:00 PM</p>
                     <p><strong className="text-gray-900">Phone:</strong> +91 9810282636</p>
                   </div>
                 </div>
