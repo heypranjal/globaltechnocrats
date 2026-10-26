@@ -320,9 +320,9 @@ const OurStoryPage: React.FC = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl transform rotate-6"></div>
                   <div className="relative">
-                    <img 
-                      src={getImageUrl('company', 'story', 'leadership-team')} 
-                      alt={getImageAlt('company', 'story', 'leadership-team')} 
+                    <img
+                      src={getImageUrl('people', 'atul-agarwal')}
+                      alt={getImageAlt('people', 'atul-agarwal')}
                       className="rounded-3xl shadow-2xl w-full"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
@@ -356,8 +356,8 @@ const OurStoryPage: React.FC = () => {
                     </div>
                   </div>
                   <div>
-                    <p className="font-bold text-2xl mb-1">Leadership Team</p>
-                    <p className="text-white/70 text-lg">Global Technocrats Directors</p>
+                    <p className="font-bold text-2xl mb-1">Mr. Atul Aggarwal</p>
+                    <p className="text-white/70 text-lg">Managing Director</p>
                   </div>
                 </div>
               </div>

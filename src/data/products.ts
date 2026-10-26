@@ -749,47 +749,6 @@ export const productsData: Product[] = [
   },
 
   {
-    id: 'sliding-gates',
-    name: 'Sliding Gates',
-    category: 'gates',
-    subcategory: 'Engineered Gate Solutions',
-    description: 'Space-efficient sliding gate systems combining security, elegance, and automated convenience.',
-    longDescription: 'Sliding gates represent the perfect fusion of security and elegance, offering practical and stylish solutions for modern properties. These gates are ideal for areas with limited space, providing enhanced security while maintaining aesthetic appeal through various design options and automation capabilities.',
-    features: [
-      'Space-efficient lateral movement design',
-      'Single-panel and bi-parting options',
-      'Cantilever and track-guided systems',
-      'Automated operation with remote control',
-      'Safety features and obstacle detection',
-      'Weather-resistant construction',
-      'Integration with smart home systems'
-    ],
-    applications: [
-      'Residential properties with limited space',
-      'Commercial establishments',
-      'Industrial facilities',
-      'Gated communities',
-      'Parking facilities',
-      'High-security installations'
-    ],
-    specifications: [
-      { name: 'Panel Types', value: 'Single-panel, bi-parting, cantilever' },
-      { name: 'Maximum Width', value: 'Up to 40 feet opening' },
-      { name: 'Height Range', value: '4-12 feet' },
-      { name: 'Materials', value: 'Steel, aluminum, composite' },
-      { name: 'Automation', value: 'Electric motor with safety sensors' },
-      { name: 'Opening Speed', value: '12-24 inches per second' }
-    ],
-    images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776789/sliddinggate2_uazh3b.png',
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776757/slidingGate1_kj77om.png'
-    ],
-    relatedProducts: ['swing-gates', 'collapsible-barrier'],
-    seoTitle: 'Sliding Gates | Automated Space-Efficient Access Control | Global Technocrats',
-    seoDescription: 'Professional sliding gate systems offering space-efficient automated access control for residential and commercial properties.'
-  },
-
-  {
     id: 'architectural-gabions',
     name: 'Architectural Gabions',
     category: 'gates',
@@ -825,50 +784,9 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776974/ArchitecturalGabions1_p567th.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779776998/ArchitecturalGabions2_vhdv6f.png'
     ],
-    relatedProducts: ['hesco-box', 'collapsible-barrier'],
+    relatedProducts: ['hesco-box', 'swing-gates'],
     seoTitle: 'Architectural Gabions | Decorative Stone Barriers | Global Technocrats',
     seoDescription: 'Professional architectural gabion systems for retaining walls, landscape features, and decorative stone barriers.'
-  },
-
-  {
-    id: 'collapsible-barrier',
-    name: 'Collapsible Barrier',
-    category: 'gates',
-    subcategory: 'Engineered Gate Solutions',
-    description: 'Portable and adaptable barrier systems for crowd control, traffic management, and temporary security.',
-    longDescription: 'Collapsible barriers offer convenient solutions for controlling crowds, managing traffic, and ensuring security across different industries. These innovative barriers provide a flexible way to create temporary boundaries with easy setup and storage capabilities, making them invaluable for events, construction sites, and emergency situations.',
-    features: [
-      'Lightweight and portable design',
-      'Quick setup and easy storage',
-      'Expandable and retractable configurations',
-      'Multiple material options (steel, aluminum, plastic)',
-      'Customizable branding and colors',
-      'Interlocking system for continuous barriers',
-      'Weather-resistant construction'
-    ],
-    applications: [
-      'Crowd control at events and venues',
-      'Traffic control and road work zones',
-      'Construction site safety barriers',
-      'Emergency response and security',
-      'Queue management systems',
-      'Temporary access control'
-    ],
-    specifications: [
-      { name: 'Materials', value: 'Steel, aluminum, high-impact plastic' },
-      { name: 'Extended Length', value: '6-12 feet per unit' },
-      { name: 'Height Options', value: '3-6 feet' },
-      { name: 'Weight', value: '15-45 lbs depending on material' },
-      { name: 'Setup Time', value: 'Under 1 minute per unit' },
-      { name: 'Storage', value: 'Compact folded design' }
-    ],
-    images: [
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777149/CollapsibleBarrier2_kvw9kv.png',
-      'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777142/CollapsibleBarrier1_gk9cfv.png'
-    ],
-    relatedProducts: ['swing-gates', 'sliding-gates'],
-    seoTitle: 'Collapsible Barriers | Portable Crowd Control Solutions | Global Technocrats',
-    seoDescription: 'Professional collapsible barrier systems for crowd control, traffic management, and temporary security applications.'
   },
 
   {
@@ -907,7 +825,7 @@ export const productsData: Product[] = [
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777263/HescoBox11_avwixf.png',
       'https://res.cloudinary.com/dy93kgo03/image/upload/v1779777286/HescoBox2_echlf3.png'
     ],
-    relatedProducts: ['architectural-gabions', 'collapsible-barrier'],
+    relatedProducts: ['architectural-gabions', 'swing-gates'],
     seoTitle: 'Hesco Box | Military-Grade Blast Barriers | Global Technocrats',
     seoDescription: 'Professional Hesco box barrier systems for military force protection, flood control, and emergency security applications.'
   }
